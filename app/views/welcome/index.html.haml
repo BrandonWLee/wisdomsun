@@ -1,19 +1,15 @@
-%head
-  %title Wisdom Sun
-%h1 Welcome to Wisdom Sun
-%h1 Welcome to Wisdom Sun
-%h1 Welcome to Wisdom Moon
-%h1 Welcome to Wisdom Sun
-%h1 Welcome to Wisdom Sun
-%h1 Welcome to Wisdom Sun
-%p Find me in app/views/welcome/index.html.haml
-%p Find me in app/views/welcome/index.html.haml
-%p Find me in app/views/welcome/index.html.haml
-%p Find me in app/views/welcome/index.html.haml
-%p Find me in app/views/welcome/index.html.haml
-%p Find me in app/views/welcome/index.html.haml
-%p Find me in app/views/welcome/index.html.haml
-%p Find me in app/views/welcome/index.html.haml
-%p Find me in app/views/welcome/index.html.haml
-%p Find me in app/views/welcome/index.html.haml
-%p Find me in app/views/welcome/index.html.haml
+= render "/layouts/menu"
+
+.container
+  .welcome-slider
+
+  .welcome-quote "Peace and love is the answer.." -Buddha
+
+  .main-content
+    .main-title About Us
+    .main-text 
+      %p Wisdom Sun is about bringing meditation teachings home: Home to our own culture and locale; home to our daily life; home to our mind, body, and heart.
+      %p Bringing meditation home, we learn to live fully and fearlessly, with joy, humor, and love. We begin to genuinely connect with who we are as individuals, and strengthen and enrich our relationships with others. We develop a clarity and depth of awareness—wisdom—imbued with warmth—like the light of the sun. 
+      %p{:class => 'read-more'} Read more...
+
+= render "/layouts/footer"

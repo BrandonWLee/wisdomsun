@@ -11,3 +11,118 @@
  *= require_self
  *= require_tree .
  */
+
+/**************************
+ *        GENERAL
+ **************************/
+body {
+  background-color: #f4f4f4;
+  font-family: Helvetica, Verdana, Arial, sans-serif;
+  margin: 0 0;
+  padding: 0 0;
+}
+.clearfix {
+  clear: both;
+}
+
+/**************************
+ *          MENU 
+ **************************/
+.menu { 
+  background-color: #444;
+  color: #fff; 
+  display: block;
+  font-family: "Verdana", "Arial", sans-serif;
+  font-size: 15px;
+  margin: 30px 0 20px 0;
+  position: relative;
+  width: 100%;
+}
+.menu-container {
+  margin: 0 auto;
+  width: 960px;
+}
+.menu-title {
+  color: #444;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 0.75em;
+  margin: -16px 0 0 20px;
+  position: absolute;
+  text-transform: uppercase;
+}
+.menu-item-container {
+  margin-left: auto;
+  margin-right: 0px;
+  width: 670px;
+}
+.menu-item {
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 0;
+  padding: 20px 20px; 
+  transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+}
+.menu-item:hover { 
+  background-color: #777; 
+}
+
+/**************************
+ *         BODY
+ **************************/
+.container {
+  background-color: #fdfdfd;
+  border: 1px solid #f2f2f2;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  box-shadow: 0 0 8px #eaeaea;
+  -webkit-box-shadow: 0 0 8px #eaeaea;
+  -moz-box-shadow: 0 0 8px #eaeaea;
+  margin: 0 auto 60px auto;
+  padding: 60px 30px;
+  width: 960px;
+}
+h1 {
+  color: #555; 
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+.main-content {
+  margin: 0 45px;
+}
+.main-title {
+  border-bottom: 1px solid #ddd;
+  color: #555;
+  font-size: 27px;
+  margin-bottom: 30px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+.main-text{
+  color: #222;
+  line-height: 40px;
+}
+
+
+/**************************
+ *        FOOTER
+ **************************/
+.footer {
+  color: #999;
+  font-size: 15px;
+  float: right;
+  margin: 0 30px 50px 0;
+}
+.footer-item {
+  display: inline-block;
+  padding: 10px 10px;
+}
+.footer-item.footer-company {
+  padding-left: 40px;
+  padding-right: 40px;
+}
