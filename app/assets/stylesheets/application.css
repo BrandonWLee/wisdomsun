@@ -52,9 +52,7 @@ body {
   text-transform: uppercase;
 }
 .menu-item-container {
-  margin-left: auto;
-  margin-right: 0px;
-  width: 670px;
+  margin-left: 30%;
 }
 .menu-item {
   cursor: pointer;
