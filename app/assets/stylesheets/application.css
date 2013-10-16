@@ -47,12 +47,11 @@ body {
   font-size: 18px;
   font-weight: bold;
   letter-spacing: 0.75em;
-  margin: -16px 0 0 20px;
+  margin: -17px 0 0 20px;
   position: absolute;
   text-transform: uppercase;
 }
 .menu-item-container {
-  margin-left: 30%;
 }
 .menu-item {
   cursor: pointer;
