@@ -1,5 +1,6 @@
 Wisdomsun::Application.routes.draw do
   get "welcome/index"
+  resources :books
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

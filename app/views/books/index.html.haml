@@ -1,0 +1,14 @@
+//images follow this convension por favoro
+
+%img{:src => "/assets/books/Fr.jpg", :width => 400}
+%p
+%table
+  %thead
+  BOOKS
+  %tbody
+    - @books.each do |book|
+      %tr
+        %td
+        %img{:src => "/assets/books/" + book.picture, :width => 400}
+        = book.title
+        = link_to "More about #{book.title}", book_path(book)

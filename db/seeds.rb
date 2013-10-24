@@ -5,3 +5,14 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+books = [{:title => 'Kill la Kill', :author => 'Trigger', :picture => '1.jpg', :description => "power of nakedness"},
+    	  {:title => 'Original Art', :author => 'Anonymous', :picture => '2.jpg', :description => "moe moe kyun~"},
+    	  {:title => 'Madoka', :author => 'Shaft', :picture => '3.jpg', :description => "Do you want to make a wish?"},
+      	  {:title => "Jojo's Bizarre Adventure", :author => 'Madhouse', :picture => '4.jpg', :description => "WRYYYYYYYYYYYYYY"},
+      	  {:title => 'Aria', :author => 'Amano Kozue', :picture => '5.jpg', :description => "Greatest Manga Ever"}
+  	 ]
+
+books.each do |movie|
+  Book.create!(movie)
+end
