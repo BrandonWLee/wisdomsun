@@ -5,9 +5,9 @@
     .header
       .header-title Books
     .content
-      .content-box
-        - @books.each do |book|
-          %img{:src => '/assets/books/' + book.picture, :width => '400'}
-          .title
+      - @books.each do |book|
+        .content-box
+          %img{:src => '/assets/books/' + book.picture}
+          .title= book.title
   = render "/layouts/footer"
 

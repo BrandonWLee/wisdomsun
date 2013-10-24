@@ -177,11 +177,28 @@ h1 {
   top: 80px;
   width: 100%;
 }
+.content {
+  display: block;
+  margin: 0 auto;
+}
 .content-box {
-  background-color: #ccc;
-  width: 200px;
-  height: 250px;
-  margin: 20px;
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  display: inline-block;
+  width: 210px;
+  min-height: 290px;
+  margin: 10px 9px;
+  vertical-align: top;
+}
+.content-box img {
+  display: block;
+  margin: 10px auto;
+  width: 170px;
+}
+.content-box .title {
+  color: #444;
+  margin: 10px auto;
+  text-align: center;
 }
 
 
