@@ -190,6 +190,10 @@ h1 {
   margin: 10px 9px;
   vertical-align: top;
 }
+.content-box .img-box {
+  min-height: 240px;
+  vertical-align: bottom;
+}
 .content-box img {
   display: block;
   margin: 10px auto;
@@ -197,6 +201,7 @@ h1 {
 }
 .content-box .title {
   color: #444;
+  font-weight: bold;
   margin: 10px auto;
   text-align: center;
 }
