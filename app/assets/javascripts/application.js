@@ -15,7 +15,7 @@
 //= require_tree .
 
 $(document).ready(function(){
-  var path = window.location.pathname.split('/')[1];
+    var path = window.location.pathname.split('/')[1];
   var menu_item;
   switch(path){
     case 'about':
@@ -23,6 +23,9 @@ $(document).ready(function(){
       break;
     case 'books':
       menu_item = '#menu-books';
+      break;
+    case 'events':
+      menu_item = '#menu-events';
       break;
     case 'downloads':
       menu_item = '#menu-downloads';
