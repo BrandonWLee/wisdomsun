@@ -4,6 +4,7 @@ Wisdomsun::Application.routes.draw do
   devise_for :users, :controllers => { :sessions => 'users/sessions' }
 
   get "welcome/index"
+  resources :books
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
