@@ -24,6 +24,10 @@ group :test do
   gem 'cucumber-rails', :require => false
 end
 
+# CarrierWave for Image uploading
+
+gem "carrierwave"
+
 
 # Gems used only for assets and not required
 # in production environments by default.

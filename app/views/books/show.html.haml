@@ -1,7 +1,9 @@
 %p
 	=@book.title
-	=@book.author
-	=@book.picture
-	=@book.purchase_url
+%p
+	%img{:src => @book.pictureTest.url, :width => 400}
+%p
+	=@book.description
+%p
+	=link_to "Back to List", books_path
 
-	=link_to "Back to all Books", books_path

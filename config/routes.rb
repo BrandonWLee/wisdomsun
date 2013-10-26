@@ -4,8 +4,11 @@ Wisdomsun::Application.routes.draw do
   devise_for :users, :controllers => { :sessions => 'users/sessions' }
 
   get "welcome/index"
+  resources :about
+  resources :bulletin
+  resources :downloads
+  resources :contact
   resources :books
-
   resources :events
 
   # The priority is based upon order of creation:
