@@ -1,0 +1,14 @@
+.wrapper
+  = render "/layouts/menu"
+
+  .container
+    .header
+      .header-title Books
+    .content
+      - @books.each do |book|
+        .content-box
+          .img-box
+            %img{:src => '/assets/books/' + book.picture}
+          .title= book.title
+  = render "/layouts/footer"
+

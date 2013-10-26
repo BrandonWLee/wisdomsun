@@ -26,6 +26,22 @@ Scenario: delete a book
   When I delete the book "Meditation"
   Then I should not see "Meditation"
 
+Scenario: deleting a book that doesn't exist should fail
+  When I delete the book "Buddha"
+  Then I should be on the Books page
+  And I should see the error "Book doesn't exist"
+
 Scenario: modify a book's info
-  When I change "Beyond the Sunrise's" price to "$100.00"
+  When I change "Beyond the Sunrise's" "price" to "$100.00"
   Then I should see "Beyond the Sunrise" before "$100.00"
+
+Scenario: modify a book that doesn't exist should fail
+  When I change "Buddha's" "price to "$100.00"
+  Then I should be on the Books page
+  And I should see the error "Book doesn't exist"
+
+Scenario: modifying a book's info field that doesnt exist should fail
+  When I change "Beyond the Sunrise's" "release_date" to "5-May-2010"
+  Then I should be on the Books page
+  And I should see the error "Field deosn't exist"
+

@@ -20,6 +20,7 @@ Scenario: login using nonadmin login should fail
 
 Scenario: logout should bring me back to homepage
   Given I am logged in as admin
+  And I am on the admin page
   When I click logout
   Then I should be on the Wisdom Sun homepage
 
