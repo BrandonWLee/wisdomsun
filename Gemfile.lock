@@ -229,12 +229,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-<<<<<<< HEAD
-  carrierwave
-=======
   activeadmin
   capybara
->>>>>>> 2a53aeb24a1e3ed76324a1377f17b2b0b49782e7
   coffee-rails (~> 3.2.1)
   cucumber-rails
   cucumber-rails-training-wheels
