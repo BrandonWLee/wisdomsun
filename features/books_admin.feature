@@ -7,11 +7,11 @@ Feature: add, remove, or modify books
 Background: books have been added to database
   Given I am logged in as admin
   And I am on the books page
-  And the following books exist:
-  | title        | author    | price       | link_to_purchase  | publish_date
-  | Mediation       | Brandon Lee  | 15.00      | fake_url      | 12-Dec-2004
-  | Beyond the Sunrise  | Jeff Zhan    | 20.00      | fake_url_2    | 4-May-2010
-  | Cultivating the Soul| Kevin Dip    | 13.50      | fake_url_3    | 23-Jan-2013 
+  Given the following books exist:
+  | title                 | author        | price       | link_to_purchase  | publish_date
+  | Mediation             | Brandon Lee   | 15.00       | fake_url          | 12-Dec-2004
+  | Beyond the Sunrise    | Jeff Zhan     | 20.00       | fake_url_2        | 4-May-2010
+  | Cultivating the Soul  | Kevin Dip     | 13.50       | fake_url_3        | 23-Jan-2013 
 
 Scenario: add a book
   When I add the book:
