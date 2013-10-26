@@ -181,31 +181,6 @@ h1 {
   display: block;
   margin: 0 auto;
 }
-.content-box {
-  background-color: #f2f2f2;
-  border: 1px solid #ccc;
-  display: inline-block;
-  width: 210px;
-  min-height: 290px;
-  margin: 10px 9px;
-  vertical-align: top;
-}
-.content-box .img-box {
-  min-height: 240px;
-  vertical-align: bottom;
-}
-.content-box img {
-  display: block;
-  margin: 10px auto;
-  width: 170px;
-}
-.content-box .title {
-  color: #444;
-  font-weight: bold;
-  margin: 10px auto;
-  text-align: center;
-}
-
 
 /**************************
  *        FOOTER

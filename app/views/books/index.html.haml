@@ -1,3 +1,4 @@
+= stylesheet_link_tag   "books", :media => "all"
 .wrapper
   = render "/layouts/menu"
 
@@ -7,8 +8,12 @@
     .content
       - @books.each do |book|
         .content-box
+          -# %a{:href => book_path(book.id)}
           .img-box
             %img{:src => '/assets/books/' + book.picture}
-          .title= book.title
+          .text-box
+            .title= book.title    
+            .buy= link_to "Buy", book.purchase_url
+            .author= book.author
+            .details= book.description
   = render "/layouts/footer"
-
