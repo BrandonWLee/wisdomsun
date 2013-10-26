@@ -5,7 +5,7 @@ class CreateBooks < ActiveRecord::Migration
       t.string :author
       t.text :description
       t.string :picture
-      t.string :purchaseURL
+      t.string :purchase_url
       # Add fields that let Rails automatically keep track
       # of when movies are added or modified:
       t.timestamps
