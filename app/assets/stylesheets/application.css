@@ -1,17 +1,3 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the top of the
- * compiled file, but it's generally better to create a new file per style scope.
- *
- *= require_self
- *= require_tree .
- */
-
 /**************************
  *        GENERAL
  **************************/
@@ -21,26 +7,41 @@ body {
   margin: 0 0;
   padding: 0 0;
 }
+.line {
+  background-color: #aaa;
+  margin: 20px 0;
+  height: 1px;
+  width: 100%;
+}
 .clearfix {
   clear: both;
+}
+.wrapper {
+  margin: 0 auto;
+  width: 960px;
 }
 
 /**************************
  *          MENU 
  **************************/
-.menu { 
-  background-color: #444;
-  color: #fff; 
+.menu {
+  border-bottom: 1px solid #999;
+  color: #333;
   display: block;
   font-family: "Verdana", "Arial", sans-serif;
   font-size: 15px;
-  margin: 50px 0 20px 0;
-  position: relative;
-  width: 100%;
+  margin: 0 auto 20px auto;
 }
 .menu-container {
-  margin: 0 auto;
-  width: 960px;
+  text-align: right;
+}
+.menu-logo-container {
+  border: 1px solid #999;
+  display: inline-block;
+  float: left;
+  height: 100px;
+  margin-top: 5px;
+  width: 200px;
 }
 .menu-title {
   color: #444;
@@ -52,37 +53,90 @@ body {
   text-transform: uppercase;
 }
 .menu-item-container {
+  display: inline-block;
   text-align: center;
+  width: 700px;
 }
-
 .menu-item {
+  color: #333;
   cursor: pointer;
   display: inline-block;
   margin: 0 0;
-  padding: 20px 20px; 
-  transition: 0.5s;
-  -moz-transition: 0.5s;
-  -webkit-transition: 0.5s;
+  padding: 80px 20px 20px 20px;
+  text-decoration: none;
+  transition: 0.1s;
+  -moz-transition: 0.1s;
+  -webkit-transition: 0.1s;
 }
-.menu-item:hover { 
-  background-color: #777; 
+.menu-item:hover, .menu-item.active { 
+  background-color: #5f74a6;
+  color: #fff;
+}
+.menu-logo {
+  background-color: #eee;
+  width: 60px;
+  height: 60px;
 }
 
 /**************************
  *         BODY
  **************************/
 .container {
-  background-color: #fdfdfd;
-  border: 1px solid #f2f2f2;
-  border-radius: 5px;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  box-shadow: 0 0 8px #eaeaea;
-  -webkit-box-shadow: 0 0 8px #eaeaea;
-  -moz-box-shadow: 0 0 8px #eaeaea;
-  margin: 0 auto 60px auto;
-  padding: 60px 30px;
-  width: 960px;
+  margin-bottom: 20px;
+}
+.container-left {
+  display: inline-block;
+  margin-right: 20px;
+  vertical-align: top;
+  width: 220px;
+}
+.container-left .title {
+  background-color: #454545;
+  color: #fff;
+  font-size: 17px;
+  padding: 5px 0 5px 20px;
+}
+.container-left .item {
+  background-color: #eee;
+  border: 1px solid #ccc;
+  height: 60px;
+  margin-top: 10px;
+}
+.container-right {
+  display: inline-block;
+  width: 713px;
+}
+.container-right .slider {
+  background-color: #5f74a6;
+  height: 300px;
+  margin-bottom: 15px;
+}
+.container-right .subtitle {
+  background-color: #454545;
+  color: #eee;
+  display: block;
+  margin-bottom: 15px;
+  padding: 5px 0 5px 25px;
+  width: 250px;
+}
+.quote-text {
+  color: #444;
+  margin: 15px 0;
+}
+.about-pic {
+  background-color: #e9e9e9;
+  border: 1px solid #cfcfcf;
+  display: inline-block;
+  margin-right: 10px;
+  height: 180px;
+  width: 125px;
+  vertical-align: top;
+}
+.about-text {
+  color: #555;
+  display: inline-block;
+  width: 300px;
+  vertical-align: top;
 }
 h1 {
   color: #555; 
@@ -107,6 +161,27 @@ h1 {
   line-height: 40px;
 }
 
+/**************************
+    OTHER PAGES (NOT HOME)
+ **************************/
+.container .header {
+  background-color: #363638;
+  height: 150px;
+  position: relative;
+}
+.container .header-title {
+  font-size: 50px;
+  color: #fff;
+  right: 30px;
+  position: absolute;
+  text-align: right;
+  top: 80px;
+  width: 100%;
+}
+.content {
+  display: block;
+  margin: 0 auto;
+}
 
 /**************************
  *        FOOTER
@@ -115,9 +190,7 @@ h1 {
   color: #999;
   font-size: 15px;
   float: right;
-  margin: 0 0 50px 0;
-  width: 960px;
-}
+  margin: 0 0 50px 0;}
 .footer-item {
   display: inline-block;
   padding: 10px 10px;

@@ -19,4 +19,5 @@ class BooksController < ApplicationController
       flash[:notice] = "#{@book.title} was successfully created."
       redirect_to books_path
     end
+  end
 end
