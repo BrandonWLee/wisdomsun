@@ -7,3 +7,4 @@ class EventsController < ApplicationController
     @event = Event.find(id)
   end
 end
+

@@ -23,4 +23,14 @@ ActiveRecord::Schema.define(:version => 20131024052935) do
     t.datetime "updated_at",  :null => false
   end
 
+  create_table "events", :force => true do |t|
+    t.string   "name"
+    t.string   "date"
+    t.string   "description"
+    t.string   "location"
+    t.string   "time"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
 end

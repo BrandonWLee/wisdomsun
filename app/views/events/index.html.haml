@@ -1,6 +1,19 @@
-%h1 Events 
-- @events.each do |event|
-    %p= link_to "#{event.name}", event_path(event)
-    %p= event.date
-    %p= event.location
+= stylesheet_link_tag "events", :media => "all"
+.wrapper
+  = render "/layouts/menu"
 
+  .container
+    .header
+      .header-title Events
+    .content
+      .img-box 
+        %img{:src => '/assets/events/palmtrees.jpg'}
+        %img{:src => '/assets/events/retreat.jpg'}
+      .events-box
+        - @events.each do |event|
+          .content-box
+            .event-box
+              .title= link_to "#{event.name}", event_path(event)
+              .date= event.date
+              .location= event.location
+  = render "/layouts/footer"

@@ -1,5 +1,22 @@
-%h3 Description:
+= stylesheet_link_tag "events", :media => "all"
+.wrapper
+  = render "/layouts/menu"
 
-%p#description= @event.description
-
-= link_to 'Back to event list', events_path
+  .container
+    .header
+      .header-title Events
+    .content
+      .description-box
+        .event-box
+          %p 
+            =@event.name
+          %p
+            =@event.date
+          %p
+            =@event.time
+          %p
+            =@event.location
+          %p
+            #description= @event.description
+          = link_to 'Back to event list', events_path
+  = render "/layouts/footer"
