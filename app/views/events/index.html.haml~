@@ -1,0 +1,15 @@
+= stylesheet_link_tag "events", :media => "all"
+.wrapper
+  = render "/layouts/menu"
+
+  .container
+    .header
+      .header-title Events
+    .content
+      - @events.each do |event|
+        .content-box
+          .event-box
+            .title= link_to "#{event.name}", event_path(event)
+            .date= event.date
+            .location= event.location
+  = render "/layouts/footer"
