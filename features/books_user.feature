@@ -7,10 +7,10 @@ Feature: books are all present on webpage and navigation works
 
 Background: books have been added to database
   Given the following books exist:
-  | title				| author		| price		 	| purchase_url		| publish_date
-  | Meditation 			| Brandon Lee	| 15.00			| fake_url			| 12-Dec-2004
-  | Beyond the Sunrise	| Jeff Zhan		| 20.00			| fake_url_2		| 4-May-2010
-  | Cultivating the Soul| Kevin Dip		| 13.50			| fake_url_3		| 23-Jan-2013
+  | title				| author		| price		 	| purchase_url		| publish_date	|
+  | Meditation 			| Brandon Lee	| 15.00			| fake_url			| 12-Dec-2004	|
+  | Beyond the Sunrise	| Jeff Zhan		| 20.00			| fake_url_2		| 4-May-2010	|
+  | Cultivating the Soul| Kevin Dip		| 13.50			| fake_url_3		| 23-Jan-2013	|
   
 
   And I am on the books page
@@ -41,25 +41,17 @@ Scenario: all the links_to_purchase are on page
   	Then I should see "Cultivating the Soul" before "23-Jan-2013"
 
 Scenario: clicking on book image leads to larger image
-  When I click on Meditation book image
-  	Then I should be on the Meditation image popup page
-  When I click on Beyond the Sunrise book image
-  	Then I should be on the Beyond the Sunrise image popup page
-  When I click on Cultivating the Soul image
-  	Then I should be on the Cultivating the Soul image popup page
+  When I click on "Meditation" book image
+  	Then I should be on the "Meditation" image popup page
+  When I click on "Beyond the Sunrise" book image
+  	Then I should be on the "Beyond the Sunrise" image popup page
+  When I click on "Cultivating the Soul" image
+  	Then I should be on the "Cultivating the Soul" image popup page
 
 Scenario: clicking on the link to purchase page leads to correct links
-  When I click on Meditation purchase link
-  	Then I should be on the Meditation purchase link
-  When I click on the Beyond the Sunrise purchase link
-  	Then I should be on the Beyond the Sunrise purchase link
-  When I click on the Cultivating the Soul purchase link
-  	Then I should be on the Cultivating the Soul purchase link
-
-Scenario: clicking on the title leads to detailed description of the book
-  When I click on Meditation 
-  	Then I should see more details about Meditation
-  When I click on Beyond the Sunrise
-  	Then I should see more details about Beyond the Sunrise
-  When I click on Cultivating the Soul
-  	Then I should see more details about Cultivating the Soul  	
+  When I click on "Meditation" purchase link
+  	Then I should be on the "Meditation" purchase link
+  When I click on the "Beyond the Sunrise" purchase link
+  	Then I should be on the "Beyond the Sunrise" purchase link
+  When I click on the "Cultivating the Soul" purchase link
+  	Then I should be on the "Cultivating the Soul" purchase link
