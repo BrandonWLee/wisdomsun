@@ -7,10 +7,10 @@ Feature: books are all present on webpage and navigation works
 
 Background: books have been added to database
   Given the following books exist:
-  | title				| author		| price		 	| purchase_url		| publish_date	|
-  | Meditation 			| Brandon Lee	| 15.00			| fake_url			| 12-Dec-2004	|
-  | Beyond the Sunrise	| Jeff Zhan		| 20.00			| fake_url_2		| 4-May-2010	|
-  | Cultivating the Soul| Kevin Dip		| 13.50			| fake_url_3		| 23-Jan-2013	|
+  | title				| author		| price		 	| purchase_url		| 
+  | Meditation 			| Brandon Lee	| 15.00			| fake_url			| 
+  | Beyond the Sunrise	| Jeff Zhan		| 20.00			| fake_url_2		| 
+  | Cultivating the Soul| Kevin Dip		| 13.50			| fake_url_3		|
   
 
   And I am on the books page
