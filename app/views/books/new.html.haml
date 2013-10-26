@@ -1,0 +1,20 @@
+%h1 Upload a new book
+
+= form_tag books_path do
+
+  = label :book, :title, 'Title'
+  = text_field :book, 'title'
+
+  = label :book, :description, 'Description'
+  = text_field :book, 'description'
+
+  = label :book, :author, 'Author'
+  = text_field :book, 'author'
+
+  = label :book, :purchaseURL, 'PurchaseURL'
+  = text_field :book, 'purchaseURL'
+
+  = label :book, :pictureTest, 'PictureTest'
+  = file_field :book, 'pictureTest'
+
+  = submit_tag 'Save Changes'
