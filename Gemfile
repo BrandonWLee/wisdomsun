@@ -6,16 +6,29 @@ gem 'rails', '3.2.14'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 # BEFORE: gem 'sqlite3'
-gem 'sqlite3', :group => [:development, :test]
+group :development, :test do
+  gem 'sqlite3'
+  gem 'debugger'
+  gem 'cucumber-rails-training-wheels'
+  gem 'database_cleaner'
+  gem 'capybara'
+  gem 'launchy'
+  gem 'rspec-rails'
+  gem 'simplecov'
+end
 group :production do
   gem 'thin'
   gem 'pg'
+end
+group :test do
+  gem 'cucumber-rails', :require => false
 end
 
 
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
+  gem 'therubyracer', '0.10.2', :platforms => :ruby
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
 

@@ -5,13 +5,11 @@ Feature: add, remove, or modify books
   I want to log in as admin to modify the Books page
 
 Background: books have been added to database
-
   Given the following books exist:
   | title                | author        | description      | purchase_url  | picture             |
   | Guns and Cars        | Shensen Wang  | I..err..wut      | fake_url_1    | square_shensen.png  |
   | Don't be a Derp      | Jeff Zhan     | Vines are cool   | fake_url_2    | square_jeff.png     |
   | Why don't you Shave  | Kevin Dip     | I'm so awesome   | fake_url_3    | square_kevin.png    |
-
   And I am logged in as admin
   And I am on the books page
 
