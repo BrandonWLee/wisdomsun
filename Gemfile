@@ -9,7 +9,6 @@ gem 'rails', '3.2.14'
 group :development, :test do
   gem 'sqlite3'
   gem 'debugger'
-  gem 'cucumber-rails'
   gem 'cucumber-rails-training-wheels'
   gem 'database_cleaner'
   gem 'capybara'
@@ -20,6 +19,9 @@ end
 group :production do
   gem 'thin'
   gem 'pg'
+end
+group :test do
+  gem 'cucumber-rails', :require => false
 end
 
 
@@ -36,7 +38,7 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'jquery-rails'
+gem 'jquery-rails', '~> 2.3.0'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -55,3 +57,9 @@ gem 'jquery-rails'
 
 # haml
 gem 'haml-rails'
+
+# devise for user login authentication
+gem 'devise'
+
+# active-admin
+gem 'activeadmin'

@@ -14,5 +14,9 @@
 /log/*.log
 /tmp
 
+
 #aptana
 /.metadata/
+
+*~
+

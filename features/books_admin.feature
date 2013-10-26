@@ -5,26 +5,28 @@ Feature: add, remove, or modify books
   I want to log in as admin to modify the Books page
 
 Background: books have been added to database
-  Given I am logged in as admin
-  And I am on the books page
+
   Given the following books exist:
-  | title                 | author        | price       | link_to_purchase  | publish_date
-  | Mediation             | Brandon Lee   | 15.00       | fake_url          | 12-Dec-2004
-  | Beyond the Sunrise    | Jeff Zhan     | 20.00       | fake_url_2        | 4-May-2010
-  | Cultivating the Soul  | Kevin Dip     | 13.50       | fake_url_3        | 23-Jan-2013 
+  | title                | author        | description      | purchase_url  | picture             |
+  | Guns and Cars        | Shensen Wang  | I..err..wut      | fake_url_1    | square_shensen.png  |
+  | Don't be a Derp      | Jeff Zhan     | Vines are cool   | fake_url_2    | square_jeff.png     |
+  | Why don't you Shave  | Kevin Dip     | I'm so awesome   | fake_url_3    | square_kevin.png    |
+
+  And I am logged in as admin
+  And I am on the books page
 
 Scenario: add a book
   When I add the book:
-  | Wisdom Moon   | Samuel Leung   | 10.95     | fake_url_4  | 20-Oct-2014
-  Then I should see "Wisdom Moon"
-  And I should see "Wisdom Moon" before "Samuel Leung"
-  And I should see "Samuel Leung" before "$10.95"
-  And I should see "$10.95" before "fake_url_4"
-  And I should see "fake_url_4" before "20-Oct-2014"
+  | Freakin' Sam   | Samuel Leung   | It's about anime   | fake_url_4  | square_sam.png  |
+  Then I should see "Freakin' Sam"
+  And I should see "Freakin' Sam" before "Samuel Leung"
+  And I should see "Samuel Leung" before "It's about anime"
+  And I should see "It's about anime" before "fake_url_4"
+  And I should see "fake_url_4" before "square_sam.png"
 
 Scenario: delete a book
-  When I delete the book "Meditation"
-  Then I should not see "Meditation"
+  When I delete the book "Guns and Cars"
+  Then I should not see "Guns and Cars"
 
 Scenario: deleting a book that doesn't exist should fail
   When I delete the book "Buddha"
@@ -32,11 +34,11 @@ Scenario: deleting a book that doesn't exist should fail
   And I should see the error "Book doesn't exist"
 
 Scenario: modify a book's info
-  When I change "Beyond the Sunrise's" "price" to "$100.00"
-  Then I should see "Beyond the Sunrise" before "$100.00"
+  When I change "Don't be a Derp" "description" to "Nigga my NIGGA"
+  Then I should see "Nigga my NIGGA" before "fake_url_4"
 
 Scenario: modify a book that doesn't exist should fail
-  When I change "Buddha's" "price to "$100.00"
+  When I change "Buddha's" "description" to "Peace and love is the answer"
   Then I should be on the Books page
   And I should see the error "Book doesn't exist"
 
