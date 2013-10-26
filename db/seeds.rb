@@ -5,3 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+#
+#
+events = Event.create({ name: 'Meditation Circle', date: 'September', description: 'Meet weekly for engaging meditating sessions', location: 'San Francisco'})
+
+
