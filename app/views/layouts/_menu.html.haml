@@ -9,10 +9,10 @@
       .logo
       .menu-title 
     .menu-item-container
-      .menu-item Home
-      .menu-item About
-      .menu-item Books
-      .menu-item Events
-      .menu-item Downloads
-      .menu-item Bulletin
-      .menu-item Contact
+      = link_to 'Home', '/', :class => 'menu-item', :id => 'menu-home'
+      = link_to 'About', '/about', :class => 'menu-item', :id => 'menu-about'
+      = link_to 'Books', '/books', :class => 'menu-item', :id => 'menu-books'
+      = link_to 'Events', '/events', :class => 'menu-item', :id => 'menu-events'
+      = link_to 'Downloads', '/downloads', :class => 'menu-item', :id => 'menu-downloads'
+      = link_to 'Bulletin', '/bulletin', :class => 'menu-item', :id => 'menu-bulletin'
+      = link_to 'Contact', '/contact', :class => 'menu-item', :id => 'menu-contact'

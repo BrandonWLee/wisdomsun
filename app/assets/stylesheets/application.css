@@ -40,7 +40,7 @@ body {
   display: inline-block;
   float: left;
   height: 100px;
-  margin-top: 25px;
+  margin-top: 5px;
   width: 200px;
 }
 .menu-title {
@@ -57,17 +57,18 @@ body {
   text-align: center;
   width: 700px;
 }
-
 .menu-item {
+  color: #333;
   cursor: pointer;
   display: inline-block;
   margin: 0 0;
-  padding: 100px 20px 20px 20px;
+  padding: 80px 20px 20px 20px;
+  text-decoration: none;
   transition: 0.1s;
   -moz-transition: 0.1s;
   -webkit-transition: 0.1s;
 }
-.menu-item:hover { 
+.menu-item:hover, .menu-item.active { 
   background-color: #5f74a6;
   color: #fff;
 }
