@@ -1,3 +1,7 @@
-$('.flexslider').flexslider({
-  animate: "slide"
+$(document).ready(function(){
+  $('.flexslider').flexslider({
+    animate: "slide",
+    controlNav: false,
+    directionNav: false
+  });
 });

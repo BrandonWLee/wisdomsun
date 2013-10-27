@@ -9,5 +9,9 @@
   list-style-type: none;
 }
 #slider img {
-  width: 650px;
+  width: 100%;
+}
+#slider ul.slides {
+  margin: 0;
+  padding: 0;
 }
