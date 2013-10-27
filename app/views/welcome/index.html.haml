@@ -9,8 +9,9 @@
     #events.container-left
       %a{ :href => '/events' }
         .title Event
-      .item
-      .item
+      - @events.each do |event|
+        .item
+          .item-title= event.name
     .container-right
       #slider.flexslider
         %ul.slides
@@ -38,3 +39,4 @@
 
   = render "/layouts/footer"
 
+= javascript_include_tag "welcome"
