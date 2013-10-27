@@ -228,6 +228,7 @@ PLATFORMS
 DEPENDENCIES
   activeadmin
   capybara
+  carrierwave
   coffee-rails (~> 3.2.1)
   cucumber-rails
   cucumber-rails-training-wheels
