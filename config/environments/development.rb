@@ -37,4 +37,7 @@ Wisdomsun::Application.configure do
 
   # Devise default url
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+
+  # Paperclip using ImageMagick
+  Paperclip.options[:command_path] = "/usr/local/bin/"
 end

@@ -67,3 +67,7 @@ gem 'devise'
 
 # active-admin
 gem 'activeadmin'
+
+#file upload
+gem "paperclip", "~> 3.5.2"
+gem "paperclip-storage-ftp", "~> 1.1.0"
