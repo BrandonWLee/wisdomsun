@@ -46,7 +46,7 @@ describe Users::SessionsController do
 		response.should render_template('devise/sessions/new')
 	end
 
-	it "should do something when it posts destroy" do
+	it "should redirect to '/' after post destroy" do
 		user = mock('user')
 		user.stub(:to_key).and_return(1)
 		user.stub(:authenticatable_salt).and_return(1)
