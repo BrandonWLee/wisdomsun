@@ -98,6 +98,11 @@ GEM
     erubis (2.7.0)
     eventmachine (1.0.3)
     execjs (2.0.2)
+    factory_girl (4.2.0)
+      activesupport (>= 3.0.0)
+    factory_girl_rails (4.2.1)
+      factory_girl (~> 4.2.0)
+      railties (>= 3.0.0)
     formtastic (2.2.1)
       actionpack (>= 3.0)
     gherkin (2.12.2)
@@ -235,13 +240,13 @@ PLATFORMS
 DEPENDENCIES
   activeadmin
   capybara
-  carrierwave
   coffee-rails (~> 3.2.1)
   cucumber-rails
   cucumber-rails-training-wheels
   database_cleaner
   debugger
   devise
+  factory_girl_rails (~> 4.0)
   haml-rails
   jquery-rails (~> 2.3.0)
   launchy
