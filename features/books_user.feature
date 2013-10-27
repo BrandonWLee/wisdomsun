@@ -40,14 +40,6 @@ Scenario: all the links_to_purchase are on page
   	Then I should see "Beyond the Sunrise" before "4-May-2010"
   	Then I should see "Cultivating the Soul" before "23-Jan-2013"
 
-Scenario: clicking on book image leads to larger image
-  When I click on "Meditation" book image
-  	Then I should be on the "Meditation" image popup page
-  When I click on "Beyond the Sunrise" book image
-  	Then I should be on the "Beyond the Sunrise" image popup page
-  When I click on "Cultivating the Soul" image
-  	Then I should be on the "Cultivating the Soul" image popup page
-
 Scenario: clicking on the link to purchase page leads to correct links
   When I click on "Meditation" purchase link
   	Then I should be on the "Meditation" purchase link
