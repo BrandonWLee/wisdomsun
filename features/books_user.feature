@@ -51,7 +51,7 @@ Scenario: clicking on book image leads to larger image
 Scenario: clicking on the link to purchase page leads to correct links
   When I click on "Meditation" purchase link
   	Then I should be on the "Meditation" purchase link
-  When I click on the "Beyond the Sunrise" purchase link
+  When I click on "Beyond the Sunrise" purchase link
   	Then I should be on the "Beyond the Sunrise" purchase link
-  When I click on the "Cultivating the Soul" purchase link
+  When I click on "Cultivating the Soul" purchase link
   	Then I should be on the "Cultivating the Soul" purchase link

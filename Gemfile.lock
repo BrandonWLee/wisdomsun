@@ -55,10 +55,17 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
+<<<<<<< HEAD
     carrierwave (0.9.0)
       activemodel (>= 3.2.0)
       activesupport (>= 3.2.0)
       json (>= 1.7)
+=======
+    climate_control (0.0.3)
+      activesupport (>= 3.0)
+    cocaine (0.5.3)
+      climate_control (>= 0.0.3, < 1.0)
+>>>>>>> dc1c55b6ffbc2994c5013de29d6d68327040eea6
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
       railties (~> 3.2.0)
@@ -143,6 +150,13 @@ GEM
     nokogiri (1.6.0)
       mini_portile (~> 0.5.0)
     orm_adapter (0.4.0)
+    paperclip (3.5.2)
+      activemodel (>= 3.0.0)
+      activesupport (>= 3.0.0)
+      cocaine (~> 0.5.3)
+      mime-types
+    paperclip-storage-ftp (1.1.0)
+      paperclip
     pg (0.17.0)
     polyamorous (0.5.0)
       activerecord (~> 3.0)
@@ -214,9 +228,9 @@ GEM
       polyglot
       polyglot (>= 0.3.1)
     tzinfo (0.3.38)
-    uglifier (2.2.1)
+    uglifier (2.3.0)
       execjs (>= 0.3.0)
-      multi_json (~> 1.0, >= 1.0.2)
+      json (>= 1.8.0)
     warden (1.2.3)
       rack (>= 1.0)
     xpath (2.0.0)
@@ -228,7 +242,10 @@ PLATFORMS
 DEPENDENCIES
   activeadmin
   capybara
+<<<<<<< HEAD
   carrierwave
+=======
+>>>>>>> dc1c55b6ffbc2994c5013de29d6d68327040eea6
   coffee-rails (~> 3.2.1)
   cucumber-rails
   cucumber-rails-training-wheels
@@ -238,6 +255,8 @@ DEPENDENCIES
   haml-rails
   jquery-rails (~> 2.3.0)
   launchy
+  paperclip (~> 3.5.2)
+  paperclip-storage-ftp (~> 1.1.0)
   pg
   rails (= 3.2.14)
   rspec-rails
