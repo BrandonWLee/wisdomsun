@@ -15,7 +15,7 @@ class BooksController < ApplicationController
   def new
   end
   def create
-    @book = Book.create!(params[:movie])
+    @book = Book.create!(params[:book])
     flash[:notice] = "#{@book.title} was successfully created."
     redirect_to books_path
   end
