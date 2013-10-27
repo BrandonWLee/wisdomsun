@@ -2,17 +2,16 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.welcome-slider {
-  background-color: #444;
-  height: 400px;
-  margin: 0 auto;
-  width: 90%;
+#slider {
+  background-color: #333;
+  margin-bottom: 15px;
+  height: 450px;
+  list-style-type: none;
 }
-
-.welcome-quote {
-  color: #888;
-  font-size: 22px;
-  font-style: italic;
-  margin: 30px auto 40px auto;
-  text-align: center;
+#slider img {
+  width: 100%;
+}
+#slider ul.slides {
+  margin: 0;
+  padding: 0;
 }

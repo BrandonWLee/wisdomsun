@@ -56,7 +56,16 @@ end
 When /^(?:|I )follow "([^"]*)"$/ do |link|
   click_link(link)
 end
-
+When /^I press (.+)$/ do |tab|
+  if tab.index('tab') != nil
+    element = tab.split(' tab')[0]
+    selector = element.downcase.gsub(/\s/,'')
+    find("#menu-"+selector).click
+  else
+    selector = tab.downcase.gsub(/\s/,'-')
+    find("#"+selector+" a").click
+  end
+end
 When /^(?:|I )fill in "([^"]*)" with "([^"]*)"$/ do |field, value|
   fill_in(field, :with => value)
 end

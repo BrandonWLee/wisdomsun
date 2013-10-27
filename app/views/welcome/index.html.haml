@@ -1,18 +1,29 @@
+= stylesheet_link_tag "flexslider", :media => "all"
+= stylesheet_link_tag "welcome.css.scss", :media => "all"
+= javascript_include_tag "jquery.flexslider-min"
+
 .wrapper
   = render "/layouts/menu"
 
   .container
-    .container-left
-      .title Event
-      .item
-      .item
+    #events.container-left
+      %a{ :href => '/events' }
+        .title Event
+      - @events.each do |event|
+        .item
+          .item-title= event.name
     .container-right
-      .slider
-      .section
+      #slider.flexslider
+        %ul.slides
+          %li
+            %img{ :src => '/assets/welcome/slide1.jpg' }
+          %li
+            %img{ :src => '/assets/welcome/slide2.jpg' }
+      #quotes.section
         .subtitle Quote of the Day
         .quote-text "You only lose what you cling to." -Buddha
       .line
-      .section
+      #about-us.section
         .subtitle About Us
         .about-pic
         .about-pic
@@ -20,10 +31,12 @@
           %p Wisdom Sun is about bringing meditation teachings home: Home to our own culture and locale; home to our daily life; home to our mind, body, and heart.
           %p{:class => 'read-more'} Read more...
       .line
-      .section
-        .subtitle Around the World
+      #around-the-web.section
+        %a{ :href => '/aroundtheweb' }
+          .subtitle Around the World
         .text
           Text
 
   = render "/layouts/footer"
 
+= javascript_include_tag "welcome"

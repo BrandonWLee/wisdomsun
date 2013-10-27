@@ -26,6 +26,13 @@ module NavigationHelpers
     when /^the Similar Movies page for "(.*)"$/
       movie = Movie.find_by_title($1)
       movie_findbydirector_path(movie)
+    when /^About/ then '/about'
+    when /^Downloads/ then '/downloads'
+    when /^Bulletin/ then '/bulletin'
+    when /^Contact/ then '/contact'
+    when /^Events/ then '/events'
+    when /^Books/ then '/books'
+    when /^Around the Web/ then '/aroundtheweb'
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:

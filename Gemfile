@@ -24,10 +24,6 @@ group :test do
   gem 'cucumber-rails', :require => false
 end
 
-# CarrierWave for Image uploading
-
-gem "carrierwave"
-
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -67,3 +63,7 @@ gem 'devise'
 
 # active-admin
 gem 'activeadmin'
+
+#file upload
+gem "paperclip", "~> 3.5.2"
+gem "paperclip-storage-ftp", "~> 1.1.0"

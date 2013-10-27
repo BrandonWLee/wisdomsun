@@ -99,17 +99,23 @@ body {
 .container-left .item {
   background-color: #eee;
   border: 1px solid #ccc;
+  color: #777;
+  font-size: 14px;
   height: 60px;
   margin-top: 10px;
+}
+.container-left .item .item-title {
+
+}
+.container-left .item .item-date {
+
+}
+.container-left .item .item-location {
+
 }
 .container-right {
   display: inline-block;
   width: 713px;
-}
-.container-right .slider {
-  background-color: #5f74a6;
-  height: 300px;
-  margin-bottom: 15px;
 }
 .container-right .subtitle {
   background-color: #454545;

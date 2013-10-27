@@ -11,6 +11,9 @@ Wisdomsun::Application.routes.draw do
   resources :books
   resources :events
 
+  resources :aroundtheweb
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
