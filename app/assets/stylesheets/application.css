@@ -106,11 +106,6 @@ body {
   display: inline-block;
   width: 713px;
 }
-.container-right .slider {
-  background-color: #5f74a6;
-  height: 300px;
-  margin-bottom: 15px;
-}
 .container-right .subtitle {
   background-color: #454545;
   color: #eee;
