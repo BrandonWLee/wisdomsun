@@ -10,23 +10,28 @@ Given /the following books exist/ do |books_table|
   end
 end
 
-Then /I should see "(.*)" before "(.*)"/ do |e1, e2|
+Then /the book title "(.*)" should be on page/ do |title|
+  pattern = title
+  !page.body.match(pattern)
+end
+
+Then /the book title "(.*)" before "(.*)"/ do |e1, e2|
   #  ensure that that e1 occurs before e2.
   #  page.body is the entire content of the page as a string.
   pattern = e1 + ".*" + e2
   !page.body.match(pattern).nil?
 end
 
-When(/^I click on "(.*?)" book image$/) do |arg1|
-  pending # express the regexp above with the code you wish you had
+# When(/^I click on the "(.*)" purchase link$/) do |arg1|
+  # click_link(Book.find_by_title(arg1).purchase_url)
+# end
+
+
+When(/^I click on "(.*?)" purchase link$/) do |arg1|
+  path_to(Book.find_by_title(arg1).purchase_url)
 end
 
-When(/^I click on "(.*?)" image$/) do |arg1|
-  pending # express the regexp above with the code you wish you had
+Then /^I will be on the "(.*)" purchase link$/ do |arg1|
+  # http://www.example.com is the default root for testing
+  current_url.should == "http://www.example.com#{path_to(Book.find_by_title(arg1).purchase_url)}"
 end
-
-When(/^I click on the "(.*?)" purchase link$/) do |arg1|
-  click_link(Book.find_by_title($1).purchase_url)
-end
-
-

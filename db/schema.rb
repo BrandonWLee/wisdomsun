@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(:version => 20131026232148) do
     t.string   "author"
     t.text     "description"
     t.string   "picture"
-    t.string   "purchaseURL"
+    t.string   "purchase_url"
     t.datetime "created_at",           :null => false
     t.datetime "updated_at",           :null => false
     t.string   "picture_file_name"
