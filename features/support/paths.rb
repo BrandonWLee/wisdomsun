@@ -12,20 +12,13 @@ module NavigationHelpers
   #
   def path_to(page_name)
     case page_name
-   
+    when /^\// then
+      '/'
     when /^the books page$/ then
       '/books'
+    when /^books/ then
+      '/books'
     when /^the (Wisdom Sun )?home\s?page$/ then '/'
-    when /^the movies page$/ then '/movies'
-    when /^the edit page for "(.*)"$/
-      movie = Movie.find_by_title($1)
-      edit_movie_path(movie)
-    when /^the details page for "(.*)"$/
-      movie = Movie.find_by_title($1)
-      movie_path(movie)
-    when /^the Similar Movies page for "(.*)"$/
-      movie = Movie.find_by_title($1)
-      movie_findbydirector_path(movie)
     when /^About/ then '/about'
     when /^Downloads/ then '/downloads'
     when /^Bulletin/ then '/bulletin'
