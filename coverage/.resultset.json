@@ -6,7 +6,7 @@
   },
   "RSpec": {
     "coverage": {
-      "/home/saasbook/Desktop/WisdomSun/wisdomsun/app/controllers/application_controller.rb": [
+      "/home/saasbook/Documents/Aptana_Studio_3_Workspace/WisdomSun/app/controllers/application_controller.rb": [
         1,
         1,
         null,
@@ -24,141 +24,133 @@
         null,
         null
       ],
-      "/home/saasbook/Desktop/WisdomSun/wisdomsun/app/helpers/application_helper.rb": [
+      "/home/saasbook/Documents/Aptana_Studio_3_Workspace/WisdomSun/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/home/saasbook/Desktop/WisdomSun/wisdomsun/app/helpers/books_helper.rb": [
+      "/home/saasbook/Documents/Aptana_Studio_3_Workspace/WisdomSun/app/helpers/books_helper.rb": [
         1,
         null
       ],
-      "/home/saasbook/Desktop/WisdomSun/wisdomsun/app/helpers/events_helper.rb": [
+      "/home/saasbook/Documents/Aptana_Studio_3_Workspace/WisdomSun/app/helpers/events_helper.rb": [
         1,
         null
       ],
-      "/home/saasbook/Desktop/WisdomSun/wisdomsun/app/helpers/users_helper.rb": [
+      "/home/saasbook/Documents/Aptana_Studio_3_Workspace/WisdomSun/app/helpers/users_helper.rb": [
         1,
         null
       ],
-      "/home/saasbook/Desktop/WisdomSun/wisdomsun/app/helpers/welcome_helper.rb": [
+      "/home/saasbook/Documents/Aptana_Studio_3_Workspace/WisdomSun/app/helpers/welcome_helper.rb": [
         1,
         null
       ],
-      "/home/saasbook/Desktop/WisdomSun/wisdomsun/app/admin/user.rb": [
-        1,
-        null,
-        null
-      ],
-      "/home/saasbook/Desktop/WisdomSun/wisdomsun/app/models/user.rb": [
-        1,
-        null,
-        null,
-        1,
-        null,
-        null,
-        null,
+      "/home/saasbook/Documents/Aptana_Studio_3_Workspace/WisdomSun/app/admin/user.rb": [
         1,
         null,
         null
       ],
-      "/home/saasbook/Desktop/WisdomSun/wisdomsun/app/admin/dashboard.rb": [
+      "/home/saasbook/Documents/Aptana_Studio_3_Workspace/WisdomSun/app/models/user.rb": [
         1,
         null,
-        1,
         null,
         1,
-        0,
-        0,
-        0,
-        0,
         null,
         null,
         null,
-        null,
-        null,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        null,
-        null,
-        null,
-        null,
-        null,
-        0,
-        0,
-        0,
-        0,
-        0,
-        null,
-        null,
-        null,
-        null,
-        null,
-        0,
-        0,
-        0,
-        0,
-        0,
-        null,
-        null,
-        null,
-        null,
-        null,
-        0,
-        0,
-        0,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      "/home/saasbook/Desktop/WisdomSun/wisdomsun/app/admin/book.rb": [
         1,
         null,
         null
       ],
-      "/home/saasbook/Desktop/WisdomSun/wisdomsun/app/models/book.rb": [
-        1,
-        1,
-        1,
-        1,
+      "/home/saasbook/Documents/Aptana_Studio_3_Workspace/WisdomSun/app/admin/dashboard.rb": [
         1,
         null,
+        1,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
         null,
         null,
         null,
         null,
         null,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
         null,
+        null,
+        null,
+        null,
+        null,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null,
+        null,
+        null,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null,
+        null,
+        null,
+        0,
+        0,
+        0,
         null,
         null,
         null,
         null,
         null
       ],
-      "/home/saasbook/Desktop/WisdomSun/wisdomsun/app/admin/event.rb": [
+      "/home/saasbook/Documents/Aptana_Studio_3_Workspace/WisdomSun/app/admin/book.rb": [
         1,
         null,
         null
       ],
-      "/home/saasbook/Desktop/WisdomSun/wisdomsun/app/models/event.rb": [
+      "/home/saasbook/Documents/Aptana_Studio_3_Workspace/WisdomSun/app/models/book.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/home/saasbook/Documents/Aptana_Studio_3_Workspace/WisdomSun/app/admin/event.rb": [
+        1,
+        null,
+        null
+      ],
+      "/home/saasbook/Documents/Aptana_Studio_3_Workspace/WisdomSun/app/models/event.rb": [
         1,
         1,
         null
       ],
-      "/home/saasbook/Desktop/WisdomSun/wisdomsun/app/controllers/about_controller.rb": [
-        1,
-        1,
-        null,
-        null,
-        null,
-        null
-      ],
-      "/home/saasbook/Desktop/WisdomSun/wisdomsun/app/controllers/aroundtheweb_controller.rb": [
+      "/home/saasbook/Documents/Aptana_Studio_3_Workspace/WisdomSun/app/controllers/about_controller.rb": [
         1,
         1,
         null,
@@ -166,7 +158,15 @@
         null,
         null
       ],
-      "/home/saasbook/Desktop/WisdomSun/wisdomsun/app/controllers/books_controller.rb": [
+      "/home/saasbook/Documents/Aptana_Studio_3_Workspace/WisdomSun/app/controllers/aroundtheweb_controller.rb": [
+        1,
+        1,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/home/saasbook/Documents/Aptana_Studio_3_Workspace/WisdomSun/app/controllers/books_controller.rb": [
         1,
         1,
         2,
@@ -190,25 +190,25 @@
         null,
         null
       ],
-      "/home/saasbook/Desktop/WisdomSun/wisdomsun/app/controllers/bulletin_controller.rb": [
+      "/home/saasbook/Documents/Aptana_Studio_3_Workspace/WisdomSun/app/controllers/bulletin_controller.rb": [
         1,
         1,
         null,
         null
       ],
-      "/home/saasbook/Desktop/WisdomSun/wisdomsun/app/controllers/contact_controller.rb": [
+      "/home/saasbook/Documents/Aptana_Studio_3_Workspace/WisdomSun/app/controllers/contact_controller.rb": [
         1,
         1,
         null,
         null
       ],
-      "/home/saasbook/Desktop/WisdomSun/wisdomsun/app/controllers/downloads_controller.rb": [
+      "/home/saasbook/Documents/Aptana_Studio_3_Workspace/WisdomSun/app/controllers/downloads_controller.rb": [
         1,
         1,
         null,
         null
       ],
-      "/home/saasbook/Desktop/WisdomSun/wisdomsun/app/controllers/events_controller.rb": [
+      "/home/saasbook/Documents/Aptana_Studio_3_Workspace/WisdomSun/app/controllers/events_controller.rb": [
         1,
         1,
         2,
@@ -220,7 +220,7 @@
         null,
         null
       ],
-      "/home/saasbook/Desktop/WisdomSun/wisdomsun/app/controllers/users/sessions_controller.rb": [
+      "/home/saasbook/Documents/Aptana_Studio_3_Workspace/WisdomSun/app/controllers/users/sessions_controller.rb": [
         1,
         1,
         null,
@@ -256,11 +256,11 @@
         null,
         null
       ],
-      "/home/saasbook/Desktop/WisdomSun/wisdomsun/app/controllers/users_controller.rb": [
+      "/home/saasbook/Documents/Aptana_Studio_3_Workspace/WisdomSun/app/controllers/users_controller.rb": [
         1,
         null
       ],
-      "/home/saasbook/Desktop/WisdomSun/wisdomsun/app/controllers/welcome_controller.rb": [
+      "/home/saasbook/Documents/Aptana_Studio_3_Workspace/WisdomSun/app/controllers/welcome_controller.rb": [
         1,
         1,
         1,
@@ -268,6 +268,6 @@
         null
       ]
     },
-    "timestamp": 1382938183
+    "timestamp": 1382939682
   }
 }
