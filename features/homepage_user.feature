@@ -44,15 +44,15 @@ Scenario: navigate to Around the Web
     Then I should be on Around the Web
 
 Scenario: seeing all elements
-  Then I should see Slider
-  And I should see Events
-  And I should see Around the Web
-  And I should see About Us 
-  And I should see Home tab
-  And I should see About tab
-  And I should see Downloads tab
-  And I should see Books tab
-  And I should see Bulletin tab
-  And I should see Contact tab
-  And I should see Events tab
+  Then I should see element Slider
+  And I should see element Events
+  And I should see element Around the Web
+  And I should see element About Us 
+  And I should see element Home tab
+  And I should see element About tab
+  And I should see element Downloads tab
+  And I should see element Books tab
+  And I should see element Bulletin tab
+  And I should see element Contact tab
+  And I should see element Events tab
 
