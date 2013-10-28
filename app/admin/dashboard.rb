@@ -12,42 +12,43 @@ ActiveAdmin.register_page "Dashboard" do
 
     # Here is an example of a simple dashboard with columns and panels.
     
-     columns do
-       column do
-         panel "Books" do
-           ul do
-             Book.all.map do |book|
-               li link_to(book.title, book_path(book))
-             end
-           end
-         end
-       end
-
-       column do
-         panel "Events" do
-           ul do
-             Event.all.map do |event|
-               li link_to(event.name, event_path(event))
-             end
-           end
-         end
-       end
-
-       column do
-         panel "Users" do
-           ul do
-             User.all.map do |user|
-               li user.email
-             end
-           end
-         end
-       end
-
-       column do
-         panel "Info" do
-           para "Welcome to ActiveAdmin."
-         end
-       end
-     end
-  end # content
+#     columns do
+#       column do
+#         panel "Books" do
+#           ul do
+#             Book.all.map do |book|
+#               li link_to(book.title, book_path(book))
+#             end
+#           end
+#         end
+#       end
+#
+#       column do
+#         panel "Events" do
+#           ul do
+#             Event.all.map do |event|
+#               li link_to(event.name, event_path(event))
+#             end
+#           end
+#         end
+#       end
+#
+#       column do
+#         panel "Users" do
+#           ul do
+#             User.all.map do |user|
+#               li user.email
+#             end
+#           end
+#         end
+#       end
+#
+#       column do
+#         panel "Info" do
+#           para "Welcome to ActiveAdmin."
+#         end
+#       end
+#     end
+#  end # content
+  end
 end
