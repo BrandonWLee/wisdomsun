@@ -33,6 +33,7 @@ module NavigationHelpers
     when /^Events/ then '/events'
     when /^Books/ then '/books'
     when /^Around the Web/ then '/aroundtheweb'
+    when /the admin (panel|page)/ then admin_dashboard_path
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
