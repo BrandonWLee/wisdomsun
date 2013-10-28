@@ -29,7 +29,7 @@
         .about-pic
         .about-text
           %p Wisdom Sun is about bringing meditation teachings home: Home to our own culture and locale; home to our daily life; home to our mind, body, and heart.
-          %p{:class => 'read-more'} Read more...
+          %p{:id => 'read-more', :class => 'read-more'}= link_to "Read more...", '/about'
       .line
       #around-the-web.section
         %a{ :href => '/aroundtheweb' }
