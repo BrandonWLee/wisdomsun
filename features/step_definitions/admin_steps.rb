@@ -22,7 +22,6 @@ When /I login with the correct admin login information/ do
   fill_in("Email", :with => "admin@wisdomsun.org")
   fill_in("Password", :with => "password")
   click_button("Sign in")
-  save_and_open_page
 end
 
 
@@ -30,7 +29,6 @@ When /I login with the incorrect admin login information/ do
   fill_in("Email", :with => "user@wisdomsun.org")
   fill_in("Password", :with => "password")
   click_button("Sign in")
-  save_and_open_page
 end
 
 Given /I am logged in as admin/ do

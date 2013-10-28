@@ -25,6 +25,7 @@ module NavigationHelpers
     when /^Contact/ then '/contact'
     when /^Events/ then '/events'
     when /^Books/ then '/books'
+    when /^the admin books page/ then '/admin/books'
     when /^Around the Web/ then '/aroundtheweb'
     when /the admin (panel|page)/ then admin_dashboard_path
 
