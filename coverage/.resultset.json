@@ -6,50 +6,50 @@
   },
   "RSpec": {
     "coverage": {
-      "/home/saasbook/Desktop/WisdomSun/wisdomsun/app/controllers/application_controller.rb": [
+      "/home/saasbook/code/wisdomsun/app/controllers/application_controller.rb": [
         1,
         1,
         null,
         1,
-        0,
-        0,
-        0,
-        0,
+        2,
+        2,
+        1,
+        1,
         null,
         null,
         null,
         1,
-        0,
-        0,
-        null,
-        null
-      ],
-      "/home/saasbook/Desktop/WisdomSun/wisdomsun/app/helpers/application_helper.rb": [
-        1,
-        null
-      ],
-      "/home/saasbook/Desktop/WisdomSun/wisdomsun/app/helpers/books_helper.rb": [
-        1,
-        null
-      ],
-      "/home/saasbook/Desktop/WisdomSun/wisdomsun/app/helpers/events_helper.rb": [
-        1,
-        null
-      ],
-      "/home/saasbook/Desktop/WisdomSun/wisdomsun/app/helpers/users_helper.rb": [
-        1,
-        null
-      ],
-      "/home/saasbook/Desktop/WisdomSun/wisdomsun/app/helpers/welcome_helper.rb": [
-        1,
-        null
-      ],
-      "/home/saasbook/Desktop/WisdomSun/wisdomsun/app/admin/user.rb": [
+        2,
         1,
         null,
         null
       ],
-      "/home/saasbook/Desktop/WisdomSun/wisdomsun/app/models/user.rb": [
+      "/home/saasbook/code/wisdomsun/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/home/saasbook/code/wisdomsun/app/helpers/books_helper.rb": [
+        1,
+        null
+      ],
+      "/home/saasbook/code/wisdomsun/app/helpers/events_helper.rb": [
+        1,
+        null
+      ],
+      "/home/saasbook/code/wisdomsun/app/helpers/users_helper.rb": [
+        1,
+        null
+      ],
+      "/home/saasbook/code/wisdomsun/app/helpers/welcome_helper.rb": [
+        1,
+        null
+      ],
+      "/home/saasbook/code/wisdomsun/app/admin/user.rb": [
+        1,
+        null,
+        null
+      ],
+      "/home/saasbook/code/wisdomsun/app/models/user.rb": [
         1,
         null,
         null,
@@ -61,7 +61,7 @@
         null,
         null
       ],
-      "/home/saasbook/Desktop/WisdomSun/wisdomsun/app/admin/dashboard.rb": [
+      "/home/saasbook/code/wisdomsun/app/admin/dashboard.rb": [
         1,
         null,
         1,
@@ -76,75 +76,89 @@
         null,
         null,
         null,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
         null,
         null,
         null,
         null,
         null,
-        0,
-        0,
-        0,
-        0,
-        0,
         null,
         null,
         null,
         null,
         null,
-        0,
-        0,
-        0,
-        0,
-        0,
         null,
         null,
         null,
         null,
         null,
-        0,
-        0,
-        0,
         null,
         null,
         null,
         null,
-        null
-      ],
-      "/home/saasbook/Desktop/WisdomSun/wisdomsun/app/admin/book.rb": [
-        1,
         null,
-        null
-      ],
-      "/home/saasbook/Desktop/WisdomSun/wisdomsun/app/models/book.rb": [
-        1,
-        1,
-        null
-      ],
-      "/home/saasbook/Desktop/WisdomSun/wisdomsun/app/admin/event.rb": [
-        1,
         null,
-        null
-      ],
-      "/home/saasbook/Desktop/WisdomSun/wisdomsun/app/models/event.rb": [
-        1,
-        1,
-        null
-      ],
-      "/home/saasbook/Desktop/WisdomSun/wisdomsun/app/controllers/about_controller.rb": [
-        1,
-        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
         null,
         null,
         null,
         null
       ],
-      "/home/saasbook/Desktop/WisdomSun/wisdomsun/app/controllers/books_controller.rb": [
+      "/home/saasbook/code/wisdomsun/app/admin/book.rb": [
+        1,
+        null,
+        null
+      ],
+      "/home/saasbook/code/wisdomsun/app/models/book.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/home/saasbook/code/wisdomsun/app/admin/event.rb": [
+        1,
+        null,
+        null
+      ],
+      "/home/saasbook/code/wisdomsun/app/models/event.rb": [
+        1,
+        1,
+        null
+      ],
+      "/home/saasbook/code/wisdomsun/app/controllers/about_controller.rb": [
+        1,
+        1,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/home/saasbook/code/wisdomsun/app/controllers/aroundtheweb_controller.rb": [
+        1,
+        1,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/home/saasbook/code/wisdomsun/app/controllers/books_controller.rb": [
         1,
         1,
         2,
@@ -168,25 +182,25 @@
         null,
         null
       ],
-      "/home/saasbook/Desktop/WisdomSun/wisdomsun/app/controllers/bulletin_controller.rb": [
+      "/home/saasbook/code/wisdomsun/app/controllers/bulletin_controller.rb": [
         1,
         1,
         null,
         null
       ],
-      "/home/saasbook/Desktop/WisdomSun/wisdomsun/app/controllers/contact_controller.rb": [
+      "/home/saasbook/code/wisdomsun/app/controllers/contact_controller.rb": [
         1,
         1,
         null,
         null
       ],
-      "/home/saasbook/Desktop/WisdomSun/wisdomsun/app/controllers/downloads_controller.rb": [
+      "/home/saasbook/code/wisdomsun/app/controllers/downloads_controller.rb": [
         1,
         1,
         null,
         null
       ],
-      "/home/saasbook/Desktop/WisdomSun/wisdomsun/app/controllers/events_controller.rb": [
+      "/home/saasbook/code/wisdomsun/app/controllers/events_controller.rb": [
         1,
         1,
         2,
@@ -198,106 +212,54 @@
         null,
         null
       ],
-      "/home/saasbook/Desktop/WisdomSun/wisdomsun/app/controllers/users/sessions_controller.rb": [
+      "/home/saasbook/code/wisdomsun/app/controllers/users/sessions_controller.rb": [
         1,
         1,
         null,
         1,
-        0,
-        0,
-        0,
-        0,
-        0,
+        2,
+        2,
+        2,
+        2,
+        1,
         null,
-        0,
+        1,
         null,
         null,
         null,
         1,
-        0,
-        0,
-        0,
+        1,
+        1,
+        1,
         null,
         null,
         1,
-        0,
-        0,
-        0,
+        1,
+        1,
+        1,
         null,
         null,
         null,
-        0,
-        0,
-        0,
+        1,
+        1,
+        2,
         null,
         null,
         null,
         null
       ],
-      "/home/saasbook/Desktop/WisdomSun/wisdomsun/app/controllers/users_controller.rb": [
+      "/home/saasbook/code/wisdomsun/app/controllers/users_controller.rb": [
         1,
         null
       ],
-      "/home/saasbook/Desktop/WisdomSun/wisdomsun/app/controllers/welcome_controller.rb": [
+      "/home/saasbook/code/wisdomsun/app/controllers/welcome_controller.rb": [
         1,
         1,
-        null,
-        null
-      ],
-      "/home/saasbook/Desktop/WisdomSun/wisdomsun/app/uploaders/books_uploader.rb": [
-        null,
-        null,
         1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
-        null,
-        null,
-        null,
-        null,
-        1,
-        0,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
         null,
         null
       ]
     },
-    "timestamp": 1382834344
+    "timestamp": 1382948859
   }
 }

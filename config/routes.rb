@@ -13,6 +13,9 @@ Wisdomsun::Application.routes.draw do
 
   resources :aroundtheweb
 
+  resources :books do
+    get 'fake_url', :action => "index" , :controller => "books"
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

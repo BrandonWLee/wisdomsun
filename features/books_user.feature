@@ -8,9 +8,9 @@ Feature: books are all present on webpage and navigation works
 Background: books have been added to database
   Given the following books exist:
   | title				| author		| purchase_url		| description	|
-  | Meditation 			| Brandon Lee	| fake_url			| bloop			|
-  | Beyond the Sunrise	| Jeff Zhan		| fake_url_2		| bleep			|
-  | Cultivating the Soul| Kevin Dip		| fake_url_3		| meep			|
+  | Meditation 			| Brandon Lee	| books				| bloop			|
+  | Beyond the Sunrise	| Jeff Zhan		| books				| bleep			|
+  | Cultivating the Soul| Kevin Dip		| books				| meep			|
   
 
   And I am on the books page
@@ -18,40 +18,26 @@ Background: books have been added to database
 Scenario: all book titles are on page
   When I am on the books page
   # your steps here
-  	Then I should see "Meditation"
-	Then I should see "Beyond the Sunrise"
-	Then I should see "Cultivating the Soul"
+  	Then the book title "Meditation" should be on page
+	Then the book title "Beyond the Sunrise" should be on page
+	Then the book title "Cultivating the Soul" should be on page
 
 Scenario: all authors are on page
   When I am on the books page
-  	Then I should see "Meditation" before "Brandon Lee"
-  	Then I should see "Beyond the Sunrise" before "Jeff Zhan"
-  	Then I should see "Cultivating the Soul" before "Kevin Dip"
-
-Scenario: all prices are on page
-  When I am on the books page
-  	Then I should see "Meditation" before "$15.00"
-  	Then I should see "Beyond the Sunrise" before "$20.00"
-  	Then I should see "Cultivating the Soul" before "$13.50"
+  	Then the book title "Meditation" before "Brandon Lee"
+  	Then the book title "Beyond the Sunrise" before "Jeff Zhan"
+  	Then the book title "Cultivating the Soul" before "Kevin Dip"
 
 Scenario: all the links_to_purchase are on page
   When I am on the books page
-  	Then I should see "Meditation" before "12-Dec-2004"
-  	Then I should see "Beyond the Sunrise" before "4-May-2010"
-  	Then I should see "Cultivating the Soul" before "23-Jan-2013"
-
-Scenario: clicking on book image leads to larger image
-  When I click on "Meditation" book image
-  	Then I should be on the "Meditation" image popup page
-  When I click on "Beyond the Sunrise" book image
-  	Then I should be on the "Beyond the Sunrise" image popup page
-  When I click on "Cultivating the Soul" image
-  	Then I should be on the "Cultivating the Soul" image popup page
+  	Then the book title "Meditation" before "12-Dec-2004"
+  	Then the book title "Beyond the Sunrise" before "4-May-2010"
+  	Then the book title "Cultivating the Soul" before "23-Jan-2013"
 
 Scenario: clicking on the link to purchase page leads to correct links
   When I click on "Meditation" purchase link
-  	Then I should be on the "Meditation" purchase link
+  	Then I will be on the "Meditation" purchase link
   When I click on "Beyond the Sunrise" purchase link
-  	Then I should be on the "Beyond the Sunrise" purchase link
+  	Then I will be on the "Beyond the Sunrise" purchase link
   When I click on "Cultivating the Soul" purchase link
-  	Then I should be on the "Cultivating the Soul" purchase link
+  	Then I will be on the "Cultivating the Soul" purchase link

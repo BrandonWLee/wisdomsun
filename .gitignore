@@ -18,7 +18,5 @@
 #aptana
 /.metadata/
 
-#simplecov
-/coverage/
 *~
 

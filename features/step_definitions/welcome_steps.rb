@@ -1,5 +1,5 @@
 # Add a declarative step here for populating the DB with books.
-Then /^I should see (.+)$/ do |section|
+Then /^I should see element (.+)$/ do |section|
   if section.index('tab') == nil
     element = section.downcase.gsub(/\s/,'-')
     element = '#'+element
