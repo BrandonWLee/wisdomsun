@@ -12,6 +12,7 @@
       - @events.each do |event|
         .item
           .item-title= event.name
+          .item-date= event.date
     .container-right
       #slider.flexslider
         %ul.slides
@@ -21,7 +22,9 @@
             %img{ :src => '/assets/welcome/slide2.jpg' }
       #quotes.section
         .subtitle Quote of the Day
-        .quote-text "You only lose what you cling to." -Buddha
+        .quote-text 
+          "There is a sense of joy in being part of this knowledge and that sense of joy, which triggers the transition from knowledge to wisdom, is compassion, or unconditional love."
+          .quote-author - Chogyam Trungpa Rinpoche 
       .line
       #about-us.section
         .subtitle About Us
