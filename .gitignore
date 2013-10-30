@@ -18,5 +18,6 @@
 #aptana
 /.metadata/
 
+# temp files
 *~
-
+*.swp
