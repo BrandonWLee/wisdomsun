@@ -20,6 +20,8 @@ module NavigationHelpers
       '/support'
     when /^books/ then
       '/books'
+    when /^the contact page$/ then
+      '/contact'
     when /^the (Wisdom Sun )?home\s?page$/ then '/'
     when /^About/ then '/about'
     when /^Downloads/ then '/downloads'
