@@ -2,30 +2,36 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .content-box {
-	     border: 1px solid #ddd;
-	     width: 755px;
-	     margin: 20px auto;
-	     }
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+	border: 1px solid #d4d4d4;
+	width: 700px;
+	margin: 20px 0 0 18px;
+}
 .description-box {
-		 border: 1px solid #ddd;
-	     	 width: 960px;
-	     	 margin: 20px auto;
-		 }
+	border: 1px solid #ddd;
+  width: 960px;
+	margin: 20px 0 40px 0;
+}
 .events-box {
-	    vertical-align: top;
-	    display: inline-block;
-	    width: 300px;
-	    }
+	vertical-align: top;
+	display: inline-block;
+	width: 300px;
+}
 .event-box {
-	   padding: 25px;
-	   }
+	padding: 25px;
+}
 .img-box {
-	 width: 200px;
-	 display: inline-block;
-	 }
+	width: 200px;
+	display: inline-block;
+}
 .img-box img {
-	     width: 100%;
-	     padding: 5px;
-	     }
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  margin: 10px 0 0 10px;
+	width: 100%;
+}
 
 
