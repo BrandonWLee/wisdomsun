@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131026232148) do
+ActiveRecord::Schema.define(:version => 20131102194918) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -27,6 +27,13 @@ ActiveRecord::Schema.define(:version => 20131026232148) do
   add_index "active_admin_comments", ["author_type", "author_id"], :name => "index_active_admin_comments_on_author_type_and_author_id"
   add_index "active_admin_comments", ["namespace"], :name => "index_active_admin_comments_on_namespace"
   add_index "active_admin_comments", ["resource_type", "resource_id"], :name => "index_admin_notes_on_resource_type_and_resource_id"
+
+  create_table "albums", :force => true do |t|
+    t.integer "a_id"
+    t.string  "name"
+    t.text    "description"
+    t.string  "loc_of_albumcover"
+  end
 
   create_table "books", :force => true do |t|
     t.string   "title"
@@ -50,6 +57,14 @@ ActiveRecord::Schema.define(:version => 20131026232148) do
     t.string   "time"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+  end
+
+  create_table "photos", :force => true do |t|
+    t.integer "p_id"
+    t.integer "a_id"
+    t.string  "location"
+    t.string  "name"
+    t.text    "description"
   end
 
   create_table "users", :force => true do |t|
