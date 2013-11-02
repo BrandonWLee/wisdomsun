@@ -5,18 +5,18 @@ Wisdomsun::Application.routes.draw do
 
   get "welcome/index"
   resources :about
-  resources :bulletin
-  resources :downloads
-  resources :contact
-  resources :books
-  resources :events
-
   resources :aroundtheweb
-
+  resources :books
+  resources :bulletin
+  resources :contact
+  resources :downloads
+  resources :events
+  resources :photos
+  resources :albums
+  
   resources :books do
     get 'fake_url', :action => "index" , :controller => "books"
   end
-
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

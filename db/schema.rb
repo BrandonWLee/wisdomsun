@@ -29,10 +29,13 @@ ActiveRecord::Schema.define(:version => 20131102194918) do
   add_index "active_admin_comments", ["resource_type", "resource_id"], :name => "index_admin_notes_on_resource_type_and_resource_id"
 
   create_table "albums", :force => true do |t|
-    t.integer "a_id"
-    t.string  "name"
-    t.text    "description"
-    t.string  "loc_of_albumcover"
+    t.integer  "a_id"
+    t.string   "name"
+    t.text     "description"
+    t.string   "album_cover_file_name"
+    t.string   "album_cover_content_type"
+    t.integer  "album_cover_file_size"
+    t.datetime "album_cover_updated_at"
   end
 
   create_table "books", :force => true do |t|
@@ -60,11 +63,13 @@ ActiveRecord::Schema.define(:version => 20131102194918) do
   end
 
   create_table "photos", :force => true do |t|
-    t.integer "p_id"
-    t.integer "a_id"
-    t.string  "location"
-    t.string  "name"
-    t.text    "description"
+    t.integer  "a_id"
+    t.string   "location_file_name"
+    t.string   "location_content_type"
+    t.integer  "location_file_size"
+    t.datetime "location_updated_at"
+    t.string   "name"
+    t.text     "description"
   end
 
   create_table "users", :force => true do |t|

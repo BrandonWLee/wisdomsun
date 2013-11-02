@@ -1,0 +1,13 @@
+.wrapper
+  = render "/layouts/menu"
+
+  .container
+    .header
+      .header-title @album_name
+    .content
+      - @photos.each do |photo|
+        .content-box
+          .img-box
+            %img{:src => book.picture.url}
+          .text-box
+  = render "/layouts/footer" 
