@@ -16,8 +16,16 @@ module NavigationHelpers
       '/'
     when /^the books page$/ then
       '/books'
+    when /^the support page$/ then
+      '/support'
     when /^books/ then
       '/books'
+    when /^the contact page$/ then
+      '/contact'
+    when /^the lineage page$/ then
+      '/lineage'
+    when /^the songs and articles page&/ then
+      '/songsandarticles'
     when /^the (Wisdom Sun )?home\s?page$/ then '/'
     when /^About/ then '/about'
     when /^Downloads/ then '/downloads'
