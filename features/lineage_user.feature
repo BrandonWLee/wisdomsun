@@ -1,7 +1,7 @@
 Feature: The Lineage Page
 	As a user
-	I want more info on the admins
-	So I will check lineage to see the lineage
+	So that I can see the history of the admin
+	I want to be able to view their lineage
 
 Scenario: Lineage Page should Contain the Correct Text
 	Given I am on the lineage page
