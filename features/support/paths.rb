@@ -16,6 +16,8 @@ module NavigationHelpers
       '/'
     when /^the books page$/ then
       '/books'
+    when /^the support page$/ then
+      '/support'
     when /^books/ then
       '/books'
     when /^the (Wisdom Sun )?home\s?page$/ then '/'
