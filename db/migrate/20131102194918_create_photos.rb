@@ -1,17 +1,17 @@
 class CreatePhotos < ActiveRecord::Migration
   def up
     create_table :photos do |t|
-      t.integer :p_id
-      t.integer :a_id
-      t.string :location
+#      t.integer :p_id #picture_id
+      t.integer :album_id
+      t.attachment :location
       t.string :name
-      t.text :description      
+      t.text :description    
+      # want to add a_id to be a foreign key for albums.a_id  
     end
     create_table :albums do |t|
-      t.integer :a_id
       t.string :name
       t.text :description
-      t.string :loc_of_albumcover
+      t.attachment :album_cover # album cover
     end
   end
 
