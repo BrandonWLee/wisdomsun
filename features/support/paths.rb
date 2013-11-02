@@ -22,6 +22,8 @@ module NavigationHelpers
       '/books'
     when /^the contact page$/ then
       '/contact'
+    when /^the lineage page$/ then
+      '/lineage'
     when /^the (Wisdom Sun )?home\s?page$/ then '/'
     when /^About/ then '/about'
     when /^Downloads/ then '/downloads'
