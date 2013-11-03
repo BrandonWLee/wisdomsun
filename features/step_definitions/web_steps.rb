@@ -62,7 +62,7 @@ end
 When /^(?:|I )follow "([^"]*)"$/ do |link|
   click_link(link)
 end
-When /^I press (.+)$/ do |tab|
+When /^I press the (.+)$/ do |tab|
   if tab.index('tab') != nil
     element = tab.split(' tab')[0]
     selector = element.downcase.gsub(/\s/,'')

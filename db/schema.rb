@@ -29,7 +29,6 @@ ActiveRecord::Schema.define(:version => 20131102194918) do
   add_index "active_admin_comments", ["resource_type", "resource_id"], :name => "index_admin_notes_on_resource_type_and_resource_id"
 
   create_table "albums", :force => true do |t|
-    t.integer  "a_id"
     t.string   "name"
     t.text     "description"
     t.string   "album_cover_file_name"
@@ -63,11 +62,11 @@ ActiveRecord::Schema.define(:version => 20131102194918) do
   end
 
   create_table "photos", :force => true do |t|
-    t.integer  "a_id"
-    t.string   "location_file_name"
-    t.string   "location_content_type"
-    t.integer  "location_file_size"
-    t.datetime "location_updated_at"
+    t.integer  "album_id"
+    t.string   "picture_file_name"
+    t.string   "picture_content_type"
+    t.integer  "picture_file_size"
+    t.datetime "picture_updated_at"
     t.string   "name"
     t.text     "description"
   end
