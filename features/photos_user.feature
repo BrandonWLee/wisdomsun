@@ -6,17 +6,16 @@ Feature:
 
 Background: Create albums and add photos to them
   Given the following photos exist:
-  | p_id	| a_id	| location	| name	| description	|
-  | 1		| 1		| 1-1.jpg	| ari	| close up		|
-  | 2		| 1		| 1-2.jpg	| lady	| meep			|
-  | 3 		| 1		| 1-4.jpg	| group	| album cover	|
-  | 4		| 2		| 2-1.jpg	| meep	| bloop			|
-  
+  | album_id	| location	 | description	|
+  | 1		| 1-1.jpg	| close up		|
+  | 1		| 1-2.jpg	| meep			|
+  | 1		| 1-4.jpg	| album cover	|
+  | 2		| 2-1.jpg	| bloop			|
+
   Given the following album exists:
-  | a_id	| p_pid	| name		| description				|
-  | 1		| 3		| Retreat	| Shingle Springs Retreat	|
-  | 2		| 4		| UK		| Holiday Cornwall			|
-	  
+  | album_cover	| name		| description				|
+  | 1-1.jpg     | Retreat	    | Shingle Springs Retreat	|
+  | 1-2.jpg     | UK		      | Holiday Cornwall	|
   And I am on the albums page.
  
 Scenario: all the album titles are on the page.

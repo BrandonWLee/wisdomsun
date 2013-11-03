@@ -16,6 +16,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'simplecov'
   gem "factory_girl_rails", "~> 4.0"
+  gem 'railroady'
 end
 group :production do
   gem 'thin'

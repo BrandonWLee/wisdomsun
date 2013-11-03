@@ -26,7 +26,12 @@ Scenario: add a book
   Then there should be a book called "Freakin' Sam"
 
 Scenario: modify a book's info
-  When I change "Don't be a Derp" description to "Nigga my NIGGA"
-  Then the book "Don't be a Derp" should have the description "Nigga my NIGGA"
+  When I change "Don't be a Derp" description to "Be a derp"
+  Then the book "Don't be a Derp" should have the description "Be a derp"
+
+Scenario: delete a book
+  When I delete the book "Guns and Cars"
+  Then there should not be a book called "Guns and Cars"
+
 
 
