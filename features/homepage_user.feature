@@ -31,6 +31,10 @@ Scenario: navigate to Contact
   When I press Contact tab
     Then I should be on Contact
 
+Scenario: navigate to Support
+  When I press Support tab
+    Then I should be on Support
+
 Scenario: navigate to Events (tab)
   When I press Events tab
     Then I should be on Events
@@ -54,5 +58,6 @@ Scenario: seeing all elements
   And I should see element Books tab
   And I should see element Bulletin tab
   And I should see element Contact tab
+  And I should see element Support tab
   And I should see element Events tab
 
