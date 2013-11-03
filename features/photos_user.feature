@@ -1,4 +1,4 @@
-Feature: 
+Feature: Browsing through photos and albums
 	As a visitor of the Wisdom Sun website,
 	So that I can view albums and photos from past events,
 	I want to look at all of the past albums and individual 
@@ -20,11 +20,11 @@ Background: Create albums and add photos to them
  
 Scenario: all the album titles are on the page.
   Given I am the albums page
-  I should see the album titles "Retreat" and "UK" on the page.
+  Then I should see the album titles "Retreat" and "UK" on the page.
 
 Scenario: all the album covers are on the page.	
   Given I am on the albums page
-  I should see the album covers of "Retreat" and "UK" on the page. 
+  Then I should see the album covers of "Retreat" and "UK" on the page. 
 
 Scenario: all the album descriptions are on the page.
   Given I am on the albums page
