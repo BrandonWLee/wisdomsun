@@ -18,6 +18,9 @@ $(document).ready(function(){
     case 'bulletin':
       menu_item = '#menu-bulletin';
       break;
+    case 'support':
+      menu_item = '#menu-support';
+      break;
     case 'contact':
       menu_item = '#menu-contact';
       break;

@@ -9,6 +9,7 @@ Wisdomsun::Application.routes.draw do
   resources :books
   resources :bulletin
   resources :contact
+  resources :support
   resources :downloads
   resources :events
   resources :photos
