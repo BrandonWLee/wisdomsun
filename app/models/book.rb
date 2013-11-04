@@ -14,5 +14,5 @@ class Book < ActiveRecord::Base
       } ]
   
   validates_attachment :picture, 
-    :content_type => { :content_type => "image/jpg" }
+    :content_type => { :content_type => ["image/jpg", "image/jpeg"] }
 end
