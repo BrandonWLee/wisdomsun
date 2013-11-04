@@ -19,22 +19,7 @@ Background: photos and albums that have been uploaded already
   Given I am logged in as admin
   Given I am on the admin page
 
-Scenario: Add an album
-  When I click on the admin album page
-  And I click on "New Album"
-  And I fill in the name "Party"
-  And I click "Create Album"
-  Then there should be an album with the name "Party"
-  
-Scenario: Rename an album
-  When I click on the admin album page
-  And I go to the edit page of the album "Retreat"
-  And I fill in the name "Expedition"
-  And I click "Update Album"
-  Then there should be an album with the name "Expedition"
-  And there should not be an album with the name "Retreat"
-
-Scenario: Add a photo and add it to a new album
+Scenario: Create a photo and add it to a new album
   When I click on the admin photo page
   And I click on "New Photo"
   And I upload the photo "1-3.jpg" 
@@ -54,7 +39,7 @@ Scenario: Add a photo to an album through the album page
   And I click "Create Photo"
   Then there should be a photo with the description "A very nice picture"
   And there should be a photo named "A very nice picture" in the album "Retreat"
-  
+
 Scenario: Add a photo to an album through the photo page
   When I click on the admin photo page
   And I click on "New Photo"
@@ -71,29 +56,7 @@ Scenario: Delete a photo from an album
   And I delete the photo with description "close up"
   Then there should be no photo with the description "close up" in the album "Retreat"
 
-Scenario: Delete an album with photos in the album and all the photos
-  When I click on the admin album page
-  And I go to the album "Retreat"
-  And I check "Delete all photos"
-  And I click "Delete Album"
-  Then there should be no album named "Retreat"
-  And there should be no photo with the description "close up"
-  And there should be no photo with the description "meep"
-  And there should be no photo with the description "album cover"
-  And there should be no photo with the description "bloop"
 
-
-Scenario: Delete an album with photos in the album but not the photos
-  When I click on the admin album page
-  And I go to the album "Retreat"
-  And I check "Don't delete photos"
-  And I click "Delete Album"
-  Then there should be no album named "Retreat"
-  But there should be a photo with the description "close up"
-  But there should be a photo with the description "meep"
-  But there should be a photo with the description "album cover"
-  But there should be a photo with the description "bloop"
-  
 Scenario: Add a photo to no album
   When I click on the admin photo page
   And I click on "Add photo"

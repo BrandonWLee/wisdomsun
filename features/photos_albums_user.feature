@@ -47,3 +47,9 @@ Scenario: trying to view a photo that doesn't exist
   When I try to view the photo with id 10
   Then I should be on the photo page
   Then I should see the error "Photo does not exist"
+
+Scenario: trying to view a album that doesn't exist
+  Given I am on the photo page
+  When I try to view the album with id 10
+  Then I should be on the photo page
+  Then I should see the error "Album does not exist"
