@@ -33,5 +33,8 @@ Scenario: delete a book
   When I delete the book "Guns and Cars"
   Then there should not be a book called "Guns and Cars"
 
-
+Scenario: When I try to edit a nonexistant book
+  When I try to edit a book with id 10
+  Then I should be on the admin books page
+  And I should see the error "Book does not exist"
 

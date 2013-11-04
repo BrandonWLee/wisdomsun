@@ -21,9 +21,14 @@ Scenario: event names are on the page
 Scenario: clicking on event name leads to description 
   When I am on the events page
   And I follow "Meditation"
-    Then I should see description for "Meditation"
-    And I follow "Back to event list"
-    Then I should be on the events page
+  Then I should see description for "Meditation"
+  And I follow "Back to event list"
+  Then I should be on the events page
   And I follow "Retreat"
-    Then I should see description for "Retreat"
+  Then I should see description for "Retreat"
 
+Scenario: viewing an event that doenst exist
+  Given I am on the events page
+  When I try to view the event with id 10
+  Then I should be on the events page
+  Then I should see the error "Event does not exist"

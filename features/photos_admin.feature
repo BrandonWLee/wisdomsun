@@ -108,3 +108,8 @@ Scenario: Try to add a non picture file as a photo
   And I upload the photo "nonpicture.txt"
   And I click "Create Photo"
   Then I should see an error "Could not create photo: nonpicture.txt is not a photo"
+
+Scenario: When I try to edit a nonexistant photo
+  When I try to edit a photo with id 10
+  Then I should be on the admin photo page
+  And I should see the error "Photo does not exist"

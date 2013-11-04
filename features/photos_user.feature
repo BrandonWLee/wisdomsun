@@ -32,13 +32,18 @@ Scenario: all the album descriptions are on the page.
   
 Scenario: all the pictures are in a specific album's page
   Given I am on the albums page
-  Then I click on "Retreat"
-  Then I should see "Retreat Photos"
+  When I click on "Retreat"
+  And I should see "Retreat Photos"
   Then I should see all of the photos in the album "Retreat".
 
 Scenario: clicking on a picture results in it popping up
   Given I am on the albums page
-  Then I click on "Retreat"
-  Then I click on the first picture
+  When I click on "Retreat"
+  And I click on the first picture
   Then I should see a popup of the first picture.
   
+Scenario: trying to view a photo that doesn't exist
+  Given I am on the photo page
+  When I try to view the photo with id 10
+  Then I should be on the photo page
+  Then I should see the error "Photo does not exist"

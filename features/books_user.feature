@@ -41,3 +41,9 @@ Scenario: clicking on the link to purchase page leads to correct links
   	Then I will be on the "Beyond the Sunrise" purchase link
   When I click on "Cultivating the Soul" purchase link
   	Then I will be on the "Cultivating the Soul" purchase link
+
+Scenario: trying to view a book that doesn't exist
+  Given I am on the books page
+  When I try to view the book with id 10
+  Then I should be on the book page
+  Then I should see the error "book does not exist"

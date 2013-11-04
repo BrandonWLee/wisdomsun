@@ -32,3 +32,7 @@ Scenario: delete an event
   When I delete the event "Retreat"
   Then there should not be an event called "Retreat"
 
+Scenario: When I try to edit a nonexistant event
+  When I try to edit a event with id 10
+  Then I should be on the admin events page
+  And I should see the error "Event does not exist"
