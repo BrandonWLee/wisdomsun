@@ -1,9 +1,7 @@
 ActiveAdmin.register Book do
   index do
     column :picture do |book|
-      image_tag(book.picture.url)
-    end
-    column :title
+      image_tag(book.picture.url) end column :title
     column :description
     column :purchase_url
     default_actions
@@ -45,7 +43,6 @@ ActiveAdmin.register Book do
       f.input :description
       f.input :picture
     end
-    image_tag(book.picture.url)
     f.buttons
   end
 end
