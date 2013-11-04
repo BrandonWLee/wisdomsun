@@ -1,8 +1,8 @@
-Feature: Add, remove, or modify photos and albums
+Feature: Add, remove, or modify albums
 
   As an admin of the Wisdom Sun website,
-  So that I can keep the photos & albums updated,
-  I want to be able to remove, create, and update photos & albums.
+  So that I can keep the albums updated,
+  I want to be able to remove, create, and update albums.
 
 Background: photos and albums that have been uploaded already
   Given the following photos exist:
