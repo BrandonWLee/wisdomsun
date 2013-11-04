@@ -7,7 +7,6 @@ When /I add the event:/ do |events|
     fill_in("Location", :with => event[:location])
     fill_in("Time", :with => event[:time])
     click_button("Create Event")
-    save_and_open_page
   end
 end
 

@@ -6,7 +6,6 @@ When /I add the book:/ do |books|
     fill_in("Description", :with => book[:description])
     fill_in("Purchase url", :with => book[:purchase_url])
     click_button("Create Book")
-    save_and_open_page
   end
 end
 
