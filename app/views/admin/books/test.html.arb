@@ -1,5 +1,0 @@
-table_for assigns[:books] do
-  column :id
-  column :title
-  column :author
-end
