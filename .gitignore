@@ -21,3 +21,6 @@
 # temp files
 *~
 *.swp
+
+# Ignore railroady doc files
+/doc/
