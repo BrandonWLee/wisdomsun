@@ -6,16 +6,16 @@ Feature: Browsing through photos and albums
 
 Background: Create albums and add photos to them
   Given the following photos exist:
-  | album_id	| location	 | description	|
-  | 1		| 1-1.jpg	| close up		|
-  | 1		| 1-2.jpg	| meep			|
-  | 1		| 1-4.jpg	| album cover	|
-  | 2		| 2-1.jpg	| bloop			|
+  | album_id	| picture	 | description	|
+  | 1		| ./app/assets/images/photos/1-1.jpg	| close up		|
+  | 1		| ./app/assets/images/photos/1-2.jpg	| meep			|
+  | 1		| ./app/assets/images/photos/1-4.jpg	| album cover	|
+  | 2		| ./app/assets/images/photos/2-1.jpg	| bloop			|
 
-  Given the following album exists:
+  Given the following albums exist:
   | album_cover	| name		| description				|
-  | 1-1.jpg     | Retreat	    | Shingle Springs Retreat	|
-  | 1-2.jpg     | UK		      | Holiday Cornwall	|
+  | ./app/assets/images/photos/1-1.jpg     | Retreat	    | Shingle Springs Retreat	|
+  | ./app/assets/images/photos/1-2.jpg     | UK		      | Holiday Cornwall	|
   And I am on the albums page.
  
 Scenario: all the album titles are on the page.

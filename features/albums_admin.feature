@@ -6,28 +6,33 @@ Feature: Add, remove, or modify albums
 
 Background: photos and albums that have been uploaded already
   Given the following photos exist:
-  | album_id	| location	| description	|
-  | 1		| 1-1.jpg	| close up		|
-  | 1		| 1-2.jpg	| meep			|
-  | 1		| 1-4.jpg	| album cover	|
-  | 2		| 2-1.jpg	| bloop			|
+  | album_id	| picture	| description	|
+  | 1		| ./app/assets/images/photos/1-1.jpg	| close up		|
+  | 1		| ./app/assets/images/photos/1-2.jpg	| meep			|
+  | 1		| ./app/assets/images/photos/1-4.jpg	| album cover	|
+  | 2		| ./app/assets/images/photos/2-1.jpg	| bloop			|
 
-  Given the following album exists:
+  Given the following albums exist:
   | album_cover	| name		| description				|
-  | 1-1.jpg     | Retreat	    | Shingle Springs Retreat	|
-  | 1-2.jpg     | UK		      | Holiday Cornwall	|
+  | ./app/assets/images/photos/1-1.jpg     | Retreat	    | Shingle Springs Retreat	|
+  | ./app/assets/images/photos/1-2.jpg     | UK		      | Holiday Cornwall	|
+
+  And the following users are admin:
+  |email              | password|
+  |admin@wisdomsun.org| password|
+
   Given I am logged in as admin
   Given I am on the admin page
 
 Scenario: Add an album
-  When I click on the admin album page
+  When I click on the admin albums page
   And I click on "New Album"
   And I fill in the name "Party"
   And I click "Create Album"
   Then there should be an album with the name "Party"
   
 Scenario: Rename an album
-  When I click on the admin album page
+  When I click on the admin albums page
   And I go to the edit page of the album "Retreat"
   And I fill in the name "Expedition"
   And I click "Update Album"
@@ -35,7 +40,7 @@ Scenario: Rename an album
   And there should not be an album with the name "Retreat"
   
 Scenario: Delete an album with photos in the album and all the photos
-  When I click on the admin album page
+  When I click on the admin albums page
   And I go to the album "Retreat"
   And I check "Delete all photos"
   And I click "Delete Album"
@@ -51,7 +56,7 @@ Scenario: When I try to edit a nonexistant album
   And I should see the error "Album does not exist"
   
 Scenario: Delete an album with photos in the album but not the photos
-  When I click on the admin album page
+  When I click on the admin albums page
   And I go to the album "Retreat"
   And I check "Don't delete photos"
   And I click "Delete Album"
