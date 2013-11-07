@@ -1,6 +1,6 @@
 require "paperclip/storage/ftp"
 class Photo < ActiveRecord::Base
-  attr_accessible :picture, :name, :description  
+  attr_accessible :description, :album_id
   attr_accessible  :picture, :picture_file_name
   attr_accessible :picture_content_type, :picture_file_size, :picture_updated_at
   has_attached_file :picture,

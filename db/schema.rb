@@ -66,7 +66,6 @@ ActiveRecord::Schema.define(:version => 20131106155200) do
     t.string   "picture_content_type"
     t.integer  "picture_file_size"
     t.datetime "picture_updated_at"
-    t.string   "name"
     t.text     "description"
   end
 
