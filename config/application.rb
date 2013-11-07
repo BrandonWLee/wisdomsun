@@ -63,5 +63,8 @@ module Wisdomsun
     # Devise said so: forcing your application to not access the DB
     #    or load models when precompiling your assets.
     config.assets.initialize_on_precompile = false
+
+    # for modified redactor-rails/config.js
+    config.assets.precompile += ["redactor-rails/*"]
   end
 end
