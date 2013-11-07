@@ -185,6 +185,9 @@ GEM
     rake (10.1.0)
     rdoc (3.12.2)
       json (~> 1.4)
+    redactor-rails-paperclip (0.4.3)
+      mime-types
+      orm_adapter
     responders (1.0.0)
       railties (>= 3.2, < 5)
     rspec-core (2.14.6)
@@ -256,6 +259,7 @@ DEPENDENCIES
   pg
   railroady
   rails (= 3.2.14)
+  redactor-rails-paperclip
   rspec-rails
   sass-rails (~> 3.2.3)
   simplecov
