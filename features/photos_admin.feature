@@ -61,7 +61,6 @@ Scenario: Delete a photo from an album
   And I delete the photo with description "close up"
   Then there should be no photo with the description "close up" in the album "Retreat"  #This should delete the photo entirely, right?
 
-
 Scenario: Add a photo to no album
   When I am on the admin photos page
   And I click on "Add photo"
@@ -70,7 +69,7 @@ Scenario: Add a photo to no album
   And I click "Create Photo"
   Then there should be a photo with the description "A picture"
 
-Scenario: Try to add a non picture file as a photo
+Scenario: Try to add a non picture file as a photo, should fail
   When I am on the admin photos page
   And I click on "Add photo"
   And I upload the photo "./app/assets/images/photos/nonpicture.txt"
