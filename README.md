@@ -5,6 +5,7 @@ Wisdom Sun
 
 Notes
 =========
+```
 SQLITE3
   attach 'db/asdf.sqlite' as db;
   .help
@@ -46,3 +47,4 @@ Redactor + Paperclip
 
 Unescape html tags
   use simple_format("<p>text</p>")
+```
