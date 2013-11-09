@@ -1,5 +1,6 @@
 ActiveAdmin.register OtherPages do
   form do |f|
+  	f.semantic_errors *f.object.errors.keys
     f.inputs "Details" do
       f.input :title
       f.input :category
