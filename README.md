@@ -6,13 +6,41 @@ Wisdom Sun
 Notes
 =========
 ```
-ImageMagick
-To be able to upload images using redactor
-Need to run
-sudo apt-get install imagemagick
-then go to config/environments/development.rb
-add
-Paperclip.options[:command_path] = "/usr/bin/"
+
+File Attachment (Paperclip gem)
+  -requires ImageMagick to be installed on system
+    -see below
+    -for Heroku, use rmagick gem (?? dw about it)
+  -also uses Paperclip-Storage-FTP gem because regular Paperclip has no FTP
+User Sign in/on (Devise gem)
+Admin Dashboard (Active Admin gem)
+Rich Text Formatting (with picture and file attachment) (Redactor-Rails-Paperclip gem)
+  -for some reason not working on Firefox in Ubuntu (haven't tried outside Ubuntu)
+  -really buggy on Chromium in Ubuntu
+  -seems okay on Chrome on Windows 7 
+
+
+ImageMagick (for Paperclip)
+  To install, need to run
+    sudo apt-get install imagemagick
+    then go to config/environments/development.rb
+      add 
+      Paperclip.options[:command_path] = "/usr/bin/"
+
+ActiveAdmin
+  To register a model under ActiveAdmin (assuming you made the model already) 
+    rails generate active_admin:resource [modelname]
+    (creates app/admin/model_name.rb)
+  AA gives you default way to view and edit a resource on dashboard
+    But you can add stuff to app/admin/model_name.rb for customization 
+
+Set Heroku environment variables (for password and shit)
+  heroku config:set KEY=VALUE
+
+Unescape html tags
+  use simple_format("<p>text</p>")
+  or rather html_safe("<p>text</p>")
+    simple_format seems to get rid of style
 
 SQLITE3
   attach 'db/asdf.sqlite' as db;
@@ -20,13 +48,12 @@ SQLITE3
   .stats ON #for stats 
   .header ON  # for headers 
 
-ActiveAdmin
-  Registering new model (creates app/admin/model_name.rb)
-    rails generate active_admin:resource [modelname]
-      
-      
-heroku env vars
-  heroku config:set KEY=VALUE
+
+
+
+
+
+
 
 Redactor-Rails
   follow instructions
@@ -50,9 +77,6 @@ ActiveAdmin + Redactor
 
   then use f.input :contents, input_html:{class: 'redactor'}
 
-Redactor + Paperclip
-  using gem "redactor-rails-paperclip"
 
-Unescape html tags
-  use simple_format("<p>text</p>")
+
 ```
