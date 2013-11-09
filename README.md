@@ -20,6 +20,10 @@ Rich Text Formatting (with picture and file attachment) (Redactor-Rails-Papercli
   -seems okay on Chrome on Windows 7 
   -looks like a Javascript/Jquery problem, maybe
 
+Validation Checking in Admin
+  checks admin form against model validation and specifies which fields are invalid
+  rails plugin install git://github.com/redinger/validation_reflection.git
+
 
 ImageMagick (for Paperclip)
   To install, need to run

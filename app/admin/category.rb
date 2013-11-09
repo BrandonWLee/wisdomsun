@@ -6,4 +6,12 @@ ActiveAdmin.register Category do
     end
     f.actions
   end
+
+  controller do
+  	def create
+  		name = params[:category][:name].downcase.tr(" ", "_")
+  		params[:category].merge!(:refactored_name => name)
+  		create!
+  	end
+  end
 end
