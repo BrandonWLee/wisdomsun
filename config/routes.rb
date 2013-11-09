@@ -1,4 +1,6 @@
 Wisdomsun::Application.routes.draw do
+  mount RedactorRails::Engine => '/redactor_rails'
+
   ActiveAdmin.routes(self)
 
   devise_for :users, :controllers => { :sessions => 'users/sessions' }

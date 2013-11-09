@@ -15,3 +15,4 @@
 //= require_tree .
 //= require layout
 //= require jquery.flexslider-min
+//= require redactor-rails

@@ -3,7 +3,6 @@ class CreatePhotosAndAlbums < ActiveRecord::Migration
     create_table :photos do |t|
       t.belongs_to :album
       t.attachment :picture
-      t.string :name
       t.text :description    
     end
     create_table :albums do |t|

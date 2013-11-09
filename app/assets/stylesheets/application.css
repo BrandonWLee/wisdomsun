@@ -1,5 +1,6 @@
 /**************************
  *        GENERAL
+ *= require redactor-rails
  **************************/
 body {
   background-color: #65a9bd;
