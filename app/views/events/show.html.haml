@@ -17,6 +17,6 @@
           %p
             =@event.location
           %p
-            #description= @event.description
+            #description= simple_format(@event.description)
           = link_to 'Back to event list', events_path
   = render "/layouts/footer"

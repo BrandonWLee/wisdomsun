@@ -20,7 +20,7 @@ Wisdomsun::Application.configure do
   # Generate digests for assets URLs
   config.assets.digest = true
 
-  config.assets.precompile += %w(frontend.css frontend.js active_admin.css active_admin.js application.css application.js welcome.css.scss)
+  config.assets.precompile += %w(frontend.css frontend.js active_admin.css active_admin.js application.css application.js welcome.css.scss config.js)
   # Defaults to nil and saved in location specified by config.assets.prefix
   # config.assets.manifest = YOUR_PATH
 

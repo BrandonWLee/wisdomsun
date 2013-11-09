@@ -72,4 +72,5 @@ gem "paperclip-storage-ftp", "~> 1.1.0"
 
 # rich text editor with paperclip support
 gem 'redactor-rails-paperclip'
+gem 'rmagick'
 
