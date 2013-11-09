@@ -18,6 +18,7 @@ Rich Text Formatting (with picture and file attachment) (Redactor-Rails-Papercli
   -for some reason not working on Firefox in Ubuntu (haven't tried outside Ubuntu)
   -really buggy on Chromium in Ubuntu
   -seems okay on Chrome on Windows 7 
+  -looks like a Javascript/Jquery problem, maybe
 
 
 ImageMagick (for Paperclip)
