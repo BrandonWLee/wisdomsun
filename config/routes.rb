@@ -16,6 +16,7 @@ Wisdomsun::Application.routes.draw do
   resources :events
   resources :photos
   resources :albums
+  match 'category/:category_name/:page_name', :to => 'category#getpage', :format => false
   
   resources :books do
     get 'fake_url', :action => "index" , :controller => "books"
