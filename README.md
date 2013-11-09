@@ -6,6 +6,14 @@ Wisdom Sun
 Notes
 =========
 ```
+ImageMagick
+To be able to upload images using redactor
+Need to run
+sudo apt-get install imagemagick
+then go to config/environments/development.rb
+add
+Paperclip.options[:command_path] = "/usr/bin/"
+
 SQLITE3
   attach 'db/asdf.sqlite' as db;
   .help

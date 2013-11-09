@@ -68,4 +68,7 @@ Wisdomsun::Application.configure do
 
   # Devise default url
   config.action_mailer.default_url_options = { :host => 'wisdom-sun.herokuapp.com' }
+
+  # Paperclip using ImageMagick
+  Paperclip.options[:command_path] = "/usr/bin/"
 end
