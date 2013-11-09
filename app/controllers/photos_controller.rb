@@ -7,7 +7,7 @@ class PhotosController < ApplicationController
     @album_desc = album.description
   end
   def show
-    @photos = Photo.find_by_id(params[:photo_id]).picture # pass in the photo id from the click
-    @photo_desc = @photos.description
+    @photo = Photo.find_by_id(params[:photo_id]).picture.url # pass in the photo id from the click
+    @photo_desc = @photo.description
   end
 end

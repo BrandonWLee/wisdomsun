@@ -20,7 +20,7 @@ class Photo < ActiveRecord::Base
   def self.find_pictures_in_album(album_id)
     photos = []
     Photo.find_by_album(album_id).each do |photo|
-      photos << photo.picture
+      photos << photo.picture.url
     end
     return photos
   end

@@ -37,11 +37,6 @@ Note: This is a more advanced class, so if you have not attended any of our clas
 
 
 
-# USERS AND ADMIN
-admin = User.create!({:email => 'admin@wisdomsun.org', :password => 'password'})
-admin.toggle!(:admin)
-user = User.create!({:email => 'user@wisdomsun.org', :password => 'password'})
-
 # BOOKS
 stars_book = Book.new({:title => 'Stars of Wisdom', :author => 'Khenpo Tsultrim Gyamtso', :description => "Teachings on the Noble Nagarjuna's Fundamental Wisdom of the Middle Way By Khenpo Tsultrim Gyamtso, translated by Ari Goldfield.\n Tibetan Buddhist master Khenpo Tsultrim Gyamtso is known for his joyful songs of realization and his spontaneous and skillful teaching style. In this book he explains how to gain clarity, peace, and wisdom through step-by-step analysis and meditation on the true nature of reality. He also introduces readers to the joy and profundity of yogic song, and reveals the power of aspiration prayers to inspire, transform, and brighten our hearts.", :purchase_url => 'https://www.google.com'})
 stars_picture = File.new("./app/assets/images/books/starsofwisdom.jpg")
@@ -61,3 +56,15 @@ freeing_book.picture = freeing_picture
 freeing_picture.close
 freeing_book.save!
 
+# Album
+retreat = Album.new(:name=> "Shingle Springs Retreat", :description => "The first Wisdom Sun retreat was held in Shingle Springs, California. We were incredibly fortunate to have the use of our friends' house that provided the ideal retreat environment-beautiful, spacious, and secluded. Over five days, we studied and practiced together, indoors and outdoors. We had a refuge ceremony for four new Buddhist refugees, which was a truly wonderful and heartfelt ceremony. Together the retreatants practiced yoga, lujong, and meditation; studied and discussed the Dharma teachings; sang and danced; worked and played; and shared stories and experiences both difficult and delightful.")
+retreat_cover = File.new("./app/assets/images/photos/1-4.jpg")
+retreat.album_cover = retreat_cover
+retreat_cover.close
+retreat.save!
+
+
+# USERS AND ADMIN
+admin = User.create!({:email => 'admin@wisdomsun.org', :password => 'password'})
+admin.toggle!(:admin)
+user = User.create!({:email => 'user@wisdomsun.org', :password => 'password'})
