@@ -5,7 +5,8 @@ class CreateOtherPages < ActiveRecord::Migration
 	  t.text :body
 	  t.belongs_to :category
 	  t.string :title
-      t.timestamps
+    t.string :refactored_title
+    t.timestamps
     end
   end
 

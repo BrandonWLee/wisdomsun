@@ -53,8 +53,9 @@ ActiveRecord::Schema.define(:version => 20131108054435) do
   create_table "categories", :force => true do |t|
     t.string   "name"
     t.integer  "position"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.string   "refactored_name"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
   end
 
   create_table "events", :force => true do |t|
@@ -71,8 +72,9 @@ ActiveRecord::Schema.define(:version => 20131108054435) do
     t.text     "body"
     t.integer  "category_id"
     t.string   "title"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.string   "refactored_title"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
   end
 
   create_table "photos", :force => true do |t|
