@@ -8,14 +8,17 @@
     .content
       .description-box
         .event-box
-          %p 
+          %h2 
             =@event.name
           %p
-            =@event.date
+            %strong
+              =@event.date
           %p
-            =@event.time
+            %strong 
+              =@event.time
           %p
-            =@event.location
+            %strong
+              =@event.location
           %p
             #description= simple_format(@event.description)
           = link_to 'Back to event list', events_path

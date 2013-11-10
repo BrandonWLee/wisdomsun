@@ -7,19 +7,21 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 #
 #
-events = Event.create([{ name: 'Meditation Circle', date: 'September 4th to November 6th', description: 'Contact:  info@wisdomsun.org
+events = Event.create([{ name: 'Meditation Circle', date: 'September 4th to November 6th', description: '<strong>Contact:  info@wisdomsun.org</strong>
 
 A meditation circle is a place to develop your practice through guidance in meditation and sharing your experience with other participants.
 
 
 Session Structure: The whole evening is held in mindfulness from when we enter to when we leave. We begin with making tea and meeting each other; followed by guided seated meditation and gentle movement meditation; sharing our personal experience and asking questions about meditation; and receiving instructions on various aspects of meditation, including:
 
-    How to support a regular meditation practice
-    Mindful listening and speech in relationship
-    Working with the breath, including instruction in Lower Belly Breathing
-    Practice of the Tibetan Mind-Body Reboot
-    Walking Meditation
-    Bringing meditation practice off the cushion and into daily life
+    <ul type="circle">
+    <li>How to support a regular meditation practice</li>
+    <li>Mindful listening and speech in relationship</li>
+    <li>Working with the breath, including instruction in Lower Belly Breathing</li>
+    <li>Practice of the Tibetan Mind-Body Reboot</li>
+    <li>Walking Meditation</li>
+    <li>Bringing meditation practice off the cushion and into daily life</li>
+    </ul>
 
 If you are completely new to meditation, you are welcome! Please just let us know so we can send you a sheet with the basic points of practice. And if you are able to arrive 10 to 15 minutes early, we can talk together before class starts.
 
