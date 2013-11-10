@@ -35,8 +35,6 @@ Registration cost for the complete series of classes, plus recordings of all ses
 
 Note: This is a more advanced class, so if you have not attended any of our classes before, please contact us before you come.', location: 'Santa Cruz', time: 'TBA'}])
 
-
-
 # BOOKS
 stars_book = Book.new({:title => 'Stars of Wisdom', :author => 'Khenpo Tsultrim Gyamtso', :description => "Teachings on the Noble Nagarjuna's Fundamental Wisdom of the Middle Way By Khenpo Tsultrim Gyamtso, translated by Ari Goldfield.\n Tibetan Buddhist master Khenpo Tsultrim Gyamtso is known for his joyful songs of realization and his spontaneous and skillful teaching style. In this book he explains how to gain clarity, peace, and wisdom through step-by-step analysis and meditation on the true nature of reality. He also introduces readers to the joy and profundity of yogic song, and reveals the power of aspiration prayers to inspire, transform, and brighten our hearts.", :purchase_url => 'https://www.google.com'})
 stars_picture = File.new("./app/assets/images/books/starsofwisdom.jpg")
@@ -57,12 +55,35 @@ freeing_picture.close
 freeing_book.save!
 
 # Album
-retreat = Album.new(:name=> "Shingle Springs Retreat", :description => "The first Wisdom Sun retreat was held in Shingle Springs, California. We were incredibly fortunate to have the use of our friends' house that provided the ideal retreat environment-beautiful, spacious, and secluded. Over five days, we studied and practiced together, indoors and outdoors. We had a refuge ceremony for four new Buddhist refugees, which was a truly wonderful and heartfelt ceremony. Together the retreatants practiced yoga, lujong, and meditation; studied and discussed the Dharma teachings; sang and danced; worked and played; and shared stories and experiences both difficult and delightful.")
+retreat = Album.new(:description => "The first Wisdom Sun retreat was held in Shingle Springs, California. We were incredibly fortunate to have the use of our friends' house that provided the ideal retreat environment-beautiful, spacious, and secluded. Over five days, we studied and practiced together, indoors and outdoors. We had a refuge ceremony for four new Buddhist refugees, which was a truly wonderful and heartfelt ceremony. Together the retreatants practiced yoga, lujong, and meditation; studied and discussed the Dharma teachings; sang and danced; worked and played; and shared stories and experiences both difficult and delightful.")
+retreat_id = retreat.id
+retreat.name = 'Shingle Springs Retreat' 
 retreat_cover = File.new("./app/assets/images/photos/1-4.jpg")
 retreat.album_cover = retreat_cover
 retreat_cover.close
 retreat.save!
 
+holiday = Album.new(:name => 'Holiday, Cornwall, UK 2005', :description => "These photos were taken on a five-day holiday that Khenpo Rinpoche took with Ari, Rose, and Bridget Taylor, between his teachings in the UK and going to Dechen Choling in France. It was a magical time singing and dancing at the ancient sites of Cornwall such as Tintagel (King Arthur's castle ruins on a beautiful and rugged promontory) and hanging out eating pasties in the crowded tourist spots of Newquay. Khenpo Rinpoche particularly enjoyed King Arthur's castle, which he spoke about for many months afterwards, and also Saint Michael's Mount, a castle built on a little island, which Rinpoche praised as the most beautiful seaside garden in the world. He has certainly seen many, so that is a pretty reliable endorsement!")
+holiday_id = holiday.id
+holiday_cover = File.new("./app/assets/images/photos/2-5.jpg")
+holiday_cover.close
+holiday.save!
+
+# Photos 
+
+(1...10).each do |num|
+  retreat1 = Photo.new(:album_id => 1, :description => "Meep!")
+  pic = File.new("./app/assets/images/photos/1-#{num}.jpg")
+  retreat1.picture = pic
+  retreat1.save!  
+end
+
+(1...7).each do |num| 
+  holiday1 = Photo.new(:album_id => 2, :description => "Meep!")
+  pic = File.new("./app/assets/images/photos/2-#{num}.jpg")
+  holiday1.picture = pic
+  holiday1.save!  
+end
 
 # USERS AND ADMIN
 admin = User.create!({:email => 'admin@wisdomsun.org', :password => 'password'})
