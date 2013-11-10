@@ -6,7 +6,7 @@
 
   .container
     .header
-      .header-title =@album_name Photos
+      .header-title  "#{@album_name}" Photos
     .content
       - @photos.each do |photo|    
         <a class="fancybox content-box" id="img" href="#{photo.picture.url}" rel="group1" title="#{photo.description}"><img src="#{photo.picture.url}" alt="" /></a>   
