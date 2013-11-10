@@ -1,0 +1,15 @@
+= stylesheet_link_tag "photos"
+.wrapper
+  = render "/layouts/menu"
+
+  .container
+    .header
+      .header-title Albums
+    .content
+      - @albums.each do |album|
+        .content-box
+          .album-img-box
+            %img{:src => album.album_cover.url}      
+          .text-box
+            =link_to "#{album.name}", photos_path(:album_id => album.id)
+  = render "/layouts/footer" 

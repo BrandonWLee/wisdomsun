@@ -1,6 +1,6 @@
 require "paperclip/storage/ftp"
 class Photo < ActiveRecord::Base
-  attr_accessible :picture, :name, :description  
+  attr_accessible :picture, :name, :description, :album_id  
   attr_accessible :picture_file_name # had another picture variable --> removed
 
   attr_accessible :picture_content_type, :picture_file_size, :picture_updated_at
@@ -17,12 +17,8 @@ class Photo < ActiveRecord::Base
 
   belongs_to :album
   
-  def self.find_pictures_in_album(album_id)
-    photos = []
-    Photo.find_by_album(album_id).each do |photo|
-      photos << photo.picture
-    end
-    return photos
+  def self.find_pictures_in_album(id)
+    Photo.where(:album_id => id)
   end
     
 end

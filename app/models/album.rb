@@ -1,6 +1,6 @@
 require "paperclip/storage/ftp"
 class Album < ActiveRecord::Base
-  attr_accessible :description, :name
+  attr_accessible :description, :name, :id
   attr_accessible :album_cover, :album_cover_file_name
   attr_accessible :album_cover_content_type, :album_cover_file_size, :album_cover_updated_at
   has_attached_file :album_cover,
