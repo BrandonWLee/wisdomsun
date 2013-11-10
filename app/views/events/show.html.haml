@@ -20,6 +20,6 @@
             %strong
               =@event.location
           %p
-            #description= simple_format(@event.description)
+            #description= @event.description.html_safe
           = link_to 'Back to event list', events_path
   = render "/layouts/footer"
