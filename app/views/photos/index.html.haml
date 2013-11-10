@@ -1,16 +1,14 @@
 = stylesheet_link_tag "photos"
+= stylesheet_link_tag "jquery.fancybox-1.3.4.css"
+
 .wrapper
   = render "/layouts/menu"
 
   .container
     .header
-      .header-title "#{@album_name}" Photos
+      .header-title =@album_name Photos
     .content
-      - @photos.each do |photo|
-        .content-box
-          .photo-img-box
-            %img{:src => photo.picture.url}
-          -# .text-box
-            -# "#{photo.description}"
+      - @photos.each do |photo|    
+        <a class="fancybox content-box" id="img" href="#{photo.picture.url}" rel="group1" title="#{photo.description}"><img src="#{photo.picture.url}" alt="" /></a>   
   = render "/layouts/footer" 
 

@@ -68,6 +68,7 @@ retreat.save!
 holiday = Album.new(:name => 'Holiday, Cornwall, UK 2005', :description => "These photos were taken on a five-day holiday that Khenpo Rinpoche took with Ari, Rose, and Bridget Taylor, between his teachings in the UK and going to Dechen Choling in France. It was a magical time singing and dancing at the ancient sites of Cornwall such as Tintagel (King Arthur's castle ruins on a beautiful and rugged promontory) and hanging out eating pasties in the crowded tourist spots of Newquay. Khenpo Rinpoche particularly enjoyed King Arthur's castle, which he spoke about for many months afterwards, and also Saint Michael's Mount, a castle built on a little island, which Rinpoche praised as the most beautiful seaside garden in the world. He has certainly seen many, so that is a pretty reliable endorsement!")
 holiday_id = holiday.id
 holiday_cover = File.new("./app/assets/images/photos/2-5.jpg")
+holiday.album_cover = holiday_cover
 holiday_cover.close
 holiday.save!
 
