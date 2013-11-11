@@ -9,13 +9,14 @@
         =link_to "Sign in", new_user_session_path, :class => 'login-item'
         =link_to "Sign up", new_user_registration_path, :class => 'login-item'
     .menu-logo-container
-      .logo
+      .logo= image_tag "logo.png"
       .menu-title 
     .menu-item-container
       = link_to 'Home', '/', :class => 'menu-item', :id => 'menu-home'
-      = link_to 'About', '/about', :class => 'menu-item', :id => 'menu-about'
-      = link_to 'Books', '/books', :class => 'menu-item', :id => 'menu-books'
+      = link_to 'About', '/categories/about/about', :class => 'menu-item', :id => 'menu-about'
       = link_to 'Events', '/events', :class => 'menu-item', :id => 'menu-events'
+      = link_to 'Books', '/books', :class => 'menu-item', :id => 'menu-books'
+      = link_to 'Photos', '/photos', :class => 'menu-item', :id => 'menu-photos'
       = link_to 'Downloads', '/downloads', :class => 'menu-item', :id => 'menu-downloads'
       = link_to 'Bulletin', '/bulletin', :class => 'menu-item', :id => 'menu-bulletin'
       = link_to 'Support', '/support', :class => 'menu-item', :id => 'menu-support'

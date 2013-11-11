@@ -43,4 +43,5 @@ ActiveAdmin.register Photo do
     f.buttons
   end
 
+
 end

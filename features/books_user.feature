@@ -45,5 +45,4 @@ Scenario: clicking on the link to purchase page leads to correct links
 Scenario: trying to view a book that doesn't exist
   Given I am on the books page
   When I try to view the book with id 10
-  Then I should be on the book page
-  Then I should see the error "book does not exist"
+  Then I should see "Book does not exist"
