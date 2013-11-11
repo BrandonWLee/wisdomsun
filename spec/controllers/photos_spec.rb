@@ -20,6 +20,13 @@ describe PhotosController do
       Photo.should_receive(:find_pictures_in_album).and_return(@photos)
       get :index, :album_id => 1
     end
+    it 'should return an error for invalid album id' do
+      Photo.stub(:find_pictures_in_album).and_return(@photos)
+      get :index , :album_id => 10
+      @photo = Photo.create!(:album_id => @tmp_album.id)
+      Photo.destroy_in_album(@tmp_album.id)
+      # response.should render_template('index')
+    end
     after :each do
       @tmp_album.destroy
       @photos = nil

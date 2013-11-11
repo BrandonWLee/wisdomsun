@@ -12,7 +12,7 @@ Scenario: navigate to About Us (tab)
     Then I should be on About
 
 Scenario: navigate to About U
-  When I press "About Us"
+  When I follow "About Us"
     Then I should be on About
 
 Scenario: navigate to Downloads
@@ -22,6 +22,10 @@ Scenario: navigate to Downloads
 Scenario: navigate to Books
   When I press the Books tab
     Then I should be on Books
+
+Scenario: navigate to Photos
+  When I press the Photos tab
+    Then I should be on Albums
 
 Scenario: navigate to Bulletin
   When I press the Bulletin tab
@@ -40,7 +44,7 @@ Scenario: navigate to Events (tab)
     Then I should be on Events
 
 Scenario: navigate to Events
-  When I follow "Events"
+  When I follow "Upcoming Events"
     Then I should be on Events
 
 Scenario: navigate to Around the Web

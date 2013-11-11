@@ -17,15 +17,15 @@
       #cat-about.menu-category
         = link_to 'About', '/categories/about/about', :class => 'menu-item', :id => 'menu-about'
         .menu-dropdown
-          .drop-item= link_to 'About', '/categories/about/about'
+          .drop-top.drop-item= link_to 'About', '/categories/about/about'
           .drop-item= link_to 'About Ari', '/categories/about/about_ari_goldfield'
-          .drop-item= link_to 'About Rose', '/categories/about/about_rose_goldfield'
+          .drop-bottom.drop-item= link_to 'About Rose', '/categories/about/about_rose_goldfield'
       .menu-category
         = link_to 'Events', '/events', :class => 'menu-item', :id => 'menu-events'
       .menu-category
         = link_to 'Books', '/books', :class => 'menu-item', :id => 'menu-books'
       .menu-category
-        = link_to 'Photos', '/photos', :class => 'menu-item', :id => 'menu-photos'
+        = link_to 'Photos', '/albums', :class => 'menu-item', :id => 'menu-photos'
       .menu-category
         = link_to 'Downloads', '/downloads', :class => 'menu-item', :id => 'menu-downloads'
       .menu-category
