@@ -30,5 +30,4 @@ Scenario: clicking on event name leads to description
 Scenario: viewing an event that doenst exist
   Given I am on the events page
   When I try to view the event with id 10
-  Then I should be on the events page
-  Then I should see the error "Event does not exist"
+  Then I should see "Event does not exist"

@@ -4,6 +4,11 @@ class BooksController < ApplicationController
   end
   def show
     id = params[:id]
+    if (not Book.exists?(id))
+      flash[:notice] = "Book does not exist"
+      redirect_to '/books'
+      return
+    end
     @book = Book.find(id)
   end
   def destroy

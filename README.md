@@ -42,6 +42,9 @@ ActiveAdmin
 Set Heroku environment variables (for password and shit)
   heroku config:set KEY=VALUE
 
+Heroku log (+ postgresql log)
+  heroku logs -p postgres -t
+
 Unescape html tags
   use simple_format("<p>text</p>")
   or rather html_safe("<p>text</p>")

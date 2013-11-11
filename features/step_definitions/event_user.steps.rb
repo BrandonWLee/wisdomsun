@@ -11,3 +11,7 @@ end
 Then /^I should see description for "(.*)"$/ do |arg1|
   step %{I should see "#{Event.find_by_name(arg1).description}"}
 end
+
+When /^I try to view the event with id 10/ do
+  visit('/events/10')
+end

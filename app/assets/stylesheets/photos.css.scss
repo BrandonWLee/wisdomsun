@@ -2,7 +2,7 @@
   background-color: #f2f2f2;
   border: 1px solid #ccc;
   display: inline-block;
-  width: 27%;
+  width: 30%;
   height: 150px;
   margin: 10px 9px;
   vertical-align: top;
@@ -12,7 +12,7 @@
   background-color: #f2f2f2;
   border: 1px solid #ccc;
   display: inline-block;
-  width: 27%;
+  width: 30%;
   height: 250px;
   margin: 10px;
   vertical-align: top;
@@ -38,6 +38,7 @@
   // max-height: 215px;
   // max-width: 215px;
   width: 215px;
+  width: 90%;
   // max-width: 215px;
   vertical-align: middle;
   overflow: hidden;
@@ -51,11 +52,12 @@
   vertical-align: middle;
   overflow: hidden;
 }
-.content-box .text-box {
-  color: #070719;
-  text-align: center;
-  font-size: 17px;
-  margin: 5px;
+.text-box {
+  // color: #070719;
+  color: #0A122A;
+  text-align: justify;
+  font-size: 14px;
+  margin: 0px 50px 30px 50px;
 }
 .album-content-box .text-box {
   color: #070719;
@@ -67,4 +69,9 @@
   color: #444;
   font-size: 15px;
   margin: 10px 10px 10px 30px;
+}
+.back_link {
+  text-align: right;
+  font-size: 13px;
+  margin: 0px 30px 10px 0px; 
 }

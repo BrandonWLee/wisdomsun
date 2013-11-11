@@ -3,7 +3,7 @@
  *= require redactor-rails
  **************************/
 body {
-  background: #65a9bd url('bkgd.jpg') center;
+  background: #65a9bd url('bkgd.jpg') fixed center top;
   font-family: Helvetica, Verdana, Arial, sans-serif;
   margin: 0 0;
   padding: 0 0;
@@ -19,7 +19,7 @@ body {
   clear: both;
 }
 .wrapper {
-  margin: 0 auto;
+  margin: 20px auto;
   width: 960px;
 }
 
@@ -27,37 +27,24 @@ body {
  *          MENU 
  **************************/
 .menu {
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid #ddd;
   color: #333;
   display: block;
   font-family: "Verdana", "Arial", sans-serif;
   font-size: 15px;
+  text-align: center;
   margin: 0 auto 20px auto;
+  width: 98%;
 }
 .menu-container {
   position: relative;
 }
-.menu-logo-container {
-  border: 1px solid #ddd;
-  display: inline-block;
-  float: left;
-  height: 100px;
-  margin: 8px 0 0 0px;
-  width: 180px;
-}
-.menu-title {
-  color: #444;
-  font-size: 18px;
-  font-weight: bold;
-  letter-spacing: 0.75em;
-  margin: -47px 0 0 20px;
-  position: absolute;
-  text-transform: uppercase;
+.menu-logo-container img{
+  height: 150px;
 }
 .menu-item-container {
   display: inline-block;
   text-align: center;
-  width: 700px;
 }
 .menu-item {
   border-top-right-radius: 4px;
@@ -68,8 +55,8 @@ body {
   -webkit-border-top-left-radius: 4px;
   cursor: pointer;
   display: inline-block;
-  margin: 50px 0 0 0;
-  padding: 15px 15px;
+  margin: 0 10px 10px 10px;
+  padding: 5px 5px;
   text-decoration: none;
   transition: 0.1s;
   -moz-transition: 0.1s;
@@ -85,6 +72,32 @@ body {
   width: 60px;
   height: 60px;
 }
+.menu-category {
+  display: inline-block;
+  position: relative;
+}
+.menu-dropdown {
+display: none;
+  position: absolute;
+  left: -35px;
+  top: 27px;
+  z-index: 99999;
+}
+.menu-dropdown .drop-item {
+  background-color: #333;
+  cursor: pointer;
+  padding: 13px 0;
+  text-align: center;
+  width: 130px;
+}
+.menu-dropdown .drop-item a {
+  color: #fbfbfb;
+  text-decoration: none;
+}
+
+.menu-dropdown .drop-item:hover {
+  background-color: #666;
+}
 
 /**************************
  *         BODY
@@ -98,8 +111,7 @@ body {
   box-shadow: 0 0 8px #777;
   -moz-box-shadow: 0 0 8px #777;
   -webkit-box-shadow: 0 0 8px #777;
-  margin-top: 20px;
-  padding: 25px 20px 70px 20px;
+  padding: 10px 20px 70px 20px;
 }
 .container-left {
   display: inline-block;
@@ -197,8 +209,10 @@ body {
   cursor: pointer;
   display: inline-block;
   margin-right: 10px;
-  height: 180px;
+  min-height: 170px;
+  padding: 5px 0;
   width: 125px;
+  text-align: center;
   vertical-align: top;
   transition: 0.25s;
   -moz-transition: 0.25s;
@@ -287,14 +301,7 @@ body {
 /**************************
  *        LOGIN
  **************************/
-.login-container {
-  border-bottom-right-radius: 4px;
-  -moz-border-bottom-right-radius: 4px;
-  -webkit-border-bottom-right-radius: 4px;
-  border-bottom-left-radius: 4px;
-  -moz-border-bottom-left-radius: 4px;
-  -webkit-border-bottom-left-radius: 4px;
-  background-color: #444;
+.login-container{
   cursor: pointer;
   display: inline-block;
   padding: 5px 10px;
@@ -302,13 +309,13 @@ body {
   right: 0;
 }
 .login-container a {
-  color: #fff;
+  color: #666;
   text-decoration: none;
 }
 .login-item:hover {
-  background-color: #616161;
+  color: #333;
 }
 .login-item {
-  padding-left: 10px;
-  padding-right: 10px;
+  float: right;
+  padding: 5px 10px;
 }
