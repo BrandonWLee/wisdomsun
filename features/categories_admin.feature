@@ -53,6 +53,15 @@ Scenario: Creating a Good Category
   Then I should see "Category was successfully created."
   And I should see "testy_category"
 
+Scenario: Creating the About Category
+  When I go to the admin categories page
+  And I click on "New Category"
+  When I fill in "category_name" with "About"
+  When I fill in "category_position" with "0"
+  And I press "Create Category"
+  Then I should see "Category was successfully created."
+  And I should see "about"
+
 Scenario: Updating a Category
   When I go to the admin categories page
   And I click on "New Category"

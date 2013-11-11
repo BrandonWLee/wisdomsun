@@ -17,6 +17,13 @@ Background: Setting up Categories
   And I press "Create Category"
   Then I should see "Category was successfully created."
   And I should see "testy_category"
+  When I go to the admin categories page
+  And I click on "New Category"
+  When I fill in "category_name" with "About"
+  When I fill in "category_position" with "2"
+  And I press "Create Category"
+  Then I should see "Category was successfully created."
+  And I should see "about"
 
 Scenario: Creating a Bad Page
   When I go to the admin other pages page
@@ -44,6 +51,18 @@ Scenario: Creating a Good Page
   And I select "testy category" from "other_pages_category_id"
   And I press "Create Other pages"
   Then I should see "Other pages was successfully created"
+
+Scenario: Creating the About Ari Goldfield Page
+  When I go to the admin other pages page
+  And I click on "New Other Pages"
+  And I fill in "other_pages_title" with "About Ari Goldfield"
+  And I fill in "other_pages_body" with "This is about Ari"
+  And I select "About" from "other_pages_category_id"
+  And I press "Create Other pages"
+  Then I should see "Other pages was successfully created"
+  When I go to the about ari goldfield page
+  Then I should see "About Ari Goldfield"
+  And I should see "This is about Ari"
 
 Scenario: Updating a Page
   When I go to the admin other pages page

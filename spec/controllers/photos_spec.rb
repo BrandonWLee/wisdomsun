@@ -33,4 +33,3 @@ describe PhotosController do
     end
   end
 end
-

@@ -34,7 +34,7 @@ body {
   font-size: 15px;
   text-align: center;
   margin: 0 auto 20px auto;
-  width: 90%;
+  width: 98%;
 }
 .menu-container {
   position: relative;
@@ -71,6 +71,48 @@ body {
   background-color: #eee;
   width: 60px;
   height: 60px;
+}
+.menu-category {
+  display: inline-block;
+  position: relative;
+}
+.menu-dropdown {
+display: none;
+  position: absolute;
+  left: -35px;
+  top: 27px;
+  z-index: 99999;
+}
+.menu-dropdown .drop-item {
+  background-color: #333;
+  cursor: pointer;
+  padding: 13px 0;
+  text-align: center;
+  width: 130px;
+}
+.menu-dropdown .drop-top {
+  border-top-left-radius: 4px;
+  -moz-border-top-left-radius: 4px;
+  -webkit-border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  -moz-border-top-right-radius: 4px;
+  -webkit-border-top-right-radius: 4px;
+}
+.menu-dropdown .drop-bottom {
+  border-bottom-left-radius: 4px;
+  -moz-border-bottom-left-radius: 4px;
+  -webkit-border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  -moz-border-bottom-right-radius: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+}
+.menu-dropdown .drop-item a {
+  color: #fbfbfb;
+  text-decoration: none;
+}
+
+.menu-dropdown .drop-item:hover {
+  background-color: #666;
 }
 
 /**************************
@@ -183,8 +225,10 @@ body {
   cursor: pointer;
   display: inline-block;
   margin-right: 10px;
-  height: 180px;
+  min-height: 170px;
+  padding: 5px 0;
   width: 125px;
+  text-align: center;
   vertical-align: top;
   transition: 0.25s;
   -moz-transition: 0.25s;
