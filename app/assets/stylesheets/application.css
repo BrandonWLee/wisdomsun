@@ -3,10 +3,11 @@
  *= require redactor-rails
  **************************/
 body {
-  background-color: #65a9bd;
+  background: #65a9bd url('bkgd.jpg') center top;
   font-family: Helvetica, Verdana, Arial, sans-serif;
   margin: 0 0;
   padding: 0 0;
+  top: 0;
 }
 .line {
   background-color: #aaa;
@@ -18,7 +19,7 @@ body {
   clear: both;
 }
 .wrapper {
-  margin: 0 auto;
+  margin: 20px auto;
   width: 960px;
 }
 
@@ -27,32 +28,18 @@ body {
  **************************/
 .menu {
   border-bottom: 1px solid #fff;
-  color: #fff;
+  color: #333;
   display: block;
   font-family: "Verdana", "Arial", sans-serif;
   font-size: 15px;
+  text-align: center;
   margin: 0 auto 20px auto;
 }
 .menu-container {
   position: relative;
-  text-align: right;
 }
-.menu-logo-container {
-  border: 1px solid #eee;
-  display: inline-block;
-  float: left;
-  height: 80px;
-  margin: 8px 0 0 10px;
-  width: 200px;
-}
-.menu-title {
-  color: #444;
-  font-size: 18px;
-  font-weight: bold;
-  letter-spacing: 0.75em;
-  margin: -47px 0 0 20px;
-  position: absolute;
-  text-transform: uppercase;
+.menu-logo-container img{
+  height: 150px;
 }
 .menu-item-container {
   display: inline-block;
@@ -66,19 +53,19 @@ body {
   border-top-left-radius: 4px;
   -moz-border-top-left-radius: 4px;
   -webkit-border-top-left-radius: 4px;
-  color: #fff;
   cursor: pointer;
   display: inline-block;
-  margin: 50px 0 0 0;
+  margin-bottom: 10px;
   padding: 15px 15px;
   text-decoration: none;
   transition: 0.1s;
   -moz-transition: 0.1s;
   -webkit-transition: 0.1s;
 }
+.menu a { color: #333; }
 .menu-item:hover, .menu-item.active { 
-  background-color: #506a72; /* #5f74a6; */
-  color: #fff;
+  border-bottom: 2px solid #333;
+  color: #000;
 }
 .menu-logo {
   background-color: #eee;
@@ -92,14 +79,13 @@ body {
 .container {
   background-color: #fafafa;
   border: 1px solid #777;
-  border-radius: 5px;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  box-shadow: 0 0 5px #777;
-  -moz-box-shadow: 0 0 5px #777;
-  -webkit-box-shadow: 0 0 5px #777;
-  margin-top: 20px;
-  padding: 25px 20px 70px 20px;
+  border-radius: 9px;
+  -moz-border-radius: 9px;
+  -webkit-border-radius: 9px;
+  box-shadow: 0 0 8px #777;
+  -moz-box-shadow: 0 0 8px #777;
+  -webkit-box-shadow: 0 0 8px #777;
+  padding: 10px 20px 70px 20px;
 }
 .container-left {
   display: inline-block;
@@ -182,7 +168,6 @@ body {
   margin-bottom: 30px;
 }
 .quote-text {
-  border-left: 3px solid #bbb;
   color: #777;
   font-style: oblique;
   margin: 15px 0;
@@ -261,12 +246,19 @@ body {
   display: block;
   margin: 0 auto;
 }
+.content-text {
+  color: #444;
+  font-size: 15px;
+  line-height: 30px;
+  margin: 0 auto;
+  width: 80%;
+}
 
 /**************************
  *        FOOTER
  **************************/
 .footer {
-  color: #fff;
+  color: #333;
   font-size: 15px;
   float: right;
   margin: 0 0 50px 0;}
@@ -281,14 +273,7 @@ body {
 /**************************
  *        LOGIN
  **************************/
-.login-container {
-  border-bottom-right-radius: 4px;
-  -moz-border-bottom-right-radius: 4px;
-  -webkit-border-bottom-right-radius: 4px;
-  border-bottom-left-radius: 4px;
-  -moz-border-bottom-left-radius: 4px;
-  -webkit-border-bottom-left-radius: 4px;
-  background-color: #444;
+.login-container{
   cursor: pointer;
   display: inline-block;
   padding: 5px 10px;
@@ -296,13 +281,13 @@ body {
   right: 0;
 }
 .login-container a {
-  color: #fff;
+  color: #666;
   text-decoration: none;
 }
 .login-item:hover {
-  background-color: #616161;
+  color: #333;
 }
 .login-item {
-  padding-left: 10px;
-  padding-right: 10px;
+  float: right;
+  padding: 5px 10px;
 }
