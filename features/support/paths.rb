@@ -37,7 +37,7 @@ module NavigationHelpers
     when /^Events/ then '/events'
     when /^Support/ then '/support'
     when /^Books/ then '/books'
-    when /^Photos/ then '/albums'
+    when /^Albums/ then '/albums'
     when /^the admin books? page/ then '/admin/books'
     when /^the admin photos? page/ then '/admin/photos'
     when /^the admin albums? page/ then '/admin/albums'

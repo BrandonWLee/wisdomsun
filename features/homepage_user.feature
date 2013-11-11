@@ -5,7 +5,29 @@ Feature: Working website
   And see the photo slider, tabs for navigation, events, and about us sections
 
 Background: on the homepage
+  Given the following users are admin:
+  |email              | password|
+  |admin@wisdomsun.org| password|
+
+  Given I am logged in as admin
+  Given I am on the admin page
+  When I go to the admin categories page
+  And I click on "New Category"
+  When I fill in "category_name" with "About"
+  When I fill in "category_position" with "2"
+  And I press "Create Category"
+  Then I should see "Category was successfully created."
+  And I should see "about"
+  When I go to the admin other pages page
+  And I click on "New Other Pages"
+  And I fill in "other_pages_title" with "About"
+  And I select "About" from "other_pages_category_id"
+  And I press "Create Other pages"
+  Then I should see "Other pages was successfully created"
+  When I go to the about ari goldfield page
+  Then I should see "About"
   Given I am on the homepage
+
 
 Scenario: navigate to About Us (tab)
   When I press the About tab
