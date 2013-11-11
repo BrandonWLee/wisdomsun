@@ -1,7 +1,7 @@
 require 'spec_helper'  
 require 'factory_girl'
 
-describe Admin::PhotosController do
+describe Admin::EventsController do
   render_views
 	include Devise::TestHelpers
   before(:each) do
@@ -19,8 +19,8 @@ describe Admin::PhotosController do
     User.all.each do |user|
       user.destroy
     end
-    @photos = Photo.create!( [{:description=>"photo1"}, 
-                            {:description=>"photo2"}])
+    @events = Event.create!( [{:name=> "firstevent", :description=>"event1"}, 
+                            {:name=> "secondevent", :description=>"event2"}])
     #user = FactoryGirl.create(:user, :email => "hello@example.com", :password => "password")
 
 #    picture1 = File.new("./app/assets/images/photos/1-1.jpg")
@@ -32,16 +32,16 @@ describe Admin::PhotosController do
   end
 
   after(:all) do
-    @photos.each do |photo|
-      photo.destroy
+    @events.each do |event|
+      event.destroy
     end
   end
 
-  describe 'admin photos index page' do
-    it 'should show all of the photos' do
+  describe 'admin events index page' do
+    it 'should show all of the events' do
       get :index
-      @photos.each do |photo| 
-        response.body.should include(photo.description)
+      @events.each do |event| 
+        response.body.should include(event.description)
       end
     end
   end
