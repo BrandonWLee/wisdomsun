@@ -69,7 +69,6 @@ holiday_cover.close
   retreat1.picture = pic
   pic.close
   retreat1.save!  
-  pic.close
 end
 
 (1...7).each do |num| 
@@ -78,7 +77,6 @@ end
   holiday1.picture = pic
   pic.close
   holiday1.save!  
-  pic.close
 end
 
 # USERS AND ADMIN
