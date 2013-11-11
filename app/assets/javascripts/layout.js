@@ -12,6 +12,9 @@ $(document).ready(function(){
     case 'events':
       menu_item = '#menu-events';
       break;
+    case 'photos':
+      menu_item = '#menu-photos';
+      break;
     case 'downloads':
       menu_item = '#menu-downloads';
       break;
