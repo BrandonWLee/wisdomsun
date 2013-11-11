@@ -40,7 +40,8 @@ ActiveAdmin.register Photo do
       f.input :picture
       f.input :description
     end
-    f.buttons
+    f.actions
   end
+
 
 end

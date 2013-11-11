@@ -30,20 +30,20 @@ Note: This is a more advanced class, so if you have not attended any of our clas
 stars_book = Book.new({:title => 'Stars of Wisdom', :author => 'Khenpo Tsultrim Gyamtso', :description => "Teachings on the Noble Nagarjuna's Fundamental Wisdom of the Middle Way By Khenpo Tsultrim Gyamtso, translated by Ari Goldfield.\n Tibetan Buddhist master Khenpo Tsultrim Gyamtso is known for his joyful songs of realization and his spontaneous and skillful teaching style. In this book he explains how to gain clarity, peace, and wisdom through step-by-step analysis and meditation on the true nature of reality. He also introduces readers to the joy and profundity of yogic song, and reveals the power of aspiration prayers to inspire, transform, and brighten our hearts.", :purchase_url => 'https://www.google.com'})
 stars_picture = File.new("./app/assets/images/books/starsofwisdom.jpg")
 stars_book.picture = stars_picture
-stars_picture.close
 stars_book.save!
+stars_picture.close
 
 sun_book = Book.new({:title => 'The Sun of Wisdom', :author => 'Khenpo Tsultrim Gyamtso',  :description => "Teachings on the Noble Nagarjuna's Fundamental Wisdom of the Middle Way By Khenpo Tsultrim Gyamtso, translated by Ari Goldfield.\n The Fundamental Wisdom of the Middle Way was written in the second century and is one of the most important works of Nagarjuna, the pioneering commentator on the Buddha's teachings on the Madhyamika or Middle Way view. The subtle analyses presented in this treatise were closely studied and commented upon by many realized masters from the Indo-Tibetan Buddhist tradition. Using Nagarjuna's root text and the great modern master Ju Mipham's commentary as a framework, Khenpo Tsultrim Gyamtso explains the most important verse from each chapter in the text in a style that illuminates for modern students both the meaning of these profound teachings and how to put them into practice in a way that benefits both oneself and others.", :purchase_url => 'https://www.google.com'})
 sun_picture = File.new("./app/assets/images/books/thesunofwisdom.jpg")
 sun_book.picture = sun_picture
-sun_picture.close
 sun_book.save!
+sun_picture.close
 
 freeing_book = Book.new({:title => 'Freeing the Body Freeing the Mind', :author => 'Robert Thurman', :description => "Writings on the Connections between Yoga and Buddhism Edited by Michael Stone Foreword by Robert Thurman. \n In this collection of provocative essays by prominent teachers of Yoga and Buddhism, the common ground of these two ancient traditions becomes clear. Michael Stone has brought together a group of intriguing voices to show how Buddhism and Yoga share the same roots, the same values, and the same spiritual goals. The themes addressed here are rich and varied, yet the essays all weave together the common threads between the traditions that offer guidance toward spiritual freedom and genuine realization. Contributors include Ajahn Amaro Bhikkhu, Shosan Victoria Austin, Frank Jude Boccio, Christopher Key Chapple, Ari Goldfield and Rose Taylor, Chip Hartranft, Roshi Pat Enkyo O'Hara, Sarah Powers, Eido Shimano Roshi, Jill Satterfield, Mu Soeng, Michael Stone, and Robert Thurman.", :purchase_url => 'https://www.google.com'})
 freeing_picture = File.new("./app/assets/images/books/freeingthebodyfreeingthemind.jpg")
 freeing_book.picture = freeing_picture
-freeing_picture.close
 freeing_book.save!
+freeing_picture.close
 
 # Album
 retreat = Album.new(:description => "The first Wisdom Sun retreat was held in Shingle Springs, California. We were incredibly fortunate to have the use of our friends' house that provided the ideal retreat environment-beautiful, spacious, and secluded. Over five days, we studied and practiced together, indoors and outdoors. We had a refuge ceremony for four new Buddhist refugees, which was a truly wonderful and heartfelt ceremony. Together the retreatants practiced yoga, lujong, and meditation; studied and discussed the Dharma teachings; sang and danced; worked and played; and shared stories and experiences both difficult and delightful.")
@@ -51,14 +51,15 @@ retreat_id = retreat.id
 retreat.name = 'Shingle Springs Retreat' 
 retreat_cover = File.new("./app/assets/images/photos/1-4.jpg")
 retreat.album_cover = retreat_cover
-retreat_cover.close
 retreat.save!
+retreat_cover.close
 
 holiday = Album.new(:name => 'Holiday, Cornwall, UK 2005', :description => "These photos were taken on a five-day holiday that Khenpo Rinpoche took with Ari, Rose, and Bridget Taylor, between his teachings in the UK and going to Dechen Choling in France. It was a magical time singing and dancing at the ancient sites of Cornwall such as Tintagel (King Arthur's castle ruins on a beautiful and rugged promontory) and hanging out eating pasties in the crowded tourist spots of Newquay. Khenpo Rinpoche particularly enjoyed King Arthur's castle, which he spoke about for many months afterwards, and also Saint Michael's Mount, a castle built on a little island, which Rinpoche praised as the most beautiful seaside garden in the world. He has certainly seen many, so that is a pretty reliable endorsement!")
 holiday_id = holiday.id
 holiday_cover = File.new("./app/assets/images/photos/2-5.jpg")
-holiday_cover.close
+holiday.album_cover = holiday_cover
 holiday.save!
+holiday_cover.close
 
 # Photos 
 
@@ -68,6 +69,7 @@ holiday.save!
   retreat1.picture = pic
   pic.close
   retreat1.save!  
+  pic.close
 end
 
 (1...7).each do |num| 
@@ -76,6 +78,7 @@ end
   holiday1.picture = pic
   pic.close
   holiday1.save!  
+  pic.close
 end
 
 # USERS AND ADMIN

@@ -15,5 +15,11 @@ ActiveAdmin.register OtherPages do
   		params[:other_pages].merge!(:refactored_title => title)
   		create!
   	end
+
+    def update
+      title = params[:other_pages][:title].downcase.tr(" ", "_")
+      params[:other_pages].merge!(:refactored_title => title)
+      update!
+    end
   end
 end

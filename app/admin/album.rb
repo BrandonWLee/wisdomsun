@@ -8,7 +8,14 @@ ActiveAdmin.register Album do
     column :number_of_photos do |album|
       album.photos.size
     end
-    default_actions
+    actions do |album|
+      link_to "View", admin_album_path(album)
+      link_to "Edit", edit_admin_album_path(album)
+      link_to "Delete", admin_album_path(album), :method => :delete
+      if album.photos.size != 0
+        link_to "Delete with Photos", destroy_photos_admin_album_path(album), :method => :delete
+      end
+    end
   end
 
   show do |album|
@@ -34,6 +41,15 @@ ActiveAdmin.register Album do
       f.input :description
       f.input :album_cover
     end
-    f.buttons
+    f.actions
   end
+
+  member_action :destroy_photos, :method => :delete do 
+    flash[:notice] = "Found  photos"
+    Photo.destroy_in_album(params[:id])
+    album = Album.find(params[:id])
+    album.destroy
+    redirect_to admin_albums_path
+  end
+
 end

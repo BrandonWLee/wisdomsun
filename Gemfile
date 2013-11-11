@@ -74,3 +74,6 @@ gem "paperclip-storage-ftp", "~> 1.1.0"
 gem 'redactor-rails-paperclip'
 gem 'rmagick'
 
+# email
+gem 'mail'
+

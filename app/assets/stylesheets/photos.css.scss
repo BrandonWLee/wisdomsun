@@ -2,16 +2,26 @@
   background-color: #f2f2f2;
   border: 1px solid #ccc;
   display: inline-block;
-  width: 27%;
-  min-height: 150px;
+  width: 30%;
+  height: 150px;
   margin: 10px 9px;
   vertical-align: top;
+  overflow: hidden;
 }
-.content-box .album-img-box {
+.album-content-box {
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  display: inline-block;
+  width: 30%;
+  height: 250px;
+  margin: 10px;
+  vertical-align: top;
+}
+.album-content-box .album-img-box {
   display: inline-block;
   height: 190px;
   vertical-align: center;
-  margin: 10px 10px 0px 10px;
+  margin: 10px 10px 10px 10px;
   float: left;
   overflow: hidden;
 }
@@ -24,7 +34,17 @@
   overflow: hidden;
 }
 .content-box img {
-  margin: 10px 10px 10px 10px ;
+  margin: 10px;
+  // max-height: 215px;
+  // max-width: 215px;
+  width: 215px;
+  width: 90%;
+  // max-width: 215px;
+  vertical-align: middle;
+  overflow: hidden;
+}
+.album-content-box img {
+  margin: 10px;
   // max-height: 215px;
   // max-width: 215px;
   width: 215px;
@@ -32,7 +52,14 @@
   vertical-align: middle;
   overflow: hidden;
 }
-.content-box .text-box {
+.text-box {
+  // color: #070719;
+  color: #0A122A;
+  text-align: justify;
+  font-size: 14px;
+  margin: 0px 50px 30px 50px;
+}
+.album-content-box .text-box {
   color: #070719;
   text-align: center;
   font-size: 17px;
@@ -42,4 +69,9 @@
   color: #444;
   font-size: 15px;
   margin: 10px 10px 10px 30px;
+}
+.back_link {
+  text-align: right;
+  font-size: 13px;
+  margin: 0px 30px 10px 0px; 
 }

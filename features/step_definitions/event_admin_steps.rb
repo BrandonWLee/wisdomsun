@@ -25,6 +25,13 @@ Then /the event "(.*)" should have the description "(.*)"/ do |name, description
   event.description.should == description
 end
 
+When /I change the "(.*)" title to ""/ do |name|
+  event = Event.where(:name => name).first
+  visit edit_admin_event_path(event)
+  fill_in("Name", :with => "")
+  click_button("Update Event")
+end
+
 When /I change the "(.*)" description to "(.*)"/ do |name, description|
   event = Event.where(:name => name).first
   visit edit_admin_event_path(event)
@@ -37,3 +44,8 @@ When /I delete the event "(.*)"/ do |name|
   visit admin_event_path(event)
   click_link("Delete Event")
 end
+
+When /^I try to edit a event with id 10/ do
+  visit('/admin/events/10/edit')
+end
+

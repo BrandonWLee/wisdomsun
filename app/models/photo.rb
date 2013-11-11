@@ -15,10 +15,19 @@ class Photo < ActiveRecord::Base
       :passive => true
       } ]
 
+  validates_attachment :picture, 
+    :content_type => { :content_type => ["image/jpg", "image/jpeg"] }
   belongs_to :album
   
   def self.find_pictures_in_album(id)
     Photo.where(:album_id => id)
+  end
+
+  def self.destroy_in_album(id)
+    photos = Photo.where(:album_id => id)
+    photos.each do |photo|
+      photo.destroy
+    end
   end
     
 end

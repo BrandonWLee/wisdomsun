@@ -20,6 +20,9 @@ module NavigationHelpers
       '/support'
     when /^books/ then
       '/books'
+    when /^the albums page.$/ then
+      '/albums'
+    
     when /^the contact page$/ then
       '/contact'
     when /^the lineage page$/ then
@@ -37,6 +40,9 @@ module NavigationHelpers
     when /^the admin books? page/ then '/admin/books'
     when /^the admin photos? page/ then '/admin/photos'
     when /^the admin albums? page/ then '/admin/albums'
+    when /^the admin categories page/ then '/admin/categories'
+    when /^the admin other pages page/ then '/admin/other_pages'
+    when /^the about ari goldfield page/ then '/categories/about/about_ari_goldfield'
     when /^Around the Web/ then '/aroundtheweb'
     when /the admin (panel|page)/ then admin_dashboard_path
 

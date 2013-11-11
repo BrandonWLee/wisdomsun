@@ -3,9 +3,8 @@
 = javascript_include_tag "jquery.flexslider-min"
 
 .wrapper
-  = render "/layouts/menu"
-
   .container
+    = render "/layouts/menu"
     #events.container-left
       %a{ :href => '/events' }
         .title Events
@@ -27,8 +26,10 @@
           .quote-author - Chogyam Trungpa Rinpoche 
       #about-us.section
         .subtitle About Us
-        .about-pic
-        .about-pic
+        %a{ :href => 'categories/about/about_ari_goldfield'}
+          .about-pic= image_tag "welcome/ari.jpg"
+        %a{ :href => 'categories/about/about_rose_goldfield'}
+          .about-pic= image_tag "welcome/rose.jpg"
         .about-text
           %p Wisdom Sun is about bringing meditation teachings home: Home to our own culture and locale; home to our daily life; home to our mind, body, and heart.
           %p{:id => 'read-more', :class => 'read-more'}= link_to "Read more...", '/about'

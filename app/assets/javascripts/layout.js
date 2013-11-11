@@ -12,6 +12,9 @@ $(document).ready(function(){
     case 'events':
       menu_item = '#menu-events';
       break;
+    case 'photos':
+      menu_item = '#menu-photos';
+      break;
     case 'downloads':
       menu_item = '#menu-downloads';
       break;
@@ -28,4 +31,12 @@ $(document).ready(function(){
       menu_item = '#menu-home';
   }
   $(menu_item).addClass('active');
+
+  /* Dropdowns */
+  $('#cat-about').hover(function(){
+    $(this).find('.menu-dropdown').show();
+  });
+  $('.menu-dropdown').click(function(e){
+    e.stopPropagation();
+  });
 });

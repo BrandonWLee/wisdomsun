@@ -9,7 +9,7 @@ Scenario: Accessing Support should lead to the Donations Page
 	And I should see "Donation"
 	And I should see "Make a Donation by Check"
 	And I should see "Make a Donation Online with Paypal"
-  And I should see a form for PayPal
+        And I should see a form for PayPal
 
 Scenario: Clicking the Paypal link
 	Given I am on the support page
@@ -34,7 +34,7 @@ Scenario: I should be able to fill in contact submission form
 
 Scenario: Forms must be filled in
 	Given I am on the contact page
-  When I press "Send"
-  Then I should be on the contact page
-  But I should see "You must fill in the whole form to submit"
+        When I press "Send"
+        Then I should be on the contact page
+        But I should see "You must fill in the whole form to submit"
   
