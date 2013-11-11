@@ -35,10 +35,10 @@ Scenario: delete an event
 Scenario: When I try to edit a nonexistant event
   When I try to edit a event with id 10
   Then I should be on the admin events page
-  And I should see the error "Event does not exist"
+  And I should see "Event does not exist"
 
 Scenario: When I change an event title to an empty title
   When I change the "Meditation" title to ""
   Then I should be on the admin events page
-  And I should see the error "Cannot have empty title"
+  And I should see "Cannot have empty title"
 

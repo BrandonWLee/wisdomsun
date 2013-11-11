@@ -37,6 +37,10 @@ When /I delete the book "(.*)"/ do |title|
   click_link("Delete Book")
 end
 
+When /^I try to edit a book with id 10/ do
+  visit('/admin/books/10/edit')
+end
+
 
   
 

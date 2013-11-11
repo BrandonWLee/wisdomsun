@@ -36,5 +36,5 @@ Scenario: delete a book
 Scenario: When I try to edit a nonexistant book
   When I try to edit a book with id 10
   Then I should be on the admin books page
-  And I should see the error "Book does not exist"
+  And I should see "Book does not exist"
 

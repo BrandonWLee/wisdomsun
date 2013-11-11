@@ -47,6 +47,33 @@ ActiveAdmin.register Book do
     end
     f.buttons
   end
+  controller do
+    def edit
+      if (not Book.exists?(params[:id]))
+        flash[:notice] = "Book does not exist"
+        redirect_to '/admin/books'
+        return
+      end
+      super
+    end
+
+    def update
+      if (params[:book][:title].nil? or params[:book][:title].empty?)
+        flash[:notice] = "Cannot have empty title"
+        redirect_to '/admin/books'
+        return
+      end
+      update!
+    end
+    def create
+      if (params[:book][:title].nil? or params[:book][:title].empty?)
+        flash[:notice] = "Cannot have empty title"
+        redirect_to '/admin/books'
+        return
+      end
+      create!
+    end
+  end
 end
 ActiveAdmin.register_page "Test Page" do
   page_action :ex, :method => :post do
