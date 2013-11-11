@@ -44,3 +44,16 @@ Scenario: Creating a Good Page
   And I select "testy category" from "other_pages_category_id"
   And I press "Create Other pages"
   Then I should see "Other pages was successfully created"
+
+Scenario: Updating a Page
+  When I go to the admin other pages page
+  And I click on "New Other Pages"
+  And I fill in "other_pages_title" with "testy title"
+  And I select "testy category" from "other_pages_category_id"
+  And I press "Create Other pages"
+  Then I should see "Other pages was successfully created"
+  When I click on "Edit Other Pages"
+  And I fill in "other_pages_title" with "again again"
+  And I press "Update Other pages"
+  Then I should see "Other pages was successfully updated"
+  And I should see "again_again"
