@@ -1,3 +1,8 @@
-%p= @title
-%p
-  #body= @htmlbody.html_safe
+.wrapper
+  .container
+    = render "/layouts/menu"
+    .header
+      .header-title= @title
+    .content
+      .content-text= @htmlbody.html_safe
+  = render "/layouts/footer"

@@ -3,10 +3,11 @@
  *= require redactor-rails
  **************************/
 body {
-  background-color: #65a9bd;
+  background: #65a9bd url('bkgd.jpg') center;
   font-family: Helvetica, Verdana, Arial, sans-serif;
   margin: 0 0;
   padding: 0 0;
+  top: 0;
 }
 .line {
   background-color: #aaa;
@@ -27,7 +28,7 @@ body {
  **************************/
 .menu {
   border-bottom: 1px solid #fff;
-  color: #fff;
+  color: #333;
   display: block;
   font-family: "Verdana", "Arial", sans-serif;
   font-size: 15px;
@@ -35,15 +36,14 @@ body {
 }
 .menu-container {
   position: relative;
-  text-align: right;
 }
 .menu-logo-container {
-  border: 1px solid #eee;
+  border: 1px solid #ddd;
   display: inline-block;
   float: left;
-  height: 80px;
-  margin: 8px 0 0 10px;
-  width: 200px;
+  height: 100px;
+  margin: 8px 0 0 0px;
+  width: 180px;
 }
 .menu-title {
   color: #444;
@@ -66,7 +66,6 @@ body {
   border-top-left-radius: 4px;
   -moz-border-top-left-radius: 4px;
   -webkit-border-top-left-radius: 4px;
-  color: #fff;
   cursor: pointer;
   display: inline-block;
   margin: 50px 0 0 0;
@@ -76,9 +75,10 @@ body {
   -moz-transition: 0.1s;
   -webkit-transition: 0.1s;
 }
+.menu a { color: #333; }
 .menu-item:hover, .menu-item.active { 
-  background-color: #506a72; /* #5f74a6; */
-  color: #fff;
+  border-bottom: 2px solid #333;
+  color: #000;
 }
 .menu-logo {
   background-color: #eee;
@@ -92,12 +92,12 @@ body {
 .container {
   background-color: #fafafa;
   border: 1px solid #777;
-  border-radius: 5px;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  box-shadow: 0 0 5px #777;
-  -moz-box-shadow: 0 0 5px #777;
-  -webkit-box-shadow: 0 0 5px #777;
+  border-radius: 9px;
+  -moz-border-radius: 9px;
+  -webkit-border-radius: 9px;
+  box-shadow: 0 0 8px #777;
+  -moz-box-shadow: 0 0 8px #777;
+  -webkit-box-shadow: 0 0 8px #777;
   margin-top: 20px;
   padding: 25px 20px 70px 20px;
 }
@@ -182,7 +182,6 @@ body {
   margin-bottom: 30px;
 }
 .quote-text {
-  border-left: 3px solid #bbb;
   color: #777;
   font-style: oblique;
   margin: 15px 0;
@@ -261,12 +260,19 @@ body {
   display: block;
   margin: 0 auto;
 }
+.content-text {
+  color: #444;
+  font-size: 15px;
+  line-height: 30px;
+  margin: 0 auto;
+  width: 80%;
+}
 
 /**************************
  *        FOOTER
  **************************/
 .footer {
-  color: #fff;
+  color: #333;
   font-size: 15px;
   float: right;
   margin: 0 0 50px 0;}
