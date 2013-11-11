@@ -35,3 +35,7 @@ Then /^I will be on the "(.*)" purchase link$/ do |arg1|
   # http://www.example.com is the default root for testing
   current_url.should == "http://www.example.com#{path_to(Book.find_by_title(arg1).purchase_url)}"
 end
+
+When /^I try to view the book with id 10/ do
+  visit('/books/10')
+end
