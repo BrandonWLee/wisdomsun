@@ -35,6 +35,8 @@ $(document).ready(function(){
   /* Dropdowns */
   $('#cat-about').hover(function(){
     $(this).find('.menu-dropdown').show();
+  }, function(){
+    $(this).find('.menu-dropdown').hide();
   });
   $('.menu-dropdown').click(function(e){
     e.stopPropagation();
