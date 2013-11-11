@@ -5,20 +5,14 @@ Feature: Support and Contact page
 
 Scenario: Accessing Support should lead to the Donations Page
 	Given I am on the support page
-	Then I should see "Support Wisdom Sun"
+	Then I should see "Support"
 	And I should see "Donation"
 	And I should see "Make a Donation by Check"
-	And I should see "Make a Donation Online with Paypal"
-        And I should see a form for PayPal
-
-Scenario: Clicking the Paypal link
-	Given I am on the support page
-	When I press "Donate by Paypal"
-	Then I should be able to donate by Paypal
+	And I should see "Make a Donation Online with PayPal"
 
 Scenario: Contacts should render the correct text
 	Given I am on the contact page
-	Then I should see "Contact Wisdom Sun"
+	Then I should see "Contact"
 	And I should see "601 29th Street"
 	And I should see "San Francisco, CA 94131"
 
@@ -30,11 +24,11 @@ Scenario: I should be able to fill in contact submission form
 	And I fill in "contact_text" with "Eybeybey"
 	And I press "Send"
 	Then I should be on the contact page
-	And I should see "Information Submitted"
+	And I should see "Information submitted"
 
 Scenario: Forms must be filled in
 	Given I am on the contact page
         When I press "Send"
         Then I should be on the contact page
-        But I should see "You must fill in the whole form to submit"
+        But I should see "Error, you must fill in the whole form to submit"
   
