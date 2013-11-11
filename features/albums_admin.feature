@@ -20,47 +20,37 @@ Background: photos and albums that have been uploaded already
   And the following users are admin:
   |email              | password|
   |admin@wisdomsun.org| password|
-
   Given I am logged in as admin
   Given I am on the admin page
 
 Scenario: Add an album
   When I click on the admin albums page
   And I click on "New Album"
-  And I fill in the name "Party"
-  And I click "Create Album"
+  And I fill in "Name" with "Party"
+  And I press "Create Album"
   Then there should be an album with the name "Party"
   
 Scenario: Rename an album
   When I click on the admin albums page
-  And I go to the edit page of the album "Retreat"
-  And I fill in the name "Expedition"
-  And I click "Update Album"
+  And I check out the edit page of the album "Retreat"
+  And I fill in "Name" with "Expedition"
+  And I press "Update Album"
   Then there should be an album with the name "Expedition"
   And there should not be an album with the name "Retreat"
   
 Scenario: Delete an album with photos in the album and all the photos
   When I click on the admin albums page
-  And I go to the album "Retreat"
-  And I check "Delete all photos"
-  And I click "Delete Album"
-  Then there should be no album named "Retreat"
-  And there should be no photo with the description "close up"
-  And there should be no photo with the description "meep"
-  And there should be no photo with the description "album cover"
-  And there should be no photo with the description "bloop"
-
-Scenario: When I try to edit a nonexistant album
-  When I try to edit a album with id 10
-  Then I should be on the admin albums page
-  And I should see the error "Album does not exist"
+  And I click "Delete with Photos" for the album "Retreat"
+  Then there should not be an album with the name "Retreat"
+  And there should not be a photo with the description "close up"
+  And there should not be a photo with the description "meep"
+  And there should not be a photo with the description "album cover"
+  And there should be a photo with the description "bloop"
   
 Scenario: Delete an album with photos in the album but not the photos
   When I click on the admin albums page
-  And I go to the album "Retreat"
-  And I check "Don't delete photos"
-  And I click "Delete Album"
-  Then there should be no album named "Retreat"
+  And I click "Delete" for the album "Retreat"
+  Then there should not be an album with the name "Retreat"
   But there should be a photo with the description "close up"
   But there should be a photo with the description "meep"
   But there should be a photo with the description "album cover"

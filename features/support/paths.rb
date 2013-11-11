@@ -20,6 +20,9 @@ module NavigationHelpers
       '/support'
     when /^books/ then
       '/books'
+    when /^the albums page.$/ then
+      '/albums'
+    
     when /^the contact page$/ then
       '/contact'
     when /^the lineage page$/ then
