@@ -31,39 +31,76 @@ When /I fill in the description "(.*)"/ do |description|
 end
 
 When /I add a new album named "(.*)"/ do |album_name|
-  click("New Album")
+  click_link("New Album")
   fill_in("Album Name", album_name)
 end
 
-When /I add the photo to the album named "(.*)"/ do |album_name|
-  select("Add to Album", album_name)
-end
-
 Then /there should be a photo with the description "(.*)"/ do |description|
-  photo = Photo.find(:description => description)
+  photo = Photo.find_by_description(description)
   photo.should_not == nil
 end
 
 Then /there should be an album with the name "(.*)"/ do |name|
-  album = Album.find(:name => name)
+  album = Album.find_by_name(name)
   album.should_not == nil
 end
 
 Then /there should be a photo with the description "(.*)" in the album "(.*)"/ do |description, name|
-  photo = Photo.find(:description => description)
+  photo = Photo.find_by_description(description)
   photo.should_not == nil
-  album = Album.find(:name => name)
+  album = Album.find_by_name(name)
   album.should_not == nil
   album.photos.should include(photo)    # TODO if more than one photo has that description?
 end
 
 When /I go to the edit page of the album "(.*)"/ do |album_name|
-  album = Album.find(:name => album_name)
-  visit admin_edit_book_page(album)
+  album = Album.find_by_name(album_name)
+  visit edit_admin_book_path(album)
 end
 
-When /I try to edit a photo with id (.*)/ do |id|
-  visit admin_edit_photo_page(:id => id)
+When /I click on the admin albums page/ do 
+  click_link("Albums")
+end
+
+When /I check out the edit page of the album "(.*)"/ do |name|
+  album = Album.find_by_name(name)
+  album.should_not == nil
+  visit edit_admin_album_path(album)
+end
+
+Then /there should not be an album with the name "(.*)"/ do |name|
+  album = Album.find_by_name(name)
+  album.should == nil
+end
+
+Then /there should not be a photo with the description "(.*)"/ do |description|
+  photo = Photo.find_by_description(description)
+  photo.should == nil
+end
+
+When /I click "(.*)" for the album "(.*)"/ do |link_name, name|
+  album = Album.find_by_name(name)
+  album.should_not == nil
+  within("tr#album_#{album.id}") do
+    click_link(link_name)
+  end
+end
+
+Then /there should be a "(.*)" photo in the "(.*)" album/ do |photo_d, album_name|
+  photo = Photo.find_by_description(photo_d)
+  photo.should_not == nil
+  photo.album.should_not == nil
+  photo.album.name.should == album_name
+end
+
+Then /there should not be a "(.*)" photo in the "(.*)" album/ do |photo_d, album_name|
+  photo = Photo.find_by_description(photo_d)
+  photo.should_not == nil
+  photo.album.should == nil
+end
+
+When /I add the photo to the album named "(.*)"/ do |name|
+  select(name, :from => "Album")
 end
 
 
