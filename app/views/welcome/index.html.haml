@@ -7,7 +7,7 @@
     = render "/layouts/menu"
     #events.container-left
       %a{ :href => '/events' }
-        .title Events
+        .title Upcoming Events
       - @events.each do |event|
         .item
           .item-title= event.name
@@ -25,7 +25,8 @@
           "There is a sense of joy in being part of this knowledge and that sense of joy, which triggers the transition from knowledge to wisdom, is compassion, or unconditional love."
           .quote-author - Chogyam Trungpa Rinpoche 
       #about-us.section
-        .subtitle About Us
+        %a{ :href => 'categories/about/about' }
+          .subtitle About Us
         %a{ :href => 'categories/about/about_ari_goldfield'}
           .about-pic= image_tag "welcome/ari.jpg"
         %a{ :href => 'categories/about/about_rose_goldfield'}
@@ -35,7 +36,7 @@
           %p{:id => 'read-more', :class => 'read-more'}= link_to "Read more...", '/about'
       #around-the-web.section
         %a{ :href => '/aroundtheweb' } 
-        .subtitle Around the Web
+          .subtitle Around the Web
         .text
           Text
 
