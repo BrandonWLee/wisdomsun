@@ -3,13 +3,13 @@ class EventsController < ApplicationController
     @events = Event.all
   end
   def show
-    id = params[:id]
-    if (not Event.exists?(id))
-    	flash[:notice] = "Event does not exist"
-    	redirect_to '/events'
-    	return
+    begin
+      id = params[:id]
+      @event = Event.find(id)
+    rescue
+      flash[:notice] = "Event does not exist"
+      redirect_to(events_path)
     end
-    @event = Event.find(id)
   end
 end
 
