@@ -18,7 +18,7 @@ describe PhotosController do
     end
     it 'passes the a collection of all photos to the view' do
       Photo.should_receive(:find_pictures_in_album).and_return(@photos)
-      get :index
+      get :index, :album_id => 1
     end
     after :each do
       @tmp_album.destroy
