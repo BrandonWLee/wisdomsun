@@ -41,7 +41,7 @@ ActiveAdmin.register Album do
       f.input :description
       f.input :album_cover
     end
-    f.buttons
+    f.actions
   end
 
   member_action :destroy_photos, :method => :delete do 

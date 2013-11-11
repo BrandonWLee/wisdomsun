@@ -45,7 +45,7 @@ ActiveAdmin.register Book do
       f.input :description
       f.input :picture
     end
-    f.buttons
+    f.actions
   end
   controller do
     def edit

@@ -466,7 +466,17 @@
         1,
         null,
         1,
+<<<<<<< HEAD
+=======
         0,
+        null,
+        null,
+        1,
+        0,
+>>>>>>> 69c369d5fcb4f2905e8fe91a35011e0a3a8b119b
+        0,
+        0,
+        null,
         null,
         null,
         1,
@@ -781,7 +791,11 @@
         null
       ]
     },
+<<<<<<< HEAD
     "timestamp": 1384152656
+=======
+    "timestamp": 1384149100
+>>>>>>> 69c369d5fcb4f2905e8fe91a35011e0a3a8b119b
   },
   "RSpec": {
     "coverage": {

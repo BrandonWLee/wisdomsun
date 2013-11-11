@@ -1,11 +1,6 @@
 require 'spec_helper'
 require 'factory_girl'
 
-FactoryGirl.define do
-	factory :user do
-		admin false
-	end
-end
 
 describe Users::SessionsController do
 	include Devise::TestHelpers
