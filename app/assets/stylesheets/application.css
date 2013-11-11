@@ -3,7 +3,7 @@
  *= require redactor-rails
  **************************/
 body {
-  background: #65a9bd url('bkgd.jpg') center top;
+  background: #65a9bd url('bkgd.jpg') fixed center top;
   font-family: Helvetica, Verdana, Arial, sans-serif;
   margin: 0 0;
   padding: 0 0;
@@ -27,13 +27,14 @@ body {
  *          MENU 
  **************************/
 .menu {
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid #ddd;
   color: #333;
   display: block;
   font-family: "Verdana", "Arial", sans-serif;
   font-size: 15px;
   text-align: center;
   margin: 0 auto 20px auto;
+  width: 90%;
 }
 .menu-container {
   position: relative;
@@ -44,7 +45,6 @@ body {
 .menu-item-container {
   display: inline-block;
   text-align: center;
-  width: 700px;
 }
 .menu-item {
   border-top-right-radius: 4px;
@@ -55,8 +55,8 @@ body {
   -webkit-border-top-left-radius: 4px;
   cursor: pointer;
   display: inline-block;
-  margin-bottom: 10px;
-  padding: 15px 15px;
+  margin: 0 10px 10px 10px;
+  padding: 5px 5px;
   text-decoration: none;
   transition: 0.1s;
   -moz-transition: 0.1s;
