@@ -21,7 +21,7 @@ ActiveAdmin.register Event do
 
     def update
       if (params[:event][:name].nil? or params[:event][:name].empty?)
-        flash[:notice] = "Cannot have empty title"
+        flash[:notice] = "Cannot have empty name"
         redirect_to '/admin/events'
         return
       end
@@ -29,7 +29,7 @@ ActiveAdmin.register Event do
     end
     def create
       if (params[:event][:name].nil? or params[:event][:name].empty?)
-        flash[:notice] = "Cannot have empty title"
+        flash[:notice] = "Cannot have empty name"
         redirect_to '/admin/events'
         return
       end

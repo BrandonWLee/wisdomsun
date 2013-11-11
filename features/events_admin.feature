@@ -40,5 +40,11 @@ Scenario: When I try to edit a nonexistant event
 Scenario: When I change an event title to an empty title
   When I change the "Meditation" title to ""
   Then I should be on the admin events page
-  And I should see "Cannot have empty title"
+  And I should see "Cannot have empty name"
+
+Scenario: When I try to make event with empty title
+  When I click on "New Event"
+  And I press "Create Event"
+  Then I should see "Cannot have empty name"
+
 

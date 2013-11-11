@@ -41,6 +41,13 @@ When /^I try to edit a book with id 10/ do
   visit('/admin/books/10/edit')
 end
 
+When /I book change the Book "(.*)" title to ""/ do |name|
+  event = Book.where(:title => name).first
+  visit edit_admin_book_path(event)
+  fill_in("Title", :with => "")
+  click_button("Update Book")
+end
+
 
   
 

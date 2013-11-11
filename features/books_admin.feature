@@ -38,3 +38,13 @@ Scenario: When I try to edit a nonexistant book
   Then I should be on the admin books page
   And I should see "Book does not exist"
 
+Scenario: When I try to make book with empty title
+  When I click on "New Book"
+  And I press "Create Book"
+  Then I should see "Cannot have empty title"
+
+Scenario: When I change an book title to an empty title
+  When I book change the Book "Guns and Cars" title to ""
+  Then I should be on the admin books page
+  And I should see "Cannot have empty title"
+
