@@ -24,7 +24,7 @@ class Photo < ActiveRecord::Base
   end
 
   def self.destroy_in_album(id)
-    photos = Photo.where(:album_id => id)
+    photos = Photo.find_pictures_in_album(id)
     photos.each do |photo|
       photo.destroy
     end

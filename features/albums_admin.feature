@@ -5,18 +5,19 @@ Feature: Add, remove, or modify albums
   I want to be able to remove, create, and update albums.
 
 Background: photos and albums that have been uploaded already
+  Given there are no photos
+  Given there are no albums
   Given the following albums exist:
   | album_cover	| name		| description				|
   | ./app/assets/images/photos/1-1.jpg     | Retreat	    | Shingle Springs Retreat	|
   | ./app/assets/images/photos/1-2.jpg     | UK		      | Holiday Cornwall	|
 
-  Given the following photos exist:
-  | album_id	| picture	| description	|
-  | 1		| ./app/assets/images/photos/1-1.jpg	| close up		|
-  | 1		| ./app/assets/images/photos/1-2.jpg	| meep			|
-  | 1		| ./app/assets/images/photos/1-4.jpg	| album cover	|
-  | 2		| ./app/assets/images/photos/2-1.jpg	| bloop			|
-
+  Given the following photos in these albums exist:
+  | album	| picture	| description	|
+  | Retreat		| ./app/assets/images/photos/1-1.jpg	| close up		|
+  | Retreat		| ./app/assets/images/photos/1-2.jpg	| meep			|
+  | Retreat		| ./app/assets/images/photos/1-4.jpg	| album cover	|
+  | UK		| ./app/assets/images/photos/2-1.jpg	| bloop			|
 
   And the following users are admin:
   |email              | password|
