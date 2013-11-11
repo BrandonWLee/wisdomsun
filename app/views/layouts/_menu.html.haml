@@ -2,11 +2,12 @@
   .menu-container
     .login-container
       -if user_signed_in?
-        =link_to "Sign out", destroy_user_session_path, :method => :delete
+        =link_to "Sign out", destroy_user_session_path, :method => :delete, :class => 'login-item'
         -if current_user.admin?
-          =link_to "Admin Panel", admin_dashboard_path
+          =link_to "Admin Panel", admin_dashboard_path, :class => 'login-item'
       -else
-        =link_to "Sign in", new_user_session_path
+        =link_to "Sign in", new_user_session_path, :class => 'login-item'
+        =link_to "Sign up", new_user_registration_path, :class => 'login-item'
     .menu-logo-container
       .logo
       .menu-title 
@@ -17,5 +18,5 @@
       = link_to 'Events', '/events', :class => 'menu-item', :id => 'menu-events'
       = link_to 'Downloads', '/downloads', :class => 'menu-item', :id => 'menu-downloads'
       = link_to 'Bulletin', '/bulletin', :class => 'menu-item', :id => 'menu-bulletin'
-      = link_to 'Support', '/support', :class => 'menu-item', :id => 'menu-contact'
+      = link_to 'Support', '/support', :class => 'menu-item', :id => 'menu-support'
       = link_to 'Contact', '/contact', :class => 'menu-item', :id => 'menu-contact'

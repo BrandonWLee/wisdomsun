@@ -1,0 +1,70 @@
+.content-box {
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  display: inline-block;
+  width: 27%;
+  height: 150px;
+  margin: 10px 9px;
+  vertical-align: top;
+  overflow: hidden;
+}
+.album-content-box {
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  display: inline-block;
+  width: 27%;
+  height: 250px;
+  margin: 10px;
+  vertical-align: top;
+}
+.album-content-box .album-img-box {
+  display: inline-block;
+  height: 190px;
+  vertical-align: center;
+  margin: 10px 10px 10px 10px;
+  float: left;
+  overflow: hidden;
+}
+.content-box .photo-img-box {
+  display: inline-block;
+  height: 230px;
+  vertical-align: center;
+  margin: 10px;
+  float: left;
+  overflow: hidden;
+}
+.content-box img {
+  margin: 10px;
+  // max-height: 215px;
+  // max-width: 215px;
+  width: 215px;
+  // max-width: 215px;
+  vertical-align: middle;
+  overflow: hidden;
+}
+.album-content-box img {
+  margin: 10px;
+  // max-height: 215px;
+  // max-width: 215px;
+  width: 215px;
+  // max-width: 215px;
+  vertical-align: middle;
+  overflow: hidden;
+}
+.content-box .text-box {
+  color: #070719;
+  text-align: center;
+  font-size: 17px;
+  margin: 5px;
+}
+.album-content-box .text-box {
+  color: #070719;
+  text-align: center;
+  font-size: 17px;
+  margin: 5px;
+}
+.content-box .details{
+  color: #444;
+  font-size: 15px;
+  margin: 10px 10px 10px 30px;
+}

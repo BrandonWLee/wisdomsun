@@ -1,4 +1,6 @@
 Wisdomsun::Application.routes.draw do
+  mount RedactorRails::Engine => '/redactor_rails'
+
   ActiveAdmin.routes(self)
 
   devise_for :users, :controllers => { :sessions => 'users/sessions' }
@@ -9,10 +11,12 @@ Wisdomsun::Application.routes.draw do
   resources :books
   resources :bulletin
   resources :contact
+  resources :support
   resources :downloads
   resources :events
   resources :photos
   resources :albums
+  match 'categories/:category_name/:page_name', :to => 'category#getpage', :format => false
   
   resources :books do
     get 'fake_url', :action => "index" , :controller => "books"

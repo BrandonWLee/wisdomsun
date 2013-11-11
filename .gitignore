@@ -21,3 +21,9 @@
 # temp files
 *~
 *.swp
+
+# Ignore railroady doc files
+/doc/
+
+#Ignore emacs unsaved buffer
+*\#

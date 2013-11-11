@@ -1,6 +1,7 @@
 require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
+require 'redactor-rails'
 
 if defined?(Bundler)
   # If you precompile assets before deploying to production, use this line
@@ -62,5 +63,8 @@ module Wisdomsun
     # Devise said so: forcing your application to not access the DB
     #    or load models when precompiling your assets.
     config.assets.initialize_on_precompile = false
+
+    # for modified redactor-rails/config.js
+    config.assets.precompile += ["redactor-rails/*"]
   end
 end

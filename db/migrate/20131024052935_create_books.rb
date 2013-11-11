@@ -4,7 +4,6 @@ class CreateBooks < ActiveRecord::Migration
       t.string :title
       t.string :author
       t.text :description
-      t.string :picture
       t.string :purchase_url
 
       # Add fields that let Rails automatically keep track

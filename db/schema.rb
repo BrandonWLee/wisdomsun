@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131102194918) do
+ActiveRecord::Schema.define(:version => 20131108054435) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -29,7 +29,6 @@ ActiveRecord::Schema.define(:version => 20131102194918) do
   add_index "active_admin_comments", ["resource_type", "resource_id"], :name => "index_admin_notes_on_resource_type_and_resource_id"
 
   create_table "albums", :force => true do |t|
-    t.integer  "a_id"
     t.string   "name"
     t.text     "description"
     t.string   "album_cover_file_name"
@@ -42,7 +41,6 @@ ActiveRecord::Schema.define(:version => 20131102194918) do
     t.string   "title"
     t.string   "author"
     t.text     "description"
-    t.string   "picture"
     t.string   "purchase_url"
     t.datetime "created_at",           :null => false
     t.datetime "updated_at",           :null => false
@@ -50,6 +48,14 @@ ActiveRecord::Schema.define(:version => 20131102194918) do
     t.string   "picture_content_type"
     t.integer  "picture_file_size"
     t.datetime "picture_updated_at"
+  end
+
+  create_table "categories", :force => true do |t|
+    t.string   "name"
+    t.integer  "position"
+    t.string   "refactored_name"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
   end
 
   create_table "events", :force => true do |t|
@@ -62,15 +68,40 @@ ActiveRecord::Schema.define(:version => 20131102194918) do
     t.datetime "updated_at",  :null => false
   end
 
+  create_table "other_pages", :force => true do |t|
+    t.text     "body"
+    t.integer  "category_id"
+    t.string   "title"
+    t.string   "refactored_title"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+  end
+
   create_table "photos", :force => true do |t|
-    t.integer  "a_id"
-    t.string   "location_file_name"
-    t.string   "location_content_type"
-    t.integer  "location_file_size"
-    t.datetime "location_updated_at"
-    t.string   "name"
+    t.integer  "album_id"
+    t.string   "picture_file_name"
+    t.string   "picture_content_type"
+    t.integer  "picture_file_size"
+    t.datetime "picture_updated_at"
     t.text     "description"
   end
+
+  create_table "redactor_assets", :force => true do |t|
+    t.string   "data_file_name",                  :null => false
+    t.string   "data_content_type"
+    t.integer  "data_file_size"
+    t.datetime "data_updated_at"
+    t.integer  "assetable_id"
+    t.string   "assetable_type",    :limit => 30
+    t.string   "type",              :limit => 30
+    t.integer  "width"
+    t.integer  "height"
+    t.datetime "created_at",                      :null => false
+    t.datetime "updated_at",                      :null => false
+  end
+
+  add_index "redactor_assets", ["assetable_type", "assetable_id"], :name => "idx_redactor_assetable"
+  add_index "redactor_assets", ["assetable_type", "type", "assetable_id"], :name => "idx_redactor_assetable_type"
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "",    :null => false

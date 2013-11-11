@@ -32,8 +32,13 @@ module NavigationHelpers
     when /^Bulletin/ then '/bulletin'
     when /^Contact/ then '/contact'
     when /^Events/ then '/events'
+    when /^Support/ then '/support'
     when /^Books/ then '/books'
-    when /^the admin books page/ then '/admin/books'
+    when /^the admin books? page/ then '/admin/books'
+    when /^the admin photos? page/ then '/admin/photos'
+    when /^the admin albums? page/ then '/admin/albums'
+    when /^the admin categories page/ then '/admin/categories'
+    when /^the admin other pages page/ then '/admin/other_pages'
     when /^Around the Web/ then '/aroundtheweb'
     when /the admin (panel|page)/ then admin_dashboard_path
 

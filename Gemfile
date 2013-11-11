@@ -16,6 +16,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'simplecov'
   gem "factory_girl_rails", "~> 4.0"
+  gem 'railroady'
 end
 group :production do
   gem 'thin'
@@ -68,3 +69,8 @@ gem 'activeadmin'
 #file upload
 gem "paperclip", "~> 3.5.2"
 gem "paperclip-storage-ftp", "~> 1.1.0"
+
+# rich text editor with paperclip support
+gem 'redactor-rails-paperclip'
+gem 'rmagick'
+

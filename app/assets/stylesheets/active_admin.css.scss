@@ -6,6 +6,18 @@
 //
 // For example, to change the sidebar width:
 // $sidebar-width: 242px;
+/*
+ *= require redactor-rails
+*/
+// Fix redactor-rails, 90% solution, the last 10% isn't worth it to me.
+body.active_admin form.formtastic .redactor_box {
+  margin-left: 20%;
+  border: 1px solid #C9D0D6;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  width: 76%;
+}
 
 // Active Admin's got SASS!
 @import "active_admin/mixins";

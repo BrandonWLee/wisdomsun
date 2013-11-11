@@ -37,3 +37,5 @@ Given /I am logged in as admin/ do
   step 'I follow "Sign in"'
   step 'I login with the correct admin login information'
 end
+
+
