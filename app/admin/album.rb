@@ -12,9 +12,7 @@ ActiveAdmin.register Album do
       link_to "View", admin_album_path(album)
       link_to "Edit", edit_admin_album_path(album)
       link_to "Delete", admin_album_path(album), :method => :delete
-      if album.photos.size != 0
-        link_to "Delete with Photos", destroy_photos_admin_album_path(album), :method => :delete
-      end
+      link_to "Delete with Photos", destroy_photos_admin_album_path(album), :method => :delete
     end
   end
 
@@ -45,9 +43,8 @@ ActiveAdmin.register Album do
   end
 
   member_action :destroy_photos, :method => :delete do 
-    flash[:notice] = "Found  photos"
-    Photo.destroy_in_album(params[:id])
-    album = Album.find(params[:id])
+    album = Album.find_by_id(params[:id])
+    Photo.destroy_in_album(album.id)
     album.destroy
     redirect_to admin_albums_path
   end

@@ -1,3 +1,15 @@
+Given /there are no photos/ do 
+  Photo.all.each do |photo|
+    photo.destroy
+  end
+end
+
+Given /there are no albums/ do 
+  Album.all.each do |album|
+    album.destroy
+  end
+end
+
 Given /the following photos exist:/ do |photos_table|
   photos_table.hashes.each do |photo|
     album = Album.find_by_id(photo[:album_id])
@@ -11,6 +23,18 @@ Given /the following photos exist:/ do |photos_table|
   end
 end
 
+Given /the following photos in these albums exist:/ do |photos_table|
+  photos_table.hashes.each do |photo|
+    album = Album.find_by_name(photo[:album])
+    new_photo = Photo.new
+    new_photo.album = album
+    new_photo.description = photo[:description]
+    file = File.new(photo[:picture])
+    new_photo.picture = file
+    file.close
+    new_photo.save!
+  end
+end
 Given /the following albums exist:/ do |albums_table|
   albums_table.hashes.each do |album|
     new_album = Album.new
