@@ -50,7 +50,7 @@ Scenario: Delete an album with photos in the album and all the photos
 Scenario: Delete an album with photos in the album but not the photos
   When I click on the admin albums page
   And I click "Delete" for the album "Retreat"
-  Then there should be no album with the name "Retreat"
+  Then there should not be an album with the name "Retreat"
   But there should be a photo with the description "close up"
   But there should be a photo with the description "meep"
   But there should be a photo with the description "album cover"
