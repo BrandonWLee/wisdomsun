@@ -1,7 +1,8 @@
 Given /the following photos exist:/ do |photos_table|
   photos_table.hashes.each do |photo|
+    album = Album.find_by_id(photo[:album_id])
     new_photo = Photo.new
-    new_photo.album_id = photo[:album_id]
+    new_photo.album = album
     new_photo.description = photo[:description]
     file = File.new(photo[:picture])
     new_photo.picture = file

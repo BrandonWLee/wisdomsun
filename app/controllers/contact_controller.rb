@@ -18,8 +18,6 @@ class ContactController < ApplicationController
       :body => params[:contact][:text]
     )
 
-    @mail.delivery_method :sendmail
-    @mail.deliver
     flash[:notice] = ("Information submitted")
     redirect_to '/contact'
   end
