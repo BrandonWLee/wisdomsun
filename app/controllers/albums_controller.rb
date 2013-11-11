@@ -3,6 +3,6 @@ class AlbumsController < ApplicationController
     @albums = Album.all
   end
   def show
-    redirect_to photos_page, :album_id => param[:id]
+    redirect_to photos_path, :album_id => params[:id]
   end
 end
