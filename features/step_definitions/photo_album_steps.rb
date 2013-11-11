@@ -66,6 +66,54 @@ When /I try to edit a photo with id (.*)/ do |id|
   visit admin_edit_photo_page(:id => id)
 end
 
+Then(/^I should see the album titles "(.*?)" and "(.*?)" on the page\.$/) do |arg1, arg2|
+  match1 = page.body.match(arg1)
+  match2 = page.body.match(arg2)
+  !match1.nil? && !match2.nil?
+end
 
+Then(/^I should see the album covers of "(.*?)" and "(.*?)" on the page\.$/) do |arg1, arg2|
+  albumcover1 = Album.find_by_name(arg1)
+  albumcover2 = Album.find_by_name(arg2)
+  match1 = page.body.match(albumcover1.album_cover_file_name)
+  match2 = page.body.match(albumcover2.album_cover_file_name)
+  !match1.nil? && !match2.nil?
+end
 
+Then(/^I should see all of the photos in the album "(.*?)"\.$/) do |arg1|
+  albumid = Album.find_by_name(arg1).id
+  photos = Photo.where(:album_id => albumid)
+  bool = true
+  photos.each do |photo|
+    bool = bool && page.body.match(photo.picture_file_name)
+  end
+  bool == true
+end
+
+Then(/^I should see the album descriptions of "(.*?)"\.$/) do |arg1|
+  album = Album.find_by_name(arg1)
+  !page.body.match(album.description).nil?
+end
+
+When(/^I click on the first picture of the "(.*?)" album$/) do |arg1|
+  id = Album.find_by_name(arg1).id
+  photo1 = Photo.where(:album_id => id).first
+  visit '#{photo1.picture.url}'
+end
+
+When(/^I click on "(.*?)" on the albums page$/) do |arg1|
+  click_link(arg1, match: :first)
+end  
+
+Then(/^I should see a popup of the first picture of the "(.*?)" album\.$/) do |arg1|
+  id = Album.find_by_name(arg1).id
+  photo1 = Photo.where(:album_id => id).first.picture_file_name
+  pattern = "fancybox-img.*#{photo1}"
+  page.body.match(pattern).nil? == false
+end
+
+When(/^I try to view the album with id (\d+)$/) do |arg1|
+  visit("/photos?album_id=#{arg1}")
+  # redirect_to photos_path, :album_id => arg1
+end
 
