@@ -7,6 +7,17 @@
       .header-title Contact
     .content
 
+    <em>
+    601 29th Street<br/>San Francisco, CA 94131<br/>USA 
+    </em>
+    <br/>
+    <br/>
+    <a href="mailto:info@wisdomsun.org">info@wisdomsun.org</a>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+
     = form_tag contact_index_path, :method => :post, :id => "contact_form" do
 
       Enter your Name:<br/>
@@ -32,7 +43,9 @@
       <br/>
 
       = check_box_tag 'receive_email'
-      Email a copy of this message to your own address.<br/>
+      Email a copy of this message to your own address.
+      <br/>
+      <br/>
 
       = submit_tag 'Send', :id => "contact_submit"
 
