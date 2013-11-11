@@ -44,5 +44,18 @@ describe Admin::EventsController do
         response.body.should include(event.description)
       end
     end
+    it 'should be able render edit page' do
+      @event = @events[0]
+      get :edit, {:id => @event.id.to_s}
+      response.should be_success
+    end
+    it 'should be able to render view page' do
+      
+    end
+  end
+  describe 'admin events edit page' do
+    
+  end
+  describe 'admin events delete' do
   end
 end
