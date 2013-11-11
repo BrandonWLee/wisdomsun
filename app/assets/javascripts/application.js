@@ -16,3 +16,4 @@
 //= require layout
 //= require jquery.flexslider-min
 //= require redactor-rails
+//= require fancybox/jquery.fancybox-1.3.4.js
