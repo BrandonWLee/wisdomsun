@@ -14,6 +14,11 @@ describe EventsController do
 			Event.should_receive(:find).with(1.to_s).and_return(@event)
 			post :show, {:id => 1}
 			assigns(:event).should == @event
+    end
+    it 'should not work for non existent events' do
+      Event.should_receive(:find).with(10.to_s).and_raise(ActiveRecord::RecordNotFound)
+      post :show, {:id => 10}
+      response.should redirect_to(events_path)
 		end
 	end
 

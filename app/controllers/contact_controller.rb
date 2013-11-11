@@ -6,7 +6,7 @@ class ContactController < ApplicationController
   end
 
   def create
-    if params[:contact][:name].empty? || params[:contact][:email].empty? || params[:contact][:subject].empty? || params[:contact][:text].empty?
+    if params[:contact][:name].nil? || params[:contact][:email].nil? || params[:contact][:subject].nil? || params[:contact][:text].nil?
       flash[:notice] = ("Error, you must fill in the whole form to submit")
       redirect_to '/contact'
       return
@@ -19,7 +19,7 @@ class ContactController < ApplicationController
     )
 
     @mail.delivery_method :sendmail
-    @mail.deliver!
+    @mail.deliver
     flash[:notice] = ("Information submitted")
     redirect_to '/contact'
   end

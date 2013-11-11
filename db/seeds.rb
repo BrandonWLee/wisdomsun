@@ -67,6 +67,7 @@ holiday_cover.close
   retreat1 = Photo.new(:album_id => 1, :description => "Meep!")
   pic = File.new("./app/assets/images/photos/1-#{num}.jpg")
   retreat1.picture = pic
+  pic.close
   retreat1.save!  
   pic.close
 end
@@ -75,6 +76,7 @@ end
   holiday1 = Photo.new(:album_id => 2, :description => "Meep!")
   pic = File.new("./app/assets/images/photos/2-#{num}.jpg")
   holiday1.picture = pic
+  pic.close
   holiday1.save!  
   pic.close
 end
