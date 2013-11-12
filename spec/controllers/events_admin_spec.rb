@@ -5,7 +5,7 @@ describe Admin::EventsController do
   render_views
 	include Devise::TestHelpers
   before(:each) do
-    user = mock('user')
+    user = double('user')
     user.stub(:email).and_return("hello@example.com")
     user.stub(:password).and_return("password")
     user.stub(:to_key).and_return(1)
@@ -20,7 +20,7 @@ describe Admin::EventsController do
       user.destroy
     end
     @events = Event.create!( [{:name=> "firstevent", :description=>"event1"}, 
-                            {:name=> "secondevent", :description=>"event2"}])
+                            {:description=>"event2"}])
     #user = FactoryGirl.create(:user, :email => "hello@example.com", :password => "password")
 
 #    picture1 = File.new("./app/assets/images/photos/1-1.jpg")
@@ -44,18 +44,51 @@ describe Admin::EventsController do
         response.body.should include(event.description)
       end
     end
+  end
+  describe 'admin events edit page' do 
     it 'should be able render edit page' do
       @event = @events[0]
       get :edit, {:id => @event.id.to_s}
       response.should be_success
     end
-    it 'should be able to render view page' do
-      
+    it 'should redirect if event does not exist' do
+      Event.should_receive(:exists?).with(15.to_s).and_return(false)
+      get :edit, {:id => 15.to_s}
+      response.should redirect_to('/admin/events')
     end
   end
-  describe 'admin events edit page' do
-    
+  describe 'admin events update' do
+    it 'should redirect with empty name' do
+      @id = '1'
+      post :update, {:id => @id, :event => {:name => ''}}
+      response.should redirect_to('/admin/events')
+    end
+    it 'should redirect with nil name' do
+      @id = '1'
+      post :update, {:id => @id, :event => {}}
+      response.should redirect_to('/admin/events')
+    end
+    it 'should update properly' do
+      @event = @events[0]
+      @id = @event.id.to_s
+      post :update, {:id => @id, :event => {:name => 'eventone'}}
+    end
   end
-  describe 'admin events delete' do
+  describe 'admin events create' do
+    it 'should redirect with empty name' do
+      @id = '1'
+      post :create, {:id => @id, :event => {:name => ''}}
+      response.should redirect_to('/admin/events')
+    end
+    it 'should redirect with nil name' do
+      @id = '1'
+      post :create, {:id => @id, :event => {}}
+      response.should redirect_to('/admin/events')
+    end
+    it 'should create properly' do
+      @event = @events[0]
+      @id = @event.id.to_s
+      post :create, {:id => @id, :event => {:name => 'eventone'}}
+    end
   end
 end
