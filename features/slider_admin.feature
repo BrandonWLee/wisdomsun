@@ -7,10 +7,10 @@ Feature: Add, remove, or modify slider images
 Background: Slider images have been added to database
 
   Given the following slider images exist:
-  | name                 | img_url     | link          |
-  | Lineage              | img_url_1   | fake_url_1    |
-  | Articles & Songs     | img_url_2   | fake_url_2    |
-  | Photo Albums         | img_url_3   | fake_url_3    |
+  | name                 | img_url                            | link                |
+  | Lineage              | ./app/assets/images/slider/1.jpg   | lineage             |
+  | Articles & Songs     | ./app/assets/images/slider/2.jpg   | articles_and_songs  |
+  | Photo Albums         | ./app/assets/images/slider/3.jpg   | albums              |
 
   And the following users are admin:
   |email              | password|
@@ -21,8 +21,8 @@ Background: Slider images have been added to database
 
 Scenario: Add a slider image
   When I add the slider image:
-  | name                 | img_url     | link          |
-  | Around the Web       | img_url_4   | aroundtheweb  |
+  | name                 | img_url                            | link          |
+  | Around the Web       | ./app/assets/images/slider/4.jpg   | aroundtheweb  |
   Then there should be a slider image named "Around the Web"
 
 Scenario: Modify a slider image's link

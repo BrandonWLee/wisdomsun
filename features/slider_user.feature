@@ -6,10 +6,10 @@ Feature: Slider images are all present on webpage and navigation works
 
 Background: Slideri mage have been added to database
   Given the following slider images exist:
-  | name                 | img_url     | link          |
-  | Lineage              | img_url_1   | fake_url_1    |
-  | Articles & Songs     | img_url_2   | fake_url_2    |
-  | Photo Albums         | img_url_3   | fake_url_3    |
+  | name                 | img_url                            | link                |
+  | Lineage              | ./app/assets/images/slider/1.jpg   | lineage             |
+  | Articles & Songs     | ./app/assets/images/slider/2.jpg   | articles_and_songs  |
+  | Photo Albums         | ./app/assets/images/slider/3.jpg   | albums              |
 
   And I am on the home page
 
