@@ -4,7 +4,7 @@ Feature: Slider images are all present on webpage and navigation works
 	So that I can view slider images on the homepage,
 	I want to be able to navigate the home page, see the slider images and their names, and be able to click on the image to go to their specified url.
 
-Background: Slideri mage have been added to database
+Background: Slider image have been added to database
   Given the following slider images exist:
   | name                 | img_url                            | link                |
   | Lineage              | ./app/assets/images/slider/1.jpg   | lineage             |
