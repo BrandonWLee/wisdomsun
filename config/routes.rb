@@ -6,16 +6,16 @@ Wisdomsun::Application.routes.draw do
   devise_for :users, :controllers => { :sessions => 'users/sessions' }
 
   get "welcome/index"
-  resources :about
-  resources :books
+#  resources :about, :only => [:index, :show]
+  resources :books, :only => [:index, :show]
   resources :bulletin
-  resources :contact
-  resources :support
-  resources :downloads
-  resources :events
-  resources :photos
-  resources :albums
-  resources :quotes
+  resources :contact, :only => [:index, :show]
+  resources :support, :only => [:index, :create]
+#  resources :downloads, :only => [:index, :show]
+  resources :events, :only => [:index, :show]
+  resources :photos, :only => [:index, :show]
+  resources :albums, :only => [:index, :show]
+  resources :quotes, :only => [:index]
   match 'categories/:category_name/:page_name', :to => 'category#getpage', :format => false
   match 'around_the_web', :to => 'around_the_web_posts#index'
   
