@@ -38,6 +38,7 @@ ActiveAdmin.register Book do
   end
 
   form :html => { :enctype => "multipart/form-data" } do |f|
+  	f.semantic_errors *f.object.errors.keys
     f.inputs "Details" do
       f.input :title
       f.input :author

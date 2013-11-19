@@ -7,7 +7,6 @@ Wisdomsun::Application.routes.draw do
 
   get "welcome/index"
   resources :about
-  resources :aroundtheweb
   resources :books
   resources :bulletin
   resources :contact
@@ -16,7 +15,9 @@ Wisdomsun::Application.routes.draw do
   resources :events
   resources :photos
   resources :albums
+  resources :quotes
   match 'categories/:category_name/:page_name', :to => 'category#getpage', :format => false
+  match 'around_the_web', :to => 'around_the_web_posts#index'
   
   resources :books do
     get 'fake_url', :action => "index" , :controller => "books"

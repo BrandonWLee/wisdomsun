@@ -19,11 +19,13 @@
             %img{ :src => '/assets/welcome/slide1.jpg' }
           %li
             %img{ :src => '/assets/welcome/slide2.jpg' }
-      #quotes.section
-        .subtitle Notes &amp; Quotes
-        .quote-text 
-          "There is a sense of joy in being part of this knowledge and that sense of joy, which triggers the transition from knowledge to wisdom, is compassion, or unconditional love."
-          .quote-author - Chogyam Trungpa Rinpoche 
+      -if @quote 
+        #quotes.section
+          %a{ :href => 'quotes'}
+            .subtitle Notes &amp; Quotes
+          .quote-text 
+            .quote="#{@quote.quote}"
+            .quote-author=" - #{@quote.source}"
       #about-us.section
         %a{ :href => 'categories/about/about' }
           .subtitle About Us
@@ -34,11 +36,13 @@
         .about-text
           %p Wisdom Sun is about bringing meditation teachings home: Home to our own culture and locale; home to our daily life; home to our mind, body, and heart.
           %p{:id => 'read-more', :class => 'read-more'}= link_to "Read more...", 'categories/about/about'
-      #around-the-web.section
-        %a{ :href => '/aroundtheweb' } 
-          .subtitle Around the Web
-        .text
-          Text
+      -if @around_the_web_posts
+        #around-the-web.section
+          %a{ :href => '/around_the_web' } 
+            .subtitle Around the Web
+          - @around_the_web_posts.each do |post|
+            .item
+              =link_to post.title, post.external_link
 
   = render "/layouts/footer"
 

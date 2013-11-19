@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131108054435) do
+ActiveRecord::Schema.define(:version => 20131119100349) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -35,6 +35,14 @@ ActiveRecord::Schema.define(:version => 20131108054435) do
     t.string   "album_cover_content_type"
     t.integer  "album_cover_file_size"
     t.datetime "album_cover_updated_at"
+  end
+
+  create_table "around_the_web_posts", :force => true do |t|
+    t.string   "title"
+    t.string   "external_link"
+    t.text     "commentary"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
   end
 
   create_table "books", :force => true do |t|
@@ -84,6 +92,13 @@ ActiveRecord::Schema.define(:version => 20131108054435) do
     t.integer  "picture_file_size"
     t.datetime "picture_updated_at"
     t.text     "description"
+  end
+
+  create_table "quotes", :force => true do |t|
+    t.string   "quote"
+    t.string   "source"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "redactor_assets", :force => true do |t|
