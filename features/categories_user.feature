@@ -20,17 +20,18 @@ Background: Create categories.
 Scenario: Can see contents of each category
 Given I am on the home page
 When I hover over "Other" on the menu bar
-And I hover over "About"
-Then I should see "About Ari Goldfield" 
-And I should see "About Rose Goldfield"
+Then I should see "About" 
+When I click on "About" on the dropdown
+Then I should see "About Ari Goldfield"
 And I should not see "Videos"
 
 Scenario: Can access pages within categories
 Given I am on the home page
 When I hover over "Other" on the menu bar
-And I hover over "About"
-And I click over "About Ari Goldfield"
+And I click on "About" on the dropdown
+And I click on "About Ari Goldfield"
 Then I should be on the "About Ari Goldfield" page.
-When I hover over "About"
-And I click over "About Rose Goldfield"
-Then I should be on the "About Rose Goldfield" page.
+When I hover over "Other"
+And I click on "About" on the dropdown
+And I click "About Rose Goldfield"
+Then I should be on the "About Rose Goldfield" page

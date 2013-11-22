@@ -1,1 +1,8 @@
-%p Test that redirect works
+.wrapper
+  .container
+    = render "/layouts/menu"
+    .header
+      .header-title= @title
+    .content
+      .content-text= @htmlbody.html_safe
+  = render "/layouts/footer"

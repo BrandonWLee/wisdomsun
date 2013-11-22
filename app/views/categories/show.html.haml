@@ -1,0 +1,11 @@
+.wrapper
+  .container
+    = render "/layouts/menu"
+    .header
+      .header-title "#{@category}"
+    .content
+      - @pages.each do |page|
+        .content-box
+          .text-box
+          =link_to "#{page.title}", {:controller => "otherPages", :action => "show", :id => page.id}
+  = render "/layouts/footer"
