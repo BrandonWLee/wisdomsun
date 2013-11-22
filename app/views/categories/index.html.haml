@@ -1,14 +1,15 @@
+= stylesheet_link_tag "categories"
 .wrapper
   .container
     = render "/layouts/menu"
     .header
       .header-title Categories
-    .content
+    .categories-content
       - @categories.each do |category|
-        .content-box
-          .text-box
-            "#{category.name}"
-          .text-box
+        .categories-content-box
+          .categories-text-box
+            = "#{category.name}"
+          .categories-text-box
           - @pages[category.id].each do |page|
             =link_to "#{page.title}", {:controller => "otherPages", :action => "show", :id => page.id}
   = render "/layouts/footer"
