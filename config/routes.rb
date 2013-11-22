@@ -6,20 +6,20 @@ Wisdomsun::Application.routes.draw do
   devise_for :users, :controllers => { :sessions => 'users/sessions' }
 
   get "welcome/index"
-  resources :about
-  resources :aroundtheweb
-  resources :books
+#  resources :about, :only => [:index, :show]
+  resources :books, :only => [:index, :show]
   resources :bulletin
-  resources :contact
-  resources :support
-  resources :downloads
-  resources :events
-  resources :photos
-  resources :albums
-  resources :categories
-  resources :otherPages
-  match 'categories/:category_name/:page_name', :to => 'categories#getpage', :format => false
-  
+  resources :contact, :only => [:index, :show]
+  resources :support, :only => [:index, :create]
+#  resources :downloads, :only => [:index, :show]
+  resources :events, :only => [:index, :show]
+  resources :photos, :only => [:index, :show]
+  resources :albums, :only => [:index, :show]
+  resources :quotes, :only => [:index]
+  resources :categories, :only => [:index, :show]
+  resources :otherPages, :only => [:index, :show]
+  match 'categories/:category_name/:page_name', :to => 'category#getpage', :format => false
+  match 'around_the_web', :to => 'around_the_web_posts#index'  
   resources :books do
     get 'fake_url', :action => "index" , :controller => "books"
   end

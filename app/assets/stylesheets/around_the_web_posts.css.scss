@@ -1,0 +1,42 @@
+.content-box {
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+	border: 1px solid #d4d4d4;
+  color: #333;
+  line-height: 25px;
+	width: 700px;
+	margin: 20px 0 0 18px;
+}
+.content-box .title a {
+  color: #444;
+}
+.content-box .date {
+  font-style: oblique;
+}
+.description-box {
+	border: 1px solid #ddd;
+  width: 915px;
+	margin: 20px 0 40px 0;
+}
+.posts-box {
+	vertical-align: top;
+	display: inline-block;
+	width: 300px;
+}
+.post-box {
+	padding: 25px;
+}
+.img-box {
+	width: 200px;
+	display: inline-block;
+}
+.img-box img {
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  margin: 10px 0 0 10px;
+	width: 100%;
+}
+
+

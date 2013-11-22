@@ -1,0 +1,15 @@
+= stylesheet_link_tag "quotes", :media => "all"
+.wrapper
+  .container
+    = render "/layouts/menu"
+    .header
+      .header-title= "Notes & Quotes"
+    .content
+      .quotes-box
+        - @quotes.each do |quote|
+          .content-box
+            .quote-box
+              .quote= "#{quote.quote}"
+              .source= "#{quote.source}"
+
+

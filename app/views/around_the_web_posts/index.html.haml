@@ -1,0 +1,13 @@
+= stylesheet_link_tag "around_the_web_posts", :media => "all"
+.wrapper
+  .container
+    = render "/layouts/menu"
+    .header
+      .header-title Around the Web
+    .content
+      .posts-box
+        - @posts.each do |post|
+          .content-box
+            .post-box
+              .link= link_to "#{post.title}", post.external_link
+              .commentary= post.commentary
