@@ -160,7 +160,7 @@ linear_p3 = OtherPage.create!({:category_id => 2, :title => "Lineage Pg3", :refa
 
 puts "Seeding Downloads category and pages"
 downloads_category = Category.create!({:position => 2, :name => 'Downloads', :refactored_name => 'downloads'})
-d_p1 = OtherPage.create!({:category_id => 3, :title => "Free Downloads", :refactored_title => "d_pg1", :body => "<h4 style=\"font-size: 1.3077em; line-height: 1.3em; font-weight: normal; color: #971500; font-style: italic; margin-top: 0.909em; margin-bottom: 0.909em;\">Audio Dharma Teachings</h4>
+d_p1 = OtherPage.create!({:category_id => 3, :title => "Free Downloads", :refactored_title => "free_downloads", :body => "<h4 style=\"font-size: 1.3077em; line-height: 1.3em; font-weight: normal; color: #971500; font-style: italic; margin-top: 0.909em; margin-bottom: 0.909em;\">Audio Dharma Teachings</h4>
 <ul>
 <li><a href=\"http://www.wisdomsun.org/images/audio/20110710-Ari_Goldfield-IMC-guided_earth_grounding_meditation.mp3\" style=\"color: #d55e34;\">Guided Earth Grounding Meditation - Ari Goldfield</a> (mp3)</li>
 <li><a href=\"http://www.wisdomsun.org/images/audio/20110710-Ari_Goldfield-IMC-the_true_nature_of_mind.mp3\" style=\"color: #d55e34;\">The Nature of Mind - Ari Goldfield</a> (mp3)</li>
