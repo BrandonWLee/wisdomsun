@@ -1,3 +1,5 @@
+#encoding: utf-8
+
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
 #
@@ -158,7 +160,26 @@ linear_p3 = OtherPage.create!({:category_id => 2, :title => "Lineage Pg3", :refa
 
 puts "Seeding Downloads category and pages"
 downloads_category = Category.create!({:position => 2, :name => 'Downloads', :refactored_name => 'downloads'})
-d_p1 = OtherPage.create!({:category_id => 3, :title => "Downloads Pg1", :refactored_title => "d_pg1", :body => "Random filler text for now."})
+d_p1 = OtherPage.create!({:category_id => 3, :title => "Free Downloads", :refactored_title => "d_pg1", :body => "<h4 style=\"font-size: 1.3077em; line-height: 1.3em; font-weight: normal; color: #971500; font-style: italic; margin-top: 0.909em; margin-bottom: 0.909em;\">Audio Dharma Teachings</h4>
+<h4 style=\"font-size: 1.3077em; line-height: 1.3em; font-weight: normal; color: #971500; font-style: italic; margin-top: 0.909em; margin-bottom: 0.909em;\"><span style=\"color: #333333; font-family: Tahoma, Helvetica, Arial, sans-serif; font-size: 12px; line-height: 15px; font-style: normal;\"> 
+<ul style=\"margin-top: 1em; margin-right: 0px; margin-bottom: 1em; margin-left: 0px; padding-left: 2em; list-style-type: disc;\">
+<li style=\"padding: 0px; margin: 8px 0;\"><a href=\"http://www.wisdomsun.org/images/audio/20110710-Ari_Goldfield-IMC-guided_earth_grounding_meditation.mp3\" target=\"_blank\" style=\"color: #d55e34; text-decoration: none;\">Guided Earth Grounding Meditation - Ari Goldfield</a> (mp3)</li>
+<li style=\"padding: 0px; margin: 8px 0;\"><a href=\"http://www.wisdomsun.org/images/audio/20110710-Ari_Goldfield-IMC-the_true_nature_of_mind.mp3\" target=\"_blank\" style=\"color: #d55e34; text-decoration: none;\">The Nature of Mind - Ari Goldfield</a> (mp3)</li>
+</ul>
+</span></h4>
+<h4 style=\"font-size: 1.3077em; line-height: 1.3em; font-weight: normal; color: #971500; font-style: italic; margin-top: 0.909em; margin-bottom: 0.909em;\">Stars of Wisdom Teachings</h4>
+<p><span style=\"color: #001d2c; font-family: Arial, 'Times New Roman', Times, Georgia, 'Bitstream Vera Serif', serif; font-size: 13px; line-height: 24px;\">Given in Halifax, Canada, May 28-30, 2010</span></p>
+<h4 style=\"font-size: 1.3077em; line-height: 1.3em; font-weight: normal; color: #971500; font-style: italic; margin-top: 0.909em; margin-bottom: 0.909em;\"><span style=\"color: #333333; font-family: Tahoma, Helvetica, Arial, sans-serif; font-size: 12px; line-height: 15px; font-style: normal;\"> 
+<ul style=\"margin-top: 1em; margin-right: 0px; margin-bottom: 1em; margin-left: 0px; padding-left: 2em; list-style-type: disc;\">
+<li style=\"padding: 0px; margin: 8px 0;\"><a href=\"http://www.wisdomsun.org/images/audio/StarsOfWisdom1-PurePerceptionAndNaturalConfidence--AriGoldfield.mp3\" target=\"_blank\" style=\"color: #d55e34; text-decoration: none;\">Pure Perception and Natural Confidence—Ari Goldfield</a> (mp3)</li>
+<li style=\"padding: 0px; margin: 8px 0;\"><a href=\"http://www.wisdomsun.org/images/audio/StarsOfWisdom2-SelflessnessViewAndMeditation--RoseTaylor.mp3\" target=\"_blank\" style=\"color: #d55e34; text-decoration: none;\">Selflessness View and Meditation—Rose Taylor</a> (mp3)</li>
+<li style=\"padding: 0px; margin: 8px 0;\"><a href=\"http://www.wisdomsun.org/images/audio/StarOfWisdom3-MilarepaLifeStoryAndSongs--AriGoldfield.mp3\" target=\"_blank\" style=\"color: #d55e34; text-decoration: none;\">Transforming Suffering into Enlightenment: The Story and Songs of Milarepa—Ari Goldfield</a> (mp3)</li>
+<li style=\"padding: 0px; margin: 8px 0;\"><a href=\"http://www.wisdomsun.org/images/audio/StarsOfWisdom4-Mind-OnlyViewAndMeditation--RoseTaylor.mp3\" target=\"_blank\" style=\"color: #d55e34; text-decoration: none;\">Mind-Only View and Meditation—Rose Taylor</a> (mp3)</li>
+<li style=\"padding: 0px; margin: 8px 0;\"><a href=\"http://www.wisdomsun.org/images/audio/StarsOfWisdom5-WisdomCompassionAndAspirationPrayers--AriGoldfieldRoseTaylor.mp3\" target=\"_blank\" style=\"color: #d55e34; text-decoration: none;\">Wisdom, Compassion, and Aspiration Prayers—Ari Goldfield &amp; Rose Taylor</a> (mp3)</li>
+</ul>
+</span></h4>
+<p> </p>
+"})
 d_p2 = OtherPage.create!({:category_id => 3, :title => "Downloads Pg2", :refactored_title => "d_pg2", :body => "Random filler text for now."})
 d_p3 = OtherPage.create!({:category_id => 3, :title => "Downloads Pg3", :refactored_title => "d_pg3", :body => "Random filler text for now."})
 
