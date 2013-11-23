@@ -161,48 +161,42 @@ linear_p3 = OtherPage.create!({:category_id => 2, :title => "Lineage Pg3", :refa
 puts "Seeding Downloads category and pages"
 downloads_category = Category.create!({:position => 2, :name => 'Downloads', :refactored_name => 'downloads'})
 d_p1 = OtherPage.create!({:category_id => 3, :title => "Free Downloads", :refactored_title => "d_pg1", :body => "<h4 style=\"font-size: 1.3077em; line-height: 1.3em; font-weight: normal; color: #971500; font-style: italic; margin-top: 0.909em; margin-bottom: 0.909em;\">Audio Dharma Teachings</h4>
-<h4 style=\"font-size: 1.3077em; line-height: 1.3em; font-weight: normal; color: #971500; font-style: italic; margin-top: 0.909em; margin-bottom: 0.909em;\"><span style=\"color: #333333; font-family: Tahoma, Helvetica, Arial, sans-serif; font-size: 12px; line-height: 15px; font-style: normal;\"> 
-<ul style=\"margin-top: 1em; margin-right: 0px; margin-bottom: 1em; margin-left: 0px; padding-left: 2em; list-style-type: disc;\">
-<li style=\"padding: 0px; margin: 8px 0;\"><a href=\"http://www.wisdomsun.org/images/audio/20110710-Ari_Goldfield-IMC-guided_earth_grounding_meditation.mp3\" target=\"_blank\" style=\"color: #d55e34; text-decoration: none;\">Guided Earth Grounding Meditation - Ari Goldfield</a> (mp3)</li>
-<li style=\"padding: 0px; margin: 8px 0;\"><a href=\"http://www.wisdomsun.org/images/audio/20110710-Ari_Goldfield-IMC-the_true_nature_of_mind.mp3\" target=\"_blank\" style=\"color: #d55e34; text-decoration: none;\">The Nature of Mind - Ari Goldfield</a> (mp3)</li>
+<ul>
+<li><a href=\"http://www.wisdomsun.org/images/audio/20110710-Ari_Goldfield-IMC-guided_earth_grounding_meditation.mp3\" style=\"color: #d55e34;\">Guided Earth Grounding Meditation - Ari Goldfield</a> (mp3)</li>
+<li><a href=\"http://www.wisdomsun.org/images/audio/20110710-Ari_Goldfield-IMC-the_true_nature_of_mind.mp3\" style=\"color: #d55e34;\">The Nature of Mind - Ari Goldfield</a> (mp3)</li>
 </ul>
-</span></h4>
 <h4 style=\"font-size: 1.3077em; line-height: 1.3em; font-weight: normal; color: #971500; font-style: italic; margin-top: 0.909em; margin-bottom: 0.909em;\">Stars of Wisdom Teachings</h4>
-<p><span style=\"color: #001d2c; font-family: Arial, 'Times New Roman', Times, Georgia, 'Bitstream Vera Serif', serif; font-size: 13px; line-height: 24px;\">Given in Halifax, Canada, May 28-30, 2010</span></p>
-<h4 style=\"font-size: 1.3077em; line-height: 1.3em; font-weight: normal; color: #971500; font-style: italic; margin-top: 0.909em; margin-bottom: 0.909em;\"><span style=\"color: #333333; font-family: Tahoma, Helvetica, Arial, sans-serif; font-size: 12px; line-height: 15px; font-style: normal;\"> 
-<ul style=\"margin-top: 1em; margin-right: 0px; margin-bottom: 1em; margin-left: 0px; padding-left: 2em; list-style-type: disc;\">
-<li style=\"padding: 0px; margin: 8px 0;\"><a href=\"http://www.wisdomsun.org/images/audio/StarsOfWisdom1-PurePerceptionAndNaturalConfidence--AriGoldfield.mp3\" target=\"_blank\" style=\"color: #d55e34; text-decoration: none;\">Pure Perception and Natural Confidence—Ari Goldfield</a> (mp3)</li>
-<li style=\"padding: 0px; margin: 8px 0;\"><a href=\"http://www.wisdomsun.org/images/audio/StarsOfWisdom2-SelflessnessViewAndMeditation--RoseTaylor.mp3\" target=\"_blank\" style=\"color: #d55e34; text-decoration: none;\">Selflessness View and Meditation—Rose Taylor</a> (mp3)</li>
-<li style=\"padding: 0px; margin: 8px 0;\"><a href=\"http://www.wisdomsun.org/images/audio/StarOfWisdom3-MilarepaLifeStoryAndSongs--AriGoldfield.mp3\" target=\"_blank\" style=\"color: #d55e34; text-decoration: none;\">Transforming Suffering into Enlightenment: The Story and Songs of Milarepa—Ari Goldfield</a> (mp3)</li>
-<li style=\"padding: 0px; margin: 8px 0;\"><a href=\"http://www.wisdomsun.org/images/audio/StarsOfWisdom4-Mind-OnlyViewAndMeditation--RoseTaylor.mp3\" target=\"_blank\" style=\"color: #d55e34; text-decoration: none;\">Mind-Only View and Meditation—Rose Taylor</a> (mp3)</li>
-<li style=\"padding: 0px; margin: 8px 0;\"><a href=\"http://www.wisdomsun.org/images/audio/StarsOfWisdom5-WisdomCompassionAndAspirationPrayers--AriGoldfieldRoseTaylor.mp3\" target=\"_blank\" style=\"color: #d55e34; text-decoration: none;\">Wisdom, Compassion, and Aspiration Prayers—Ari Goldfield &amp; Rose Taylor</a> (mp3)</li>
+<p>Given in Halifax, Canada, May 28-30, 2010</p>
+<ul>
+<li><a href=\"http://www.wisdomsun.org/images/audio/StarsOfWisdom1-PurePerceptionAndNaturalConfidence--AriGoldfield.mp3\" style=\"color: #d55e34;\">Pure Perception and Natural Confidence—Ari Goldfield</a> (mp3)</li>
+<li><a href=\"http://www.wisdomsun.org/images/audio/StarsOfWisdom2-SelflessnessViewAndMeditation--RoseTaylor.mp3\" style=\"color: #d55e34;\">Selflessness View and Meditation—Rose Taylor</a> (mp3)</li>
+<li><a href=\"http://www.wisdomsun.org/images/audio/StarOfWisdom3-MilarepaLifeStoryAndSongs--AriGoldfield.mp3\" style=\"color: #d55e34;\">Transforming Suffering into Enlightenment: The Story and Songs of Milarepa—Ari Goldfield</a> (mp3)</li>
+<li><a href=\"http://www.wisdomsun.org/images/audio/StarsOfWisdom4-Mind-OnlyViewAndMeditation--RoseTaylor.mp3\" style=\"color: #d55e34;\">Mind-Only View and Meditation—Rose Taylor</a> (mp3)</li>
+<li><a href=\"http://www.wisdomsun.org/images/audio/StarsOfWisdom5-WisdomCompassionAndAspirationPrayers--AriGoldfieldRoseTaylor.mp3\" style=\"color: #d55e34;\">Wisdom, Compassion, and Aspiration Prayers—Ari Goldfield &amp; Rose Taylor</a> (mp3)</li>
 </ul>
-</span></h4>
 <p> </p>
 "})
 
-d_p2 = OtherPage.create!({:category_id => 3, :title => "Articles, Songs and More", :refactored_title => "articles,_songs_and_more", :body => "<p><span style=\"color: #001d2c; font-size: 13px; line-height: 24px;\">Click on the links below to hear songs in English and read Tibetan texts:</span></p>
+d_p2 = OtherPage.create!({:category_id => 3, :title => "Articles, Songs and More", :refactored_title => "articles,_songs_and_more", :body => "<p>Click on the links below to hear songs in English and read Tibetan texts:</p>
 <p> </p>
 <h4 style=\"font-size: 1.3077em; line-height: 1.3em; font-weight: normal; color: #971500; font-style: italic; margin-top: 0.909em; margin-bottom: 0.909em;\">Songs</h4>
-<ul style=\"margin-top: 1em; margin-right: 0px; margin-bottom: 1em; margin-left: 0px; padding-left: 2em; list-style-type: disc;\">
-<li style=\"padding: 0px; margin: 8px 0;\"><a href=\"http://www.wisdomsun.org/images/audio/Seven%20Ways%20Things%20Shine%20Inside%20and%20Out.mp3\" target=\"_blank\" style=\"color: #d55e34; text-decoration: none;\">Seven Ways Things Shine Inside And Out</a> (mp3)</li>
-<li style=\"padding: 0px; margin: 8px 0;\"><a href=\"http://www.wisdomsun.org/images/audio/05%20Eighteen%20Kinds%20Of%20Yogic%20Joy.mp3\" target=\"_blank\" style=\"color: #d55e34; text-decoration: none;\">Eighteen Kinds Of Yogic Joy</a> (mp3)</li>
-<li style=\"padding: 0px; margin: 8px 0;\"><a href=\"http://www.wisdomsun.org/images/audio/08%20Auspiciousness%20That%20Lights%20Up%20The%20Universe.mp3\" target=\"_blank\" style=\"color: #d55e34; text-decoration: none;\">Auspiciousness That Lights Up The Universe</a> (mp3)</li>
-<li style=\"padding: 0px; margin: 8px 0;\"><a href=\"http://www.wisdomsun.org/images/audio/Cornwall%20Offering%20Song.mp3\" target=\"_blank\" style=\"color: #d55e34; text-decoration: none;\">Cornwall Offering Song</a> (mp3)</li>
-<li style=\"padding: 0px; margin: 8px 0;\"><a href=\"http://www.wisdomsun.org/images/pdf/cornwall-offering-song.pdf\" target=\"_blank\" style=\"color: #d55e34; text-decoration: none;\">Cornwall Offering Song</a> (pdf)</li>
-<li style=\"padding: 0px; margin: 8px 0;\"><a href=\"http://www.wisdomsun.org/images/audio/A%20Prayer%20that%20these%20True%20Words%20be%20Swiftly%20Fulfilled.mp3\" target=\"_blank\" style=\"color: #d55e34; text-decoration: none;\">A Prayer that these True Words be Swiftly Fulfilled</a> (mp3)</li>
-<li style=\"padding: 0px; margin: 8px 0;\"><a href=\"http://www.wisdomsun.org/images/pdf/a-prayer-that-these-true-words-be-swiftly-fulfilled-te.pdf\" target=\"_blank\" style=\"color: #d55e34; text-decoration: none;\">A Prayer that these True Words be Swiftly Fulfilled</a> (pdf)</li>
+<ul>
+<li style=\"padding: 0px; margin: 8px 0;\"><a href=\"http://www.wisdomsun.org/images/audio/Seven%20Ways%20Things%20Shine%20Inside%20and%20Out.mp3\" style=\"color: #d55e34;\">Seven Ways Things Shine Inside And Out</a> (mp3)</li>
+<li style=\"padding: 0px; margin: 8px 0;\"><a href=\"http://www.wisdomsun.org/images/audio/05%20Eighteen%20Kinds%20Of%20Yogic%20Joy.mp3\" style=\"color: #d55e34;\">Eighteen Kinds Of Yogic Joy</a> (mp3)</li>
+<li style=\"padding: 0px; margin: 8px 0;\"><a href=\"http://www.wisdomsun.org/images/audio/08%20Auspiciousness%20That%20Lights%20Up%20The%20Universe.mp3\" style=\"color: #d55e34;\">Auspiciousness That Lights Up The Universe</a> (mp3)</li>
+<li style=\"padding: 0px; margin: 8px 0;\"><a href=\"http://www.wisdomsun.org/images/audio/Cornwall%20Offering%20Song.mp3\" style=\"color: #d55e34;\">Cornwall Offering Song</a> (mp3)</li>
+<li style=\"padding: 0px; margin: 8px 0;\"><a href=\"http://www.wisdomsun.org/images/pdf/cornwall-offering-song.pdf\" style=\"color: #d55e34;\">Cornwall Offering Song</a> (pdf)</li>
+<li style=\"padding: 0px; margin: 8px 0;\"><a href=\"http://www.wisdomsun.org/images/audio/A%20Prayer%20that%20these%20True%20Words%20be%20Swiftly%20Fulfilled.mp3\" style=\"color: #d55e34;\">A Prayer that these True Words be Swiftly Fulfilled</a> (mp3)</li>
+<li style=\"padding: 0px; margin: 8px 0;\"><a href=\"http://www.wisdomsun.org/images/pdf/a-prayer-that-these-true-words-be-swiftly-fulfilled-te.pdf\" style=\"color: #d55e34;\">A Prayer that these True Words be Swiftly Fulfilled</a> (pdf)</li>
 </ul>
-<h4 style=\"font-size: 1.3077em; line-height: 1.3em; font-weight: normal; color: #971500; font-style: italic; margin-top: 0.909em; margin-bottom: 0.909em;\"><span style=\"color: #333333; font-family: Tahoma, Helvetica, Arial, sans-serif; font-size: 12px; line-height: 15px; font-style: normal;\"> 
-<ul style=\"margin-top: 1em; margin-right: 0px; margin-bottom: 1em; margin-left: 0px; padding-left: 2em; list-style-type: disc;\">
+<ul>
 </ul>
-</span></h4>
 <h4 style=\"font-size: 1.3077em; line-height: 1.3em; font-weight: normal; color: #971500; font-style: italic; margin-top: 0.909em; margin-bottom: 0.909em;\">Articles</h4>
-<ul style=\"margin-top: 1em; margin-right: 0px; margin-bottom: 1em; margin-left: 0px; padding-left: 2em; list-style-type: disc;\">
-<li style=\"padding: 0px; margin: 8px 0;\"><a href=\"http://www.wisdomsun.org/images/pdf/stages-of-view-at-the-heart-of-definitive-meaning-root-verses-english.pdf\" target=\"_blank\" style=\"color: #d55e34; text-decoration: none;\">Stages of View at the Heart of Definitive Meaning - Root Verses - English</a></li>
-<li style=\"padding: 0px; margin: 8px 0;\"><a href=\"http://www.wisdomsun.org/images/pdf/stages-of-view-at-the-heart-of-definitive-meaning-root-verses-tibetan.pdf\" target=\"_blank\" style=\"color: #d55e34; text-decoration: none;\">Stages of View at the Heart of Definitive Meaning - Root Verses - Tibetan</a></li>
-<li style=\"padding: 0px; margin: 8px 0;\"><a href=\"http://www.wisdomsun.org/images/pdf/bd-bookreview-by-ari-goldfield-life-of-milarepa-book.pdf\" target=\"_blank\" style=\"color: #d55e34; text-decoration: none;\">Buddhadharma: <em>The Life of Milarepa</em> Reviewed by Ari Goldfield</a></li>
-<li style=\"padding: 0px; margin: 8px 0;\"><a href=\"http://www.wisdomsun.org/images/pdf/bd-love-me-hate-me-by-rose-taylor.pdf\" target=\"_blank\" style=\"color: #d55e34; text-decoration: none;\">Buddhadharma: <em>Love Me, Hate Me</em> by Rose Taylor</a></li>
+<ul>
+<li><a href=\"http://www.wisdomsun.org/images/pdf/stages-of-view-at-the-heart-of-definitive-meaning-root-verses-english.pdf\" style=\"color: #d55e34;\">Stages of View at the Heart of Definitive Meaning - Root Verses - English</a></li>
+<li><a href=\"http://www.wisdomsun.org/images/pdf/stages-of-view-at-the-heart-of-definitive-meaning-root-verses-tibetan.pdf\" style=\"color: #d55e34;\">Stages of View at the Heart of Definitive Meaning - Root Verses - Tibetan</a></li>
+<li><a href=\"http://www.wisdomsun.org/images/pdf/bd-bookreview-by-ari-goldfield-life-of-milarepa-book.pdf\" style=\"color: #d55e34;\">Buddhadharma: <em>The Life of Milarepa</em> Reviewed by Ari Goldfield</a></li>
+<li><a href=\"http://www.wisdomsun.org/images/pdf/bd-love-me-hate-me-by-rose-taylor.pdf\" style=\"color: #d55e34;\">Buddhadharma: <em>Love Me, Hate Me</em> by Rose Taylor</a></li>
 </ul>
 <p> </p>
 "})
