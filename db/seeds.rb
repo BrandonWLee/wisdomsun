@@ -14,6 +14,7 @@
 puts "Seeding Users and Admins"
 admin = User.create!({:email => 'admin@wisdomsun.org', :password => 'password'})
 admin.toggle!(:admin)
+admin.toggle!(:forem_admin)
 User.create!({:email => 'user@wisdomsun.org', :password => 'password'})
 
 # EVENTS
