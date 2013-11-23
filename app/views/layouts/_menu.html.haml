@@ -38,7 +38,7 @@
         = link_to 'Other', '/categories', :class => 'menu-item', :id => 'menu-category'
         .menu-dropdown
           - Category.all.each do |category|
-            .drop-item= link_to "#{category.name}", {:controller => 'categories', :action => 'show', :id => "#{category.id}"}
+            .drop-item= link_to "#{category.name}", {:controller => '/categories', :action => 'show', :id => "#{category.id}"}
       .menu-category
         = link_to 'Support', '/support', :class => 'menu-item', :id => 'menu-support'
       .menu-category
