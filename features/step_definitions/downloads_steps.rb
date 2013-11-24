@@ -31,3 +31,7 @@ end
 Then /I should be able to click Buddhadharma/ do
 	page.should have_link('Buddhadharma: Love Me, Hate Me by Rose Taylor', href: "http://www.wisdomsun.org/images/pdf/bd-love-me-hate-me-by-rose-taylor.pdf")
 end
+
+Then /I should be able to click I art thou, Persona!/ do
+	page.should have_link('I art thou, Persona!', href: "http://www.google.com")
+end
