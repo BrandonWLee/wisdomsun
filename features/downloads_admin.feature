@@ -6,10 +6,6 @@ Feature: The Downloads Pages are Editable Using Other Pages
 
 Background: Test database has been seeded and logged in as admin
 	When the test database has been seeded
-	And the following users are admin:
-  		|email              | password|
-  		|admin@wisdomsun.org| password|
-
   And I am logged in as admin
   And I am on the admin articles, songs and more edit page
 
