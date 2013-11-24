@@ -12,6 +12,8 @@ module NavigationHelpers
   #
   def path_to(page_name)
     case page_name
+    when /^the home page$/ then
+      '/'
     when /^\// then
       '/'
     when /^the books page$/ then
@@ -22,7 +24,6 @@ module NavigationHelpers
       '/books'
     when /^the albums page.$/ then
       '/albums'
-    
     when /^the contact page$/ then
       '/contact'
     when /^the lineage page$/ then
@@ -30,6 +31,7 @@ module NavigationHelpers
     when /^the songs and articles page&/ then
       '/songsandarticles'
     when /^the (Wisdom Sun )?home\s?page$/ then '/'
+    when /the admin around the web page/ then admin_around_the_web_posts_path
     when /^About/ then '/categories/about/about'
     when /^Downloads/ then '/downloads'
     when /^Bulletin/ then '/bulletin'
@@ -46,11 +48,13 @@ module NavigationHelpers
     when /^the admin slider? page/ then '/admin/sliders'
     when /^the admin categories page/ then '/admin/categories'
     when /^the admin other pages page/ then '/admin/other_pages'
+    when /^the admin quotes page/ then '/admin/quotes'
     when /^the about ari goldfield page/ then '/categories/about/about_ari_goldfield'
     when /^Around the Web/ then '/aroundtheweb'
     when /the admin (panel|page)/ then admin_dashboard_path
-    when /the free downloads page/ then '/otherPages/7'
-    when /the articles, songs and more page/ then '/otherPages/8'
+    when /the free downloads page/ then '/otherPages/1'
+    when /^the articles, songs and more page$/ then '/otherPages/2'
+    when /^the admin articles, songs and more edit page$/ then '/admin/other_pages/2/edit'
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
