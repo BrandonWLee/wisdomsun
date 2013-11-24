@@ -11,14 +11,14 @@ ActiveAdmin.register OtherPage do
 
   controller do
   	def create
-  		title = params[:other_pages][:title].downcase.tr(" ", "_")
-  		params[:other_pages].merge!(:refactored_title => title)
+  		title = params[:other_page][:title].downcase.tr(" ", "_")
+  		params[:other_page].merge!(:refactored_title => title)
   		create!
   	end
 
     def update
-      title = params[:other_pages][:title].downcase.tr(" ", "_")
-      params[:other_pages].merge!(:refactored_title => title)
+      title = params[:other_page][:title].downcase.tr(" ", "_")
+      params[:other_page].merge!(:refactored_title => title)
       update!
     end
   end

@@ -27,52 +27,52 @@ Background: Setting up Categories
 
 Scenario: Creating a Bad Page
   When I go to the admin other pages page
-  And I click on "New Other Pages"
-  And I press "Create Other pages"
+  And I click on "New Other Page"
+  And I press "Create Other page"
   Then I should see "Title can't be blank"
 
 Scenario: Creating an Already Taken Page Name
   When I go to the admin other pages page
-  And I click on "New Other Pages"
-  And I fill in "other_pages_title" with "testy title"
-  And I select "testy category" from "other_pages_category_id"
-  And I press "Create Other pages"
+  And I click on "New Other Page"
+  And I fill in "other_page_title" with "testy title"
+  And I select "testy category" from "other_page_category_id"
+  And I press "Create Other page"
   When I go to the admin other pages page
-  And I click on "New Other Pages"
-  And I fill in "other_pages_title" with "testy title"
-  And I select "testy category" from "other_pages_category_id"
-  And I press "Create Other pages"
+  And I click on "New Other Page"
+  And I fill in "other_page_title" with "testy title"
+  And I select "testy category" from "other_page_category_id"
+  And I press "Create Other page"
   Then I should see "Refactored title has already been taken"
 
 Scenario: Creating a Good Page
   When I go to the admin other pages page
-  And I click on "New Other Pages"
-  And I fill in "other_pages_title" with "testy title"
-  And I select "testy category" from "other_pages_category_id"
-  And I press "Create Other pages"
-  Then I should see "Other pages was successfully created"
+  And I click on "New Other Page"
+  And I fill in "other_page_title" with "testy title"
+  And I select "testy category" from "other_page_category_id"
+  And I press "Create Other page"
+  Then I should see "Other page was successfully created"
 
 Scenario: Creating the About Ari Goldfield Page
   When I go to the admin other pages page
-  And I click on "New Other Pages"
-  And I fill in "other_pages_title" with "About Ari Goldfield"
-  And I fill in "other_pages_body" with "This is about Ari"
-  And I select "About" from "other_pages_category_id"
-  And I press "Create Other pages"
-  Then I should see "Other pages was successfully created"
+  And I click on "New Other Page"
+  And I fill in "other_page_title" with "About Ari Goldfield"
+  And I fill in "other_page_body" with "This is about Ari"
+  And I select "About" from "other_page_category_id"
+  And I press "Create Other page"
+  Then I should see "Other page was successfully created"
   When I go to the about ari goldfield page
   Then I should see "About Ari Goldfield"
   And I should see "This is about Ari"
 
 Scenario: Updating a Page
   When I go to the admin other pages page
-  And I click on "New Other Pages"
-  And I fill in "other_pages_title" with "testy title"
-  And I select "testy category" from "other_pages_category_id"
-  And I press "Create Other pages"
-  Then I should see "Other pages was successfully created"
-  When I click on "Edit Other Pages"
-  And I fill in "other_pages_title" with "again again"
-  And I press "Update Other pages"
-  Then I should see "Other pages was successfully updated"
+  And I click on "New Other Page"
+  And I fill in "other_page_title" with "testy title"
+  And I select "testy category" from "other_page_category_id"
+  And I press "Create Other page"
+  Then I should see "Other page was successfully created"
+  When I click on "Edit Other Page"
+  And I fill in "other_page_title" with "again again"
+  And I press "Update Other page"
+  Then I should see "Other page was successfully updated"
   And I should see "again_again"

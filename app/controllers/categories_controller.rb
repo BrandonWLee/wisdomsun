@@ -6,7 +6,7 @@ class CategoriesController < ApplicationController
 		if (categoryNames != nil && categoryNames.include?( requestedCatName ))
 			category = Category.find_by_refactored_name(requestedCatName)
 			categoryid = category.id
-			categoryPages = category.other_pagess.map { |x| x.refactored_title}
+			categoryPages = category.other_pages.map { |x| x.refactored_title}
 			if (categoryPages != nil && (not categoryPages.empty? ) && categoryPages.include?(requestedPageName))
 				page = OtherPage.find_by_refactored_title_and_category_id(requestedPageName,categoryid)
 				@title = page.title
