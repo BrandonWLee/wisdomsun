@@ -11,12 +11,8 @@ class ContactController < ApplicationController
       redirect_to '/contact'
       return
     end
-    @mail = Mail.new(
-      :from => params[:contact][:email],
-      :to => 'kdipasupil@berkeley.edu',
-      :subject => params[:contact][:subject],
-      :body => params[:contact][:text]
-    )
+
+    UserMailer.contact_email(params[:contact][:name], params[:contact][:email], params[:contact][:subject], params[:contact][:text]).deliver
 
     flash[:notice] = ("Information submitted")
     redirect_to '/contact'
