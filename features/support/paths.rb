@@ -12,6 +12,8 @@ module NavigationHelpers
   #
   def path_to(page_name)
     case page_name
+    when /^the home page$/
+      '/'
     when /^\// then
       '/'
     when /^the books page$/ then
@@ -22,7 +24,6 @@ module NavigationHelpers
       '/books'
     when /^the albums page.$/ then
       '/albums'
-    
     when /^the contact page$/ then
       '/contact'
     when /^the lineage page$/ then
