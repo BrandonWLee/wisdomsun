@@ -23,6 +23,7 @@ require 'uri'
 require 'cgi'
 require File.expand_path(File.join(File.dirname(__FILE__), "..", "support", "paths"))
 require File.expand_path(File.join(File.dirname(__FILE__), "..", "support", "selectors"))
+require "selenium-webdriver"
 
 module WithinHelpers
   def with_scope(locator)
@@ -65,7 +66,7 @@ end
 
 When /^(?:|I )follow "([^"]*)"$/ do |link|
   click_link(link)
-end
+end 
 When /^I press the (.+)$/ do |tab|
   if tab.index('tab') != nil
     element = tab.split(' tab')[0]

@@ -678,14 +678,14 @@
       "/home/saasbook/Documents/Aptana_Studio_3_Workspace/WisdomSun/app/controllers/books_controller.rb": [
         1,
         1,
-        0,
+        10,
         null,
         1,
-        0,
-        0,
-        0,
-        0,
-        0,
+        1,
+        1,
+        1,
+        1,
+        1,
         null,
         0,
         null,
@@ -879,6 +879,6 @@
         null
       ]
     },
-    "timestamp": 1385172339
+    "timestamp": 1385321765
   }
 }

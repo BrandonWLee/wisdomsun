@@ -77,3 +77,5 @@ gem 'rmagick'
 # email
 gem 'mail'
 
+# testing
+gem 'selenium-webdriver'
