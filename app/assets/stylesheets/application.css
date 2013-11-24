@@ -219,6 +219,15 @@ display: none;
 .container-right .section {
   margin-bottom: 30px;
 }
+.container-right .slide-name{
+  background-color: rgba(33,33,33,0.8);
+  color: #fff;
+  font-size: 36px;
+  position: absolute;
+  padding: 15px 55px;
+  right: 0;
+  top: 228px;
+}
 .quote-text {
   color: #777;
   font-style: oblique;

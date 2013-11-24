@@ -15,10 +15,11 @@
     .container-right
       #slider.flexslider
         %ul.slides
-          %li
-            %img{ :src => '/assets/welcome/slide1.jpg' }
-          %li
-            %img{ :src => '/assets/welcome/slide2.jpg' }
+          - @sliders.each do |slider|
+            %li
+              %a{:href => slider.link}
+                %img{ :src => slider.picture.url }
+              .slide-name= slider.name
       -if @quote 
         #quotes.section
           %a{ :href => 'quotes'}

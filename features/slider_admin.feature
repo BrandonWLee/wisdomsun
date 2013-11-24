@@ -6,11 +6,11 @@ Feature: Add, remove, or modify slider images
 
 Background: Slider images have been added to database
 
-  Given the following slider images exist:
-  | name                 | img_url                            | link                |
-  | Lineage              | ./app/assets/images/slider/1.jpg   | lineage             |
-  | Articles & Songs     | ./app/assets/images/slider/2.jpg   | articles_and_songs  |
-  | Photo Albums         | ./app/assets/images/slider/3.jpg   | albums              |
+  Given the following sliders exist:
+  | name                 | picture                             | link                |
+  | Lineage              | ./app/assets/images/sliders/1.jpg   | lineage             |
+  | Articles & Songs     | ./app/assets/images/sliders/2.jpg   | articles_and_songs  |
+  | Photo Albums         | ./app/assets/images/sliders/3.jpg   | albums              |
 
   And the following users are admin:
   |email              | password|
@@ -19,41 +19,36 @@ Background: Slider images have been added to database
   And I am logged in as admin
   And I am on the admin slider page
 
-Scenario: Add a slider image
-  When I add the slider image:
-  | name                 | img_url                            | link          |
-  | Around the Web       | ./app/assets/images/slider/4.jpg   | aroundtheweb  |
-  Then there should be a slider image named "Around the Web"
+Scenario: Add a slider
+  When I add the slider:
+  | name                 | picture                             | link          |
+  | Around the Web       | ./app/assets/images/sliders/3.jpg   | aroundtheweb  |
+  Then there should be a slider named "Around the Web"
 
-Scenario: Modify a slider image's link
-  When I change the slider image "Around the Web" link to "about"
-  Then the slider image "Around the Web" should have a link to "about"
+Scenario: Modify a slider's link
+  When I change the slider "Lineage" link to "about"
+  Then the slider "Lineage" should have a link to "about"
 
-Scenario: Delete a slider image
-  When I delete the slider image "Lineage"
-  Then there should not be a slider image named "Lineage"
+Scenario: Delete a slider
+  When I delete the slider "Lineage"
+  Then there should not be a slider named "Lineage"
 
-Scenario: When I try to edit a nonexistant slider image
-  When I try to edit a slider image with id 10
+Scenario: When I try to edit a nonexistant slider
+  When I try to edit a slider with id 10
   Then I should be on the admin slider page
-  And I should see "Slider image does not exist"
+  And I should see "Slider does not exist"
 
-Scenario: When I try to make slider image with empty name
-  When I click on "New Slider Image"
-  And I press "Create Slider Image"
+Scenario: When I try to make slider with empty name
+  When I click on "New Slider"
+  And I press "Create Slider"
   Then I should see "Cannot have empty name"
 
-Scenario: When I change an slider image name to an empty name
-  When I change the slider image "Lineage" name to ""
+Scenario: When I change an slider name to an empty name
+  When I change the slider "Lineage" name to ""
   Then I should be on the admin slider page
   And I should see "Cannot have empty name"
 
-Scenario: When I try to make slider image with empty img_url
-  When I click on "New Slider Image"
-  And I press "Create Slider Image"
-  Then I should see "Cannot have empty image url"
-
-Scenario: When I change an slider image img_url to an empty img_url
-  When I change the slider image "Lineage" img_url to ""
-  Then I should be on the admin slider page
-  Then I should see "Cannot have empty image url"
+Scenario: When I try to make slider with empty picture
+  When I click on "New Slider"
+  And I press "Create Slider"
+  Then I should see "Cannot have empty picture"
