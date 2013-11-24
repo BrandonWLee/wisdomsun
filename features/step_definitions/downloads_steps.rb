@@ -1,9 +1,5 @@
 #encoding: utf-8
 
-When /the downloads pages have been seeded/ do
-	load "#{Rails.root}/db/seeds.rb"
-end
-
 Then /I should be able to click Guided Earth Grounding Meditation/ do
 	page.should have_link('Guided Earth Grounding Meditation - Ari Goldfield', href: "http://www.wisdomsun.org/images/audio/20110710-Ari_Goldfield-IMC-guided_earth_grounding_meditation.mp3")
 end
