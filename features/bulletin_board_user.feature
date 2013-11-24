@@ -4,63 +4,74 @@ Feature:
   I want to be able to access the bulletin board, create/update/delete threads and posts
 
 Background:
-  Given the following topics exist:
-  |name             | poster | date       | description                    |
-  | Yoga            | admin  | 10/11/2013 | Talk about yoga here           |
-  | Flaming Buddhas | admin  | 11/13/2013 | Talk about flaming buddhas here|
 
-  And the following threads exist:
-  |name           | poster | date       | description                   | topic           |
-  | Hot yoga      | user   | 10/15/2013 | Talk about hot yoga here      | Yoga            |
-  | Fiery Buddhas | user   | 10/14/2013 | Talk about fiery buddhas here | Flaming Buddhas |
-
-  And the following posts exist:
-  | post             | poster  | date       | thread        |
-  | I love hot yoga! | admin   | 11/12/2013 | Hot yoga      |
-  | Mmm fire         | user    | 12/14/2014 | Fiery Buddhas |
-  
-  And the following users are admin:
+  Given the following users are admin:
   |email              | password|
   |admin@wisdomsun.org| password|
 
   And the following users are not admin:
   |email              | password|
-  |admin@wisdomsun.org| password|
+  |user@wisdomsun.org | password|
 
-  And I am logged in as user
-  And I am on the admin bulletin page
+  And the following forem categories exist:
+  | name  |
+  |General|
+
+  And the following forums exist:
+  |title             | description                    |category_name|
+  | Yoga             | Talk about yoga here           | General     |
+  | Flaming Buddhas  | Talk about flaming buddhas here| General     |
+  | Fun stuff        | Talk about fun stuff here      | General     |
+
+   And the following posts exist:
+  | topic_name       | text    | user_name          |
+  | Hot yoga         | blah    | admin@wisdomsun.org |
+  | Fiery Buddhas    | whee    | user@wisdomsun.org |
+  | Funny yoga       | bloop   | user@wisdomsun.org|
+  
+  And the following topics exist:
+  | subject       | user_name                   |forum_name       | post_name |
+  | Hot yoga      | admin@wisdomsun.org         | Yoga            | blah      |
+  | Funny yoga    | user@wisdomsun.org         | Fun stuff       |bloop      |
+  | Fiery Buddhas | user@wisdomsun.org          | Flaming Buddhas | whee      |
+
+  And I am on the Wisdom Sun homepage
+  And I am not logged in
+  When I follow "Sign in"
+  And I login with the incorrect admin login information"
+  Then I should be on the homepage
+  And I press the Bulletin tab
+  Then I should be on Bulletin
 
 Scenario: add a thread
-  When I follow the topic "Yoga"
-  And I add the thread:
-  | name | poster | date | description | topic |
-  | Therapeutic Yoga | user | 10/10/2010 | Talk about therapeutic yoga here | Yoga |
-  Then there should be a thread called "Therapeutic Yoga"
+  When I follow "Yoga"
+  And I follow "New topic"
+  And I fill in "topic_subject" with "Fun"
+  And I fill in "topic_posts_attributes_0_text" with "Shalallaa"
+  And I press "Create Topic"
+  Then I should see "Shalallaa"
+  And I follow "Yoga"
+  Then I should see "Fun"
 
 Scenario: add a post
-  When I follow the topic "Yoga"
-  And I follow the thread "Therapeutic Yoga"
-  And I add the post:
-  | post | poster | date | thread |
-  | My back feels better | user | 10/11/2013 | Therapeutic Yoga |
-  Then there should be a post that says "My back feels better"
+  When I follow "Flaming Buddhas"
+  And I follow "Fiery Buddhas"
+  And I follow "Reply"
+  And I fill in "post_text" with "WHEEE"
+  And I press "Post Reply"
+  Then I should see "WHEEE"
 
 Scenario: delete own post 
-  When I follow the topic "Yoga"
-  And I follow the thread "Therapeutic Yoga"
-  And I am the poster of the post with id 2
-  And I delete the post with id 2 
-  Then there should be no post with id 2
-
-Scenario: trying to delete someone else's post
-  When I follow the topic "Yoga"
-  And I follow the thread "Hot Yoga"
-  And I am not the poster of the post with id 1
-  And I delete the post with id 1
-  Then I should see "Cannot delete post of another user"
+  When I follow "Flaming Buddhas"
+  And I follow "Fiery Buddhas"
+  Then I should see "Wheee"
+  And I follow "Delete"
+  Then I should not see "Wheee"
 
 Scenario: editing own post
-  When I follow the topic "Flaming Buddhas"
-  And I follow the thread "Fiery Buddhas"
-  And I change the post that says "Mmm fire" to say "Mmm spicy"
-  Then I should see a post that says "Mmm spicy"
+  When I follow "Flaming Buddhas"
+  And I follow "Fiery Buddhas"
+  And I follow "Editing post"
+  And I fill in "post_text" with "SON"
+  Then I press "Edit"
+  Then I should see "SON"

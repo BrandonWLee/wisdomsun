@@ -4,62 +4,83 @@ Feature: Admin bulletin board
   I want to be able to access the bulletin board, create/update/delete malicious posts and comments.
 
 Background:
-  Given the following topics exist:
-  |name             | poster | date       | description                    |
-  | Yoga            | admin  | 10/11/2013 | Talk about yoga here           |
-  | Flaming Buddhas | admin  | 11/13/2013 | Talk about flaming buddhas here|
-
-  And the following threads exist:
-  |name           | poster | date       | description                   | topic           |
-  | Hot yoga      | user   | 10/15/2013 | Talk about hot yoga here      | Yoga            |
-  | Fiery Buddhas | user   | 10/14/2013 | Talk about fiery buddhas here | Flaming Buddhas |
-
-  And the following posts exist:
-  | post             | poster  | date       | thread        |
-  | I love hot yoga! | user    | 11/12/2013 | Hot yoga      |
-  | Mmm fire         | user    | 12/14/2014 | Fiery Buddhas |
-  
-  And the following users are admin:
+ 
+  Given the following users are admin:
   |email              | password|
   |admin@wisdomsun.org| password|
 
   And the following users are not admin:
   |email              | password|
-  |admin@wisdomsun.org| password|
+  |user@wisdomsun.org| password|
 
-  And I am logged in as admin
-  And I am on the admin bulletin page
 
-Scenario: add a topic
-  When I add the topic:
-    | name | poster | date       | description         |
-    | Fun  | admin  | 10/12/2013 | Talk about fun here |
-  Then there should be a topic called "Fun"
-  When I add the thread: 
-    | name     | poster | date       | description                | topic |
-    |Funny fun | admin  | 11/11/2011 | Talk about funny fun here  | Fun   |
-  Then there should be a thread called "Funny fun"
-  When I add the post:
-    | post      | poster | date       | thread    |
-    | I lyk fun | admin  | 12/25/2013 | Funny Fun |
-  Then there should be a post that says "I lyk fun"
+And the following forem categories exist:
+  | name  |
+  |General|
 
-Scenario: modify a topic/thread
-  When I change the "Yoga" topic to "Meditation"
-  Then there should be a topic called "Meditation"
-  When I follow the "Fun" topic 
-  And I change the "Funny fun" thread to "Meep"
-  Then there should be a thread called "Meep"
+  And the following forums exist:
+  |title             | description                    |category_name|
+  | Yoga             | Talk about yoga here           | General     |
 
-Scenario: delete a topic/thread/post
-  When I delete the topic "Flaming Buddhas"
-  Then there should not be a topic called "Flaming Buddhas"
-  And there should not be a thread called "Fiery Buddhas"
-  And there should not be a post that says "Mmm fire"
+   And the following posts exist:
+  | topic_name       | text    | user_name          |
+  | Hot yoga         | blah    | admin@wisdomsun.org |
+  
+  And the following topics exist:
+  | subject       | user_name                   |forum_name       | post_name |
+  | Hot yoga      | admin@wisdomsun.org         | Yoga            | blah      |
+  | Fun yoga      | user@wisdomsun.org          | Yoga            | bloop     |
 
-Scenario: editing a nonexistent topic
-  When I try to edit a topic with id 5
-  Then I should be on the admin bulletin page
-  And I should see "Topic does not exist"
+  And I am on the Wisdom Sun homepage
+  And I am not logged in
+  When I follow "Sign in"
+  And I login with the correct admin login information"
+  Then I should be on the admin page
+  When I go to the homepage
+  And I press the Bulletin tab
+  Then I should be on Bulletin
 
+
+Scenario: manage categories
+  When I follow "Admin Area"
+  And I follow "Manage Forum Categories"
+  And I follow "Edit"
+  And I fill in "category_name" with "Wisdom Sun"
+  And I press "Update Category"
+  Then I should see "Wisdom Sun"
+
+Scenario: modify a forum/thread
+  When I am on the bulletin page
+  When I follow "Admin Area"
+  When I follow "Manage Forums" 
+  When I follow "Edit"
+  When I fill in "forum_title" with "Yogi" 
+  And I fill in "forum_description" with "mmm"
+  And I press "Update Forum"
+  Then I should see "Yogi"
+
+Scenario: delete a forum
+  When I am on the bulletin page
+  When I follow "Admin Area"
+  And I follow "Manage Forums"
+  And I follow "Delete"
+  Then I should not see "Yogi"
+
+Scenario: add a forum
+  When I follow "Admin Area"
+  And I follow "Manage Forums"
+  And I follow "New Forum"
+  And I fill in "forum_title" with "Meep"
+  And I fill in "forum_description" with "Talk about meep here"
+  And I press "Create Forum"
+  Then I should see "Meep"
+
+
+
+Scenario: deleting another user's topic
+  When I am on the bulletin page
+  And I follow "Yoga"
+  And I follow "Fun yoga"
+  And I follow "Delete"
+  Then I should not see "Wheee"
 
