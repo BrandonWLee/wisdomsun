@@ -5,7 +5,7 @@ Feature: The Downloads Pages are Editable Using Other Pages
 	I want to be able to add downloads and other resources to the website.
 
 Background: Test database has been seeded and logged in as admin
-	When the test database has been seeded
+	When the test database has been seeded for downloads test
   And I am logged in as admin
   And I am on the admin articles, songs and more edit page
 

@@ -49,9 +49,9 @@ module NavigationHelpers
     when /^the about ari goldfield page/ then '/categories/about/about_ari_goldfield'
     when /^Around the Web/ then '/aroundtheweb'
     when /the admin (panel|page)/ then admin_dashboard_path
-    when /the free downloads page/ then '/otherPages/7'
-    when /^the articles, songs and more page$/ then '/otherPages/8'
-    when /^the admin articles, songs and more edit page$/ then '/admin/other_pages/8/edit'
+    when /the free downloads page/ then '/otherPages/1'
+    when /^the articles, songs and more page$/ then '/otherPages/2'
+    when /^the admin articles, songs and more edit page$/ then '/admin/other_pages/2/edit'
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:

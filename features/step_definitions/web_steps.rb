@@ -31,11 +31,6 @@ module WithinHelpers
 end
 World(WithinHelpers)
 
-#seeds the test database with seeds.tb
-When /the test database has been seeded/ do
-  load "#{Rails.root}/db/seeds.rb"
-end
-
 # Single-line step scoper
 When /^(.*) within (.*[^:])$/ do |step, parent|
   with_scope(parent) { When step }
