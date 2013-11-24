@@ -6,32 +6,32 @@ Feature: Categories for Users
 
 Background: Create categories.
   Given the following categories exist:
-  | name		| position	| refactored_names	|
-  |	About		| 0			| about				|
-  | Downloads	| 1			| downloads			|
+  | name		| position	| refactored_name	|
+  |	Teachings	| 0			| teachings			|
+  | Resources	| 1			| resources			|
   
   Given the following other_pages exist:
-  | category_id | title					| refactored_title		|
-  | 1			| About Ari Goldfield 	| about_ari_goldfield	|
-  | 1			| About Rose Goldfield	| about_rose_goldfield	|
-  | 2			| Videos				| videos				|
-  | 2			| Mediation Music		| mediation_music		| 
+  | category_id | title						| refactored_title			|
+  | 1			| Teachings of Buddha I	 	| teachings_buddha_i		|
+  | 1			| Teachings of Buddha II	| teachings_buddha_ii		|
+  | 2			| Videos					| videos					|
+  | 2			| Mediation Music			| mediation_music			| 
 
 Scenario: Can see contents of each category
 Given I am on the home page
 When I hover over "Other" on the menu bar
-Then I should see "About" 
-When I click on "About" on the dropdown
-Then I should see "About Ari Goldfield"
+Then I should see "Teachings of Buddha I" 
+When I click on "Teachings of Buddha I" on the dropdown
+Then I should see "Teachings of Buddha I"
 And I should not see "Videos"
 
 Scenario: Can access pages within categories
 Given I am on the home page
 When I hover over "Other" on the menu bar
-And I click on "About" on the dropdown
-And I click on "About Ari Goldfield"
-Then I should be on the "About Ari Goldfield" page.
+And I click on "Teachings of Buddha I" on the dropdown
+And I click on "Teachings of Buddha I"
+Then I should be on the "Teachings of Buddha I" page.
 When I hover over "Other"
-And I click on "About" on the dropdown
-And I click "About Rose Goldfield"
-Then I should be on the "About Rose Goldfield" page
+And I click on "Teachings" on the dropdown
+And I click "Teachings of Buddha II"
+Then I should be on the "Teachings of Buddha II" page
