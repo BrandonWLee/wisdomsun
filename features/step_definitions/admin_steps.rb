@@ -3,6 +3,7 @@ Given /the following users are admin:/ do |users_table|
   users_table.hashes.each do |user|
     admin = User.create!({:email => user[:email], :password => user[:password]})
     admin.toggle!(:admin)
+    admin.toggle!(:forem_admin)
   end
 end
 
