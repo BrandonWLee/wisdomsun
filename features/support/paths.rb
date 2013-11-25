@@ -57,6 +57,8 @@ module NavigationHelpers
     when /the free downloads page/ then '/otherPages/1'
     when /^the articles, songs and more page$/ then '/otherPages/2'
     when /^the admin articles, songs and more edit page$/ then '/admin/other_pages/2/edit'
+    when /^the lineages page$/ then '/otherPages/1'
+    when /^the lineages edit page$/ then '/admin/other_pages/1/edit'
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:

@@ -32,7 +32,7 @@ end
 
 When /^I click on "(.*)" link$/ do |name|
   slider = Slider.find_by_name(name)
-  visit '#{slider.link}'
+  visit "#{slider.link}"
 end
 
 Then /^I will be on the "(.*?)" link$/ do |arg1|
