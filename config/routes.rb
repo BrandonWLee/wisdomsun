@@ -17,7 +17,7 @@ Wisdomsun::Application.routes.draw do
 #  resources :about, :only => [:index, :show]
   resources :books, :only => [:index, :show]
   resources :bulletin
-  resources :contact, :only => [:index, :show]
+  resources :contact
   resources :support, :only => [:index, :create]
 #  resources :downloads, :only => [:index, :show]
   resources :events, :only => [:index, :show]
