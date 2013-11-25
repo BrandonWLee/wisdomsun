@@ -20,6 +20,8 @@ module NavigationHelpers
       '/books'
     when /^the support page$/ then
       '/support'
+    when /^the bulletin page$/ then
+      '/bulletin'
     when /^books/ then
       '/books'
     when /^the albums page.$/ then
