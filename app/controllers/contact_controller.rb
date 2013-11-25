@@ -7,7 +7,7 @@ class ContactController < ApplicationController
 
   def create
     # make sure all the fields are filled in
-    if params[:contact][:name].nil? || params[:contact][:email].nil? || params[:contact][:subject].nil? || params[:contact][:text].nil?  || params[:contact][:name].empty? || params[:contact][:email].empty? || params[:contact][:subject].empty? || params[:contact][:text].empty?
+    if contactIsNil(params[:contact]) || contactIsEmptyStr(params[:contact])
       flash[:notice] = ("Error, you must fill in the whole form to submit")
       redirect_to '/contact'
       return
@@ -29,5 +29,13 @@ class ContactController < ApplicationController
 
     flash[:notice] = ("Information submitted")
     redirect_to '/contact'
+  end
+
+  def contactIsNil(contact)
+    contact[:name].nil? || contact[:email].nil? || contact[:subject].nil? || contact[:text].nil? 
+  end
+
+  def contactIsEmptyStr(contact)
+    contact[:name].strip.empty? || contact[:email].strip.empty? || contact[:subject].strip.empty? || contact[:text].strip.empty?
   end
 end
