@@ -1,5 +1,5 @@
 require 'spec_helper'
 
-describe AroundTheWebPostController do
+describe AroundTheWebPostsController do
 
 end
