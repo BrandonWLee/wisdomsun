@@ -35,7 +35,7 @@ module NavigationHelpers
     when /^the (Wisdom Sun )?home\s?page$/ then '/'
     when /the admin around the web page/ then admin_around_the_web_posts_path
     when /^About/ then '/otherPages/1'
-    when /^Downloads/ then '/downloads'
+    when /^Downloads/ then '/categories/3'
     when /^Bulletin/ then '/bulletin'
     when /^Contact/ then '/contact'
     when /^Events/ then '/events'

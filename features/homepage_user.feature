@@ -18,6 +18,18 @@ Background: on the homepage
   And I press "Create Category"
   Then I should see "Category was successfully created."
   And I should see "about"
+  When I go to the admin categories page
+  And I click on "New Category"
+  When I fill in "category_name" with "wth"
+  When I fill in "category_position" with "10"
+  And I press "Create Category"
+  Then I should see "Category was successfully created."
+  When I go to the admin categories page
+  And I click on "New Category"
+  When I fill in "category_name" with "Downloads"
+  When I fill in "category_position" with "5"
+  And I press "Create Category"
+  Then I should see "Category was successfully created."
   When I go to the admin other pages page
   And I click on "New Other Page"
   And I fill in "other_page_title" with "About"
