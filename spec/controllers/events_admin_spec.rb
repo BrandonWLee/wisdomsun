@@ -20,7 +20,7 @@ describe Admin::EventsController do
       user.destroy
     end
     @events = Event.create!( [{:name=> "firstevent", :description=>"event1"}, 
-                            {:description=>"event2"}])
+                            {:name=>"secondevent",:description=>"event2"}])
     #user = FactoryGirl.create(:user, :email => "hello@example.com", :password => "password")
 
 #    picture1 = File.new("./app/assets/images/photos/1-1.jpg")

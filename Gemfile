@@ -77,7 +77,9 @@ gem 'rmagick'
 # email
 gem 'mail'
 
+# testing
+gem 'selenium-webdriver'
+
 # bulletin board
 gem 'forem', :github => "radar/forem"
 gem 'will_paginate', '3.0.4'
-

@@ -14,42 +14,42 @@ Background:
 
   Given the following quotes exist:
   |quote            | source  |
-  |I am the man     | jeff    |
+  |I am the man     | Jeff    |
   |I love you       |         |
 
   And I am logged in as admin
   And I am on the admin quotes page
 
 Scenario: add a quote
-  When I add the quote:
+  When I add the quotes:
     |quote            | source  |
     |Wow     | Jose    |
-  Then there should be a quote called "Wow"
-  And it should have a source "Jose"
+  Then the following quotes should exist:
+  |quote|source|
+  |Wow|Jose|
 Scenario: modify a quote
-  When I change the quote "I am the man" to have title "I am the woman"
+  When I change the quote "I am the man" to have quote "I am the woman"
   Then there should not be a quote "I am the man"
-  And there should be a quote "I am the woman"
-  And it should have a source "Jeff"
+  Then the following quotes should exist:
+  |quote|source|
+  |I am the woman|Jeff|
 
 Scenario: delete a quote
   When I delete the quote "I love you"
   Then there should not be a quote "I love you"
 
 Scenario: try to edit a nonexistent quote
-  When I try to edit the quote with id 10
-  Then I should be on the admin quotes page
-  And I should see "Quote does not exist"
+  When I try to edit a quote with id 10
+  And I should not see "Edit Quote"
 
 Scenario: create empty quote 
   When I click on "New Quote"
   And I press "Create Quote"
-  Then I should see "Cannot have empty quote"
+  Then I should see "Quote can't be blank"
 
 Scenario: modify quote to empty
   When I change the quote "I love you" to have quote ""
-  Then I should be on the edit page for quote "I love you"
-  And I should see "Cannot have empty quote"
+  And I should see "Quote can't be blank"
 
 Scenario: should see latest quote on front page
   When I am on the home page
@@ -60,7 +60,7 @@ Scenario: dedicated page should have all
   When I am on the quotes page
   Then I should see the quotes:
     |quote            | source  |
-    |I am the man     | jeff    |
+    |I am the man     | Jeff    |
     |I love you       |         |
 
 

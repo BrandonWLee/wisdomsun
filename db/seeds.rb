@@ -10,8 +10,6 @@
 #
 #
 
-
-
 # USERS AND ADMIN
 puts "Seeding Users and Admins"
 admin = User.create!({:email => 'admin@wisdomsun.org', :password => 'password'})
@@ -50,8 +48,8 @@ forum_category = Forem::Category.create! name: "General"
 print forum_category 
 
 puts "Seeding Forem::Forum (Admin)"
-forum = Forem::Forum.new  description: "About Wisdom Sun", category_id: forum_category.id
-forum.name = "Wisdom Sun"
+forum = Forem::Forum.new  description: "About Wisdom Sun", category_id: forum_category.id, name: "Wisdom Sun"
+
 
 puts "Seeding Forem::Post (Admin)"
 post = Forem::Post.new  text: "Admin Post"
@@ -128,6 +126,7 @@ puts "Seeding Photos"
 end
 
 # Slider Images
+puts "Seeding slider"
 slider1 = Slider.new(:name => "Lineage", :link => "lineage")
 slider1_pic = File.new("./app/assets/images/sliders/1.jpg")
 slider1.picture = slider1_pic

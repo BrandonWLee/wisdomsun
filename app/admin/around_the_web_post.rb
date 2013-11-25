@@ -26,6 +26,13 @@ ActiveAdmin.register AroundTheWebPost do
       end
       update!
     end
+    def edit
+      if (not AroundTheWebPost.exists?(params[:id]))
+        flash[:notice] = "Around The Web Post does not exist"
+        redirect_to '/admin/around_the_web_posts'
+        return
+      end
+      super
+    end
   end
-
 end

@@ -7,5 +7,15 @@ ActiveAdmin.register Quote do
     end
     f.actions
   end
+  controller do
+    def edit
+      if (not Quote.exists?(params[:id]))
+        flash[:notice] = "Quote does not exist"
+        redirect_to '/admin/quotes'
+        return
+      end
+      super
+    end
+  end
 
 end
