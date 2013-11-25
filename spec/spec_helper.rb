@@ -40,3 +40,7 @@ RSpec.configure do |config|
   config.order = "random"
 end
 
+def last_email
+  ActionMailer::Base.deliveries.last
+end
+
