@@ -26,9 +26,20 @@ Scenario: I should be able to fill in contact submission form
 	Then I should be on the contact page
 	And I should see "Information submitted"
 
+Scenario: Valid email must be filled in
+	Given I am on the contact page
+	When I fill in "contact_name" with "Lemongrab"
+	And I fill in "contact_email" with "this_is_an_email"
+	And I fill in "contact_subject" with "UNACCEPTABLE!!!"
+	And I fill in "contact_text" with "Lemon kingdom"
+        When I press "Send"
+        Then I should be on the contact page
+        But I should see "Error, you must enter a valid email address to submit"
+
 Scenario: Forms must be filled in
 	Given I am on the contact page
         When I press "Send"
         Then I should be on the contact page
         But I should see "Error, you must fill in the whole form to submit"
+
   
