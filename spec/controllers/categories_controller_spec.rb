@@ -4,7 +4,6 @@ describe CategoriesController do
     it "should render the right view" do
       @category = Category.create(:name => "Meep", :refactored_name => "meep")
       get :index
-      @category.name.should == "meep"
       response.should render_template('index')
       @category.destroy
     end
