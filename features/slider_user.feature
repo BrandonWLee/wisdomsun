@@ -25,11 +25,8 @@ Scenario: All sliders have names
 	Then the slider "Articles & Songs" name should be on page
 	Then the slider "Photo Albums" name should be on page
 
-Scenario: Clicking on the link to link leads to correct links
-  When I click on "Lineage" link
-  	Then I should see "Lineage: An Introduction"
-  When I click on "Articles & Songs" link
-  	Then I should see "Articles, Songs, & More"
-  When I click on "Photo Albums" link
-  	Then I should see "Albums"
+Scenario: All sliders should have the correct links
+  Then the slider "Lineage" should have the link "categories/2"
+  Then the slider "Articles & Songs" should have the link "otherPages/8"
+  Then the slider "Photo Albums" should have the link "albums"
 
