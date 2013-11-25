@@ -5,7 +5,7 @@ Feature: Downloads should be visible in the Downloads Tab, with the correct page
 	I want to be able to download files from the Download Pages.
 
 Background: the downloads pages have been seeded
-	When the downloads pages have been seeded
+	When the test database has been seeded for downloads test
 
 Scenario: Given I am on the free downloads page
 	When I am on the free downloads page

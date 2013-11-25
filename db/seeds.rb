@@ -10,8 +10,6 @@
 #
 #
 
-
-
 # USERS AND ADMIN
 puts "Seeding Users and Admins"
 admin = User.create!({:email => 'admin@wisdomsun.org', :password => 'password'})
@@ -50,8 +48,8 @@ forum_category = Forem::Category.create! name: "General"
 print forum_category 
 
 puts "Seeding Forem::Forum (Admin)"
-forum = Forem::Forum.new  description: "About Wisdom Sun", category_id: forum_category.id
-forum.name = "Wisdom Sun"
+forum = Forem::Forum.new  description: "About Wisdom Sun", category_id: forum_category.id, name: "Wisdom Sun"
+
 
 puts "Seeding Forem::Post (Admin)"
 post = Forem::Post.new  text: "Admin Post"
@@ -127,7 +125,27 @@ puts "Seeding Photos"
   pic.close 
 end
 
-(1...7).each do |num| 
+# Slider Images
+puts "Seeding slider"
+slider1 = Slider.new(:name => "Lineage", :link => "lineage")
+slider1_pic = File.new("./app/assets/images/sliders/1.jpg")
+slider1.picture = slider1_pic
+slider1.save!
+slider1_pic.close
+
+slider2 = Slider.new(:name => "Articles & Songs", :link => "around_the_web")
+slider2_pic = File.new("./app/assets/images/sliders/2.jpg")
+slider2.picture = slider2_pic
+slider2.save!
+slider2_pic.close
+
+slider3 = Slider.new(:name => "Albums", :link => "albums")
+slider3_pic = File.new("./app/assets/images/sliders/2.jpg")
+slider3.picture = slider3_pic
+slider3.save!
+slider3_pic.close
+
+(1...2).each do |num| 
   puts "..holiday #{num}"
   holiday1 = Photo.new(:album_id => 2, :description => "Meep!")
   pic = File.new("./app/assets/images/photos/2-#{num}.jpg")

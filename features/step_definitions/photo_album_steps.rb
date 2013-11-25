@@ -47,7 +47,7 @@ Given /the following albums exist:/ do |albums_table|
   end
 end
 
-When /I upload the photo "(.*)"/ do |photo_path|
+When /I upload the picture to the photo "(.*)"/ do |photo_path|
   step "I attach the file \"#{photo_path}\" to \"Picture\""
 end
 
