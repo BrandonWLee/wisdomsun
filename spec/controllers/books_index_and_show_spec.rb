@@ -3,7 +3,7 @@ require 'spec_helper'
 describe BooksController do
 	describe 'the show controller method' do
 		before :each do
-			@book = mock('book')
+			@book = double('book')
       Book.stub(:exists?).and_return(true)
 		end
 		it 'should render the show template' do
@@ -20,7 +20,7 @@ describe BooksController do
 
 	describe 'the index controller method' do
 		before :each do
-			@books = [mock('book1'), mock('book2')]
+			@books = [double('book1'), double('book2')]
 		end
 		it 'should render the index template' do
 			Book.stub(:all).and_return(@books)

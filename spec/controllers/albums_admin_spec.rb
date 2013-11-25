@@ -5,7 +5,7 @@ describe Admin::AlbumsController do
   render_views
 	include Devise::TestHelpers
   before(:each) do
-    user = mock('user')
+    user = double('user')
     user.stub(:email).and_return("hello@example.com")
     user.stub(:password).and_return("password")
     user.stub(:to_key).and_return(1)

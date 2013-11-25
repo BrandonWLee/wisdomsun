@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe QuotesController do
   before :each do
-    @quotes = [mock('quote1'), mock('quote2')]
+    @quotes = [double('quote1'), double('quote2')]
   end
   describe "#index" do
     it 'should render the index template' do

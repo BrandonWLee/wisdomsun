@@ -3,7 +3,7 @@ require 'spec_helper'
 describe PhotosController do
   describe 'the index controller method' do
     before :each do
-      @photos = [mock('photo1'), mock('photo2')]
+      @photos = [double('photo1'), double('photo2')]
       @tmp_album = Album.create!(:name => "meep", :description => "lalala")
     end
     it 'can add pics to albums' do

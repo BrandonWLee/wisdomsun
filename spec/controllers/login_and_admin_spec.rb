@@ -6,7 +6,7 @@ describe Users::SessionsController do
 	include Devise::TestHelpers
 	describe "POST create" do
 		it "should go to admin dashboard if it is admin" do
-			user = mock('user')
+			user = double('user')
 			user.stub(:to_key).and_return(1)
 			user.stub(:authenticatable_salt).and_return(1)
 			user.stub(:admin?).and_return(true)
@@ -30,7 +30,7 @@ describe Users::SessionsController do
 	end
 
 	it "should do something when it posts new" do
-		user = mock('user')
+		user = double('user')
 		user.stub(:to_key).and_return(1)
 		user.stub(:authenticatable_salt).and_return(1)
 		user.stub(:admin?).and_return(true)
@@ -42,7 +42,7 @@ describe Users::SessionsController do
 	end
 
 	it "should redirect to '/' after post destroy" do
-		user = mock('user')
+		user = double('user')
 		user.stub(:to_key).and_return(1)
 		user.stub(:authenticatable_salt).and_return(1)
 		user.stub(:admin?).and_return(true)

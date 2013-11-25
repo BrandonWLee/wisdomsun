@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe AroundTheWebPostsController do
   before :each do
-    @posts = [mock('post1'), mock('post2')]
+    @posts = [double('post1'), double('post2')]
   end
   describe "#index" do
     it 'should render the index template' do
