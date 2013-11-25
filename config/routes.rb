@@ -1,11 +1,11 @@
 Wisdomsun::Application.routes.draw do
 
-  # This line mounts Forem's routes at /forums by default.
+  # This line mounts Forem's routes at /bulletin.
   # This means, any requests to the /forums URL of your application will go to Forem::ForumsController#index.
   # If you would like to change where this extension is mounted, simply change the :at option to something different.
   #
   # We ask that you don't use the :as option here, as Forem relies on it being the default of "forem"
-  mount Forem::Engine, :at => '/forums'
+  mount Forem::Engine, :at => '/bulletin'
 
   mount RedactorRails::Engine => '/redactor_rails'
 
@@ -17,9 +17,9 @@ Wisdomsun::Application.routes.draw do
 #  resources :about, :only => [:index, :show]
   resources :books, :only => [:index, :show]
   resources :bulletin
-  resources :contact, :only => [:index, :show]
+  resources :contact
   resources :support, :only => [:index, :create]
-#  resources :downloads, :only => [:index, :show]
+  resources :downloads, :only => [:index, :show]
   resources :events, :only => [:index, :show]
   resources :photos, :only => [:index, :show]
   resources :albums, :only => [:index, :show]
