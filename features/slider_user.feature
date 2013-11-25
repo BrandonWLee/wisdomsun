@@ -7,8 +7,8 @@ Feature: Slider images are all present on webpage and navigation works
 Background: Slider has been added to database
   Given the following sliders exist:
   | name                 | picture                  | link                |
-  | Lineage              | ./app/assets/images/sliders/1.jpg   | lineage             |
-  | Articles & Songs     | ./app/assets/images/sliders/2.jpg   | articles_and_songs  |
+  | Lineage              | ./app/assets/images/sliders/1.jpg   | otherPages/4             |
+  | Articles & Songs     | ./app/assets/images/sliders/2.jpg   | otherPages/4  |
   | Photo Albums         | ./app/assets/images/sliders/3.jpg   | albums              |
 
   And I am on the home page
