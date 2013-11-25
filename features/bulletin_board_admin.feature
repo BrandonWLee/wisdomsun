@@ -1,7 +1,7 @@
 Feature: Admin bulletin board
   As an admin of the Wisdom Sun website, 
   So that I can control the nature of the posts on the board,
-  I want to be able to access the bulletin board, create/update/delete malicious posts and comments.
+  I want to be able to access the bulletin board, create/update/delete malicious forums, topics, and posts.
 
 Background:
  

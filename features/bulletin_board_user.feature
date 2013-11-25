@@ -1,7 +1,7 @@
 Feature: 
   As a user of the Wisdom Sun website,
   So that I can create threads and posts for discussion 
-  I want to be able to access the bulletin board, create/update/delete threads and posts
+  I want to be able to access the bulletin board, create/update/delete topics and posts
 
 Background:
 
