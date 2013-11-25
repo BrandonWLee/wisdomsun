@@ -57,7 +57,6 @@ describe Admin::AroundTheWebPostsController do
       @post = @posts[0]
       @id = @post.id.to_s
       post :update, {:id => @id, :around_the_web_post => {:title => '', :external_link => "http://www.reddit.com"}}
-      print response.body
       response.body.should include("Title can't be blank")
     end
     it 'should update properly' do
