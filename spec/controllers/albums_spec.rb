@@ -4,7 +4,7 @@ describe AlbumsController do
   describe 'the index controller method' do
     before :each do
       # @tmp_album = Album.create!(:name => "meep", :description => "lalala")
-      @albums = [mock('album1'), mock('album2')]
+      @albums = [double('album1'), double('album2')]
     end
     it 'renders index' do
       @album = Album.create!(:name=>"Meep")

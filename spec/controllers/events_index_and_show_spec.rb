@@ -3,7 +3,7 @@ require 'spec_helper'
 describe EventsController do
 	describe 'the show controller method' do
 		before :each do
-			@event = mock('event')
+			@event = double('event')
 		end
 		it 'should render the show template' do
 			Event.stub(:find).and_return(@event)
@@ -24,7 +24,7 @@ describe EventsController do
 
 	describe 'the index controller method' do
 		before :each do
-			@events = [mock('event1'), mock('event2')]
+			@events = [double('event1'), double('event2')]
 		end
 		it 'should render the index template' do
 			Event.stub(:all).and_return(@events)
