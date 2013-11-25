@@ -68,4 +68,19 @@ Wisdomsun::Application.configure do
 
   # Devise default url
   config.action_mailer.default_url_options = { :host => 'wisdom-sun.herokuapp.com' }
+  config.action_mailer.perform_deliveries = true
+  # set delivery method to :smtp, :sendmail, or :test
+  config.action_mailer.delivery_method = :smtp
+  # these options are only needed if you choose smtp delivery
+  config.action_mailer.smtp_settings = {
+   :address => ENV["SMTP_ADDRESS"], 
+   :port => 587,
+   :domain => "gmail.com",
+   :user_name => ENV["SMTP_USERNAME"],
+   :password  => ENV["SMTP_PASSWORD"],
+   :authentication  => :plain,
+   :enable_starttls_auto => true
+   }
+  config.action_mailer.default :charset => "utf-8"
+  puts config.action_mailer
 end
