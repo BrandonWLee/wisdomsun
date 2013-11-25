@@ -133,7 +133,7 @@ slider1.picture = slider1_pic
 slider1.save!
 slider1_pic.close
 
-slider2 = Slider.new(:name => "Articles & Songs", :link => "around_the_web")
+slider2 = Slider.new(:name => "Articles & Songs", :link => "otherPages/8")
 slider2_pic = File.new("./app/assets/images/sliders/2.jpg")
 slider2.picture = slider2_pic
 slider2.save!
