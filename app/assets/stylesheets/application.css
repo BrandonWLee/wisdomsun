@@ -371,3 +371,9 @@ display: none;
 .homepage-share {
   padding-bottom: 30px;
 }
+/**************************
+ *      FLASH
+ **************************/
+.flash-alert {
+  color: red;
+}
