@@ -36,13 +36,13 @@
           - Category.all.each.with_index do |category,index|
             - first_page = category.other_pages.first
             - if index == 0
-              = link_to otherPage_path(first_page) do
+              = link_to main_app.category_path(category) do
                 .drop-top.drop-item= "#{category.name}"
             - elsif index == Category.all.size - 1
-              = link_to otherPage_path(first_page) do
+              = link_to main_app.category_path(category) do
                 .drop-bottom.drop-item= "#{category.name}"
             - else
-              = link_to otherPage_path(first_page) do
+              = link_to main_app.category_path(category) do
                 .drop-item= "#{category.name}"
       .menu-category
         = link_to 'Support', '/support', :class => 'menu-item', :id => 'menu-support'

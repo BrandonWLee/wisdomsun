@@ -1,3 +1,7 @@
+<%= stylesheet_link_tag 'style' %>
+<div class='wrapper'>
+<div class='container'>
+<%= render :partial => "/layouts/menu"%>
 <div class='forum'>
   <%= render :partial => 'forem/forums/head', :locals => { :forum => @forum } %>
 
@@ -20,4 +24,7 @@
     </tbody>
   </table>
   <%= forem_pages_widget(@topics) %>
+</div>
+</div>
+<%= render :partial => "/layouts/footer"%>
 </div>

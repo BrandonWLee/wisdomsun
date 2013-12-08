@@ -1,3 +1,8 @@
+<%= stylesheet_link_tag 'style' %>
+<div class='wrapper'>
+<div class='container'>
+  <%= render :partial => "/layouts/menu"%>
+
 <div id='topic' class='<%= 'un' unless @topic.locked? %>locked'>
   <%= render :partial => 'forem/topics/head', :locals => { :topic => @topic } %>
 
@@ -45,4 +50,7 @@
   </div>
 
   <%= forem_pages_widget(@posts) %>
+</div>
+</div>
+<%= render :partial => "layouts/footer"%>
 </div>

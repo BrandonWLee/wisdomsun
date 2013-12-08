@@ -24,7 +24,7 @@ Wisdomsun::Application.routes.draw do
   resources :photos, :only => [:index, :show]
   resources :albums, :only => [:index, :show]
   resources :quotes, :only => [:index]
-  resources :categories, :only => [:index, :show]
+  resources :categories #, :only => [:index, :show]
   resources :otherPages, :only => [:index, :show]
   match 'categories/:category_name/:page_name', :to => 'categories#getpage', :format => false
   match 'around_the_web', :to => 'around_the_web_posts#index'  

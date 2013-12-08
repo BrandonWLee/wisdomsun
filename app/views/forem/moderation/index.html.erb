@@ -1,3 +1,7 @@
+<%= stylesheet_link_tag 'style' %>
+<div class='wrapper'>
+<div class='container'>
+  <%= render :partial => "/layouts/menu"%>
 <h2><%= t('.title', :forum => forum) %></h2>
 
 <h3><%= t('posts_count', :count => @posts.count, :scope => 'forem.general') %></h3>
@@ -24,4 +28,6 @@
     </div>
   <% end %>
 </div>
-
+</div>
+<%= render :partial => "/layouts/footer"%>
+</div>

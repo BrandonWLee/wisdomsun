@@ -37,8 +37,8 @@ Background:
 
   And I am on the Wisdom Sun homepage
   And I am not logged in
-  When I follow "Sign in"
-  And I login with the incorrect admin login information"
+  And I follow "Sign in"
+  And I login with the incorrect admin login information
   Then I should be on the homepage
   And I press the Bulletin tab
   Then I should be on Bulletin

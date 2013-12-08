@@ -1,5 +1,12 @@
+<%= stylesheet_link_tag 'style' %>
+<div class='wrapper'>
+<div class='container'>
+  <%= render :partial => "/layouts/menu"%>
 <%= render :partial => 'forem/forums/head', :locals => { :forum => @topic.forum } %>
 
 <h2><%= t("forem.topic.new") %></h2>
 
 <%= render "form" %>
+</div>
+<%= render :partial => "layouts/footer"%>
+</div>
