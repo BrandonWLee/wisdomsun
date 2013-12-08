@@ -4,7 +4,7 @@ class Album < ActiveRecord::Base
   attr_accessible :album_cover, :album_cover_file_name
   attr_accessible :album_cover_content_type, :album_cover_file_size, :album_cover_updated_at
   has_attached_file :album_cover,
-    :styles => { :medium => ["300x300"], :thumb => ["100x100#"] },
+    :styles => { :medium => ["300x300"], :thumb => ["32x32#"], :small => ["100x100#"] },
     :storage => :ftp,
     :path => "/wisdomsun.org/dev/:class/:attachment/:id/:style/:filename",
     :url => "http://wisdomsun.org/dev/:class/:attachment/:id/:style/:filename",

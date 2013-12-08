@@ -1,7 +1,7 @@
 ActiveAdmin.register Album do
   index do
     column :album_cover do |album|
-      image_tag(album.album_cover.url(:thumb)) 
+      image_tag(album.album_cover.url(:small)) 
     end 
     column :name
     column :description do |album|

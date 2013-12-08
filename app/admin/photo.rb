@@ -2,7 +2,7 @@ ActiveAdmin.register Photo do
   index do
     selectable_column
     column :picture do |photo|
-      image_tag(photo.picture.url(:thumb)) 
+      image_tag(photo.picture.url(:small)) 
     end 
     column :description
     column :album_name do  |photo|
