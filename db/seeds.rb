@@ -77,6 +77,7 @@ topic.forum = forum
 topic.user = user
 topic.posts = [post]
 topic.save!
+
 # BOOKS
 puts "Seeding Books"
 puts "..Stars of Wisdom.."
@@ -121,7 +122,7 @@ training_book.picture = training_picture
 training_book.save!
 training_picture.close
 
-# Album
+# Albums
 puts "Seeding Albums"
 retreat = Album.new(:description => "The first Wisdom Sun retreat was held in Shingle Springs, California. We were incredibly fortunate to have the use of our friends' house that provided the ideal retreat environment-beautiful, spacious, and secluded. Over five days, we studied and practiced together, indoors and outdoors. We had a refuge ceremony for four new Buddhist refugees, which was a truly wonderful and heartfelt ceremony. Together the retreatants practiced yoga, lujong, and meditation; studied and discussed the Dharma teachings; sang and danced; worked and played; and shared stories and experiences both difficult and delightful.")
 retreat_id = retreat.id
@@ -141,13 +142,22 @@ holiday_cover.close
 
 # Photos 
 puts "Seeding Photos"
-(1...10).each do |num|
+(1...29).each do |num|
   puts "..retreat #{num}"
-  retreat1 = Photo.new(:album_id => 1, :description => "Meep!")
+  retreat1 = Photo.new(:album_id => 1)
   pic = File.new("./app/assets/images/photos/1-#{num}.jpg")
   retreat1.picture = pic
   retreat1.save! 
   pic.close 
+end
+
+(1...12).each do |num| 
+  puts "..holiday #{num}"
+  holiday1 = Photo.new(:album_id => 2)
+  pic = File.new("./app/assets/images/photos/2-#{num}.jpg")
+  holiday1.picture = pic
+  holiday1.save!  
+  pic.close
 end
 
 # Slider Images
@@ -170,14 +180,6 @@ slider3.picture = slider3_pic
 slider3.save!
 slider3_pic.close
 
-(1...2).each do |num| 
-  puts "..holiday #{num}"
-  holiday1 = Photo.new(:album_id => 2, :description => "Meep!")
-  pic = File.new("./app/assets/images/photos/2-#{num}.jpg")
-  holiday1.picture = pic
-  holiday1.save!  
-  pic.close
-end
 
 # QUOTES
 puts "Seeding Quotes"
