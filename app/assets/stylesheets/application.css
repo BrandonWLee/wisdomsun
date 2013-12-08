@@ -115,6 +115,8 @@ display: none;
 }
 .menu-dropdown .drop-item {
   color: #fbfbfb;
+}
+.menu-dropdown a {
   text-decoration: none;
 }
 
