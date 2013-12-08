@@ -56,7 +56,7 @@ body {
   cursor: pointer;
   display: inline-block;
   margin: 0 10px 10px 10px;
-  padding: 5px 5px;
+  padding: 1px 1px;
   text-decoration: none;
   transition: 0.1s;
   -moz-transition: 0.1s;
@@ -330,11 +330,11 @@ display: none;
   margin: 0 0 50px 0;}
 .footer-item {
   display: inline-block;
-  padding: 10px 10px;
+  padding: 5px 5px;
 }
 .footer-item.footer-company {
-  padding-left: 40px;
-  padding-right: 40px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 /**************************
  *        LOGIN
@@ -342,18 +342,15 @@ display: none;
 .login-container{
   cursor: pointer;
   display: inline-block;
-  padding: 5px 10px;
-  position: absolute;
-  right: 0;
+  padding: 0px 5px;
 }
 .login-container a {
-  color: #666;
+  color: black;
   text-decoration: none;
 }
 .login-item:hover {
   color: #333;
 }
 .login-item {
-  float: right;
-  padding: 5px 10px;
+  padding: 0px 5px;
 }

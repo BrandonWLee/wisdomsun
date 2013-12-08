@@ -3,16 +3,6 @@
     .flash-container
       .flash-notice= notice || flash[:notice] 
       .flash-alert= alert || flash[:alert] 
-        
-    .login-container
-      -if user_signed_in?
-        =link_to "Sign out", main_app.destroy_user_session_path, :method => :delete, :class => 'login-item'
-        =link_to "Settings", main_app.edit_user_registration_path, :class => 'login-item'
-        -if current_user.admin?
-          =link_to "Admin Panel", main_app.admin_dashboard_path, :class => 'login-item'
-      -else
-        =link_to "Sign in", main_app.new_user_session_path, :class => 'login-item'
-        =link_to "Sign up", main_app.new_user_registration_path, :class => 'login-item'
     .menu-logo-container
       .logo= image_tag "logo.png"
       .menu-title 
@@ -37,19 +27,20 @@
       .menu-category
         = link_to 'Downloads', '/categories/3', :class => 'menu-item', :id => 'menu-downloads'
       .menu-category
-        = link_to 'Bulletin', '/bulletin', :class => 'menu-item', :id => 'menu-bulletin'
+        = link_to 'Bulletin Board', '/bulletin', :class => 'menu-item', :id => 'menu-bulletin'
       #cat.menu-category
         = link_to 'Other', '/categories', :class => 'menu-item', :id => 'menu-category'
         .menu-dropdown
           - Category.all.each.with_index do |category,index|
+            - first_page = category.other_pages.first
             - if index == 0
-              = link_to category_path(category) do
+              = link_to otherPage_path(first_page) do
                 .drop-top.drop-item= "#{category.name}"
             - elsif index == Category.all.size - 1
-              = link_to category_path(category) do
+              = link_to otherPage_path(first_page) do
                 .drop-bottom.drop-item= "#{category.name}"
             - else
-              = link_to category_path(category) do
+              = link_to otherPage_path(first_page) do
                 .drop-item= "#{category.name}"
       .menu-category
         = link_to 'Support', '/support', :class => 'menu-item', :id => 'menu-support'
