@@ -7,9 +7,9 @@ ActiveAdmin.register Category do
     column :other_pages do |category|
       titles = []
       category.other_pages.each do |page|
-        titles += [page.title]
+        titles += [link_to(page.title, main_app.otherPage_path(page))]
       end
-      titles
+      simple_format(titles.join ", ")
     end
     default_actions
   end
