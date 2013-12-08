@@ -22,9 +22,12 @@
       #cat-about.menu-category
         = link_to 'About', '/categories/about/about', :class => 'menu-item', :id => 'menu-about'
         .menu-dropdown
-          .drop-top.drop-item= link_to 'About', '/categories/about/about'
-          .drop-item= link_to 'About Ari', '/categories/about/about_ari_goldfield'
-          .drop-bottom.drop-item= link_to 'About Rose', '/categories/about/about_rose_goldfield'
+          = link_to '/categories/about/about' do
+            .drop-top.drop-item= "About"
+          = link_to '/categories/about/about_ari_goldfield' do
+            .drop-item= "About Ari"
+          = link_to '/categories/about/about_rose_goldfield' do
+            .drop-bottom.drop-item= "About Rose"
       .menu-category
         = link_to 'Events', '/events', :class => 'menu-item', :id => 'menu-events'
       .menu-category
@@ -38,8 +41,16 @@
       #cat.menu-category
         = link_to 'Other', '/categories', :class => 'menu-item', :id => 'menu-category'
         .menu-dropdown
-          - Category.all.each do |category|
-            .drop-item= link_to "#{category.name}", {:controller => '/categories', :action => 'show', :id => "#{category.id}"}
+          - Category.all.each.with_index do |category,index|
+            - if index == 0
+              = link_to category_path(category) do
+                .drop-top.drop-item= "#{category.name}"
+            - elsif index == Category.all.size - 1
+              = link_to category_path(category) do
+                .drop-bottom.drop-item= "#{category.name}"
+            - else
+              = link_to category_path(category) do
+                .drop-item= "#{category.name}"
       .menu-category
         = link_to 'Support', '/support', :class => 'menu-item', :id => 'menu-support'
       .menu-category
