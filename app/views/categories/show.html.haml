@@ -6,9 +6,10 @@
       .header-title 
         = "#{@category}"
     = render "/layouts/share"
-    .categories-content
-      - @pages.each do |page|
-        .content-box
-          .categories-text-box
-          =link_to "#{page.title}", {:controller => "otherPages", :action => "show", :id => page.id}
+    .content
+      .categories-content
+        - @pages.each do |page|
+          .content-box
+            .categories-text-box
+            =link_to "#{page.title}", {:controller => "otherPages", :action => "show", :id => page.id}
   = render "/layouts/footer"

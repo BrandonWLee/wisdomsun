@@ -6,6 +6,7 @@
       .header-title Albums
     = render "/layouts/share"
     .content
+      .album
       - @albums.each do |album|
         %a{ :href => photos_path(:album_id => album.id)}
           .album-content-box

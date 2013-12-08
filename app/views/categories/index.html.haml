@@ -5,12 +5,13 @@
     .header
       .header-title Categories
     = render "/layouts/share"
-    .categories-content
-      - @categories.each do |category|
-        .categories-content-box
-          .categories-text-box
-            = "#{category.name}"
-          .categories-text-box
-            - @pages[category.id].each do |page|
-              =link_to "#{page.title}", {:controller => "otherPages", :action => "show", :id => page.id}
+    .content
+      .categories-content
+        - @categories.each do |category|
+          .categories-content-box
+            .categories-text-box
+              = "#{category.name}"
+            .categories-text-box
+              - @pages[category.id].each do |page|
+                =link_to "#{page.title}", {:controller => "otherPages", :action => "show", :id => page.id}
   = render "/layouts/footer"
