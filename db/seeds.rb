@@ -134,7 +134,7 @@ end
 
 # Slider Images
 puts "Seeding slider"
-slider1 = Slider.new(:name => "Lineage", :link => "categories/2")
+slider1 = Slider.new(:name => "Lineage", :link => "otherPages/4")
 slider1_pic = File.new("./app/assets/images/sliders/1.jpg")
 slider1.picture = slider1_pic
 slider1.save!
