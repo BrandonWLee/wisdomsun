@@ -26,7 +26,8 @@
             %li
               %a{:href => slider.link}
                 %img{ :src => slider.picture.url }
-              .slide-name= slider.name
+              %a{ :href => slider.link }
+                .slide-name= slider.name
       -if @quote 
         #quotes.section
           %a{ :href => 'quotes'}

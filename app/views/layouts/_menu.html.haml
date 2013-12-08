@@ -4,7 +4,8 @@
       .flash-notice= notice || flash[:notice] 
       .flash-alert= alert || flash[:alert] 
     .menu-logo-container
-      .logo= image_tag "logo.png"
+      %a{ :href => '/' }
+        .logo= image_tag "logo.png"
       .menu-title 
     .menu-item-container
       .menu-category

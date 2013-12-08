@@ -150,6 +150,9 @@ display: none;
   vertical-align: top;
   width: 180px;
 }
+.container-left a {
+  text-decoration: none;
+}
 .container-left .title{
   background-color: #454545;
   border-radius: 3px;
