@@ -330,7 +330,7 @@ display: none;
 .footer {
   color: #333;
   font-size: 15px;
-  float: right;
+  text-align: center;
   margin: 0 0 50px 0;}
 .footer-item {
   display: inline-block;
