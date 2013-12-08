@@ -4,6 +4,7 @@
     = render "/layouts/menu"
     .header
       .header-title Albums
+    = render "/layouts/share"
     .content
       - @albums.each do |album|
         %a{ :href => photos_path(:album_id => album.id)}

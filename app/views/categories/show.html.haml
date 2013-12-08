@@ -5,6 +5,7 @@
     .header
       .header-title 
         = "#{@category}"
+    = render "/layouts/share"
     .categories-content
       - @pages.each do |page|
         .content-box
