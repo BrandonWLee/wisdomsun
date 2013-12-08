@@ -47,7 +47,8 @@ ActiveAdmin.register Book do
       f.input :author
       f.input :purchase_url
       f.input :description
-      f.input :picture
+      f.input :picture, :as => :file, 
+          :hint => f.object.picture.nil? || f.object.picture.url.include?("missing.png") ? f.template.content_tag(:span, "no picture yet") :  f.template.image_tag(f.object.picture.url(:medium))
     end
     f.actions
   end

@@ -38,7 +38,8 @@ ActiveAdmin.register Photo do
 #      f.actions do 
 #        link_to "New Album", new_admin_album_path, :style => "padding-left: 10px "
 #      end
-      f.input :picture
+      f.input :picture, :as => :file, 
+          :hint => f.object.picture.nil? || f.object.picture.url.include?("missing.png") ? f.template.content_tag(:span, "no picture yet") :  f.template.image_tag(f.object.picture.url(:medium))
       f.input :description
     end
     f.actions

@@ -39,7 +39,8 @@ ActiveAdmin.register Album do
     f.inputs "Details" do
       f.input :name
       f.input :description
-      f.input :album_cover
+      f.input :album_cover, :as => :file, 
+          :hint => f.object.album_cover.nil? || f.object.album_cover.url.include?("missing.png") ? f.template.content_tag(:span, "no album cover yet") :  f.template.image_tag(f.object.album_cover.url(:medium))
     end
     f.actions
   end
