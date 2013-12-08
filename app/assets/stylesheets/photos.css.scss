@@ -1,44 +1,62 @@
 .content-box {
-  background-color: #f2f2f2;
-  border: 1px solid #ccc;
+  background-color: #f8f8f8;
+  border: 1px solid #d2d2d2;
   display: inline-block;
   width: 30%;
-  height: 150px;
   margin: 10px 9px;
   vertical-align: top;
   overflow: hidden;
+  padding-bottom: 15px;
+}
+.content-box:hover {
+  background-color: #fbfbfb;
+  box-shadow: 0 2px 5px #aaa;
+  -moz-box-shadow: 0 2px 5px #aaa;
+  -webkit-box-shadow: 0 2px 5px #aaa;
 }
 .album-content-box {
-  background-color: #f2f2f2;
-  border: 1px solid #ccc;
+  background-color: #f8f8f8;
+  border: 1px solid #d2d2d2;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  cursor: pointer;
   display: inline-block;
   width: 30%;
-  height: 250px;
   margin: 10px;
+  padding-bottom: 10px;
   vertical-align: top;
+}
+.album-content-box:hover {
+  background-color: #fbfbfb;
+  box-shadow: 0 2px 5px #aaa;
+  -moz-box-shadow: 0 2px 5px #aaa;
+  -webkit-box-shadow: 0 2px 5px #aaa;
 }
 .album-content-box .album-img-box {
   display: inline-block;
-  height: 190px;
   vertical-align: center;
   margin: 10px 10px 10px 10px;
   float: left;
+  height: 150px;
   overflow: hidden;
 }
 .content-box .photo-img-box {
   display: inline-block;
-  height: 230px;
   vertical-align: center;
   margin: 10px;
   float: left;
   overflow: hidden;
 }
+.fancybox-picture {
+  height: 150px;
+  padding: 15px;
+  overflow: hidden;
+}
 .content-box img {
-  margin: 10px;
   // max-height: 215px;
   // max-width: 215px;
-  width: 215px;
-  width: 90%;
+  width: 100%;
   // max-width: 215px;
   vertical-align: middle;
   overflow: hidden;

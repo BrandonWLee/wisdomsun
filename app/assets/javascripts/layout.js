@@ -1,5 +1,7 @@
 $(document).ready(function(){
-    var path = window.location.pathname.split('/')[1];
+  var patharr = window.location.pathname.split('/');
+  var path = patharr[1];
+  var otherpage = patharr.length >= 3 ? patharr[2] : null;
   var menu_item;
   switch(path){
     case 'about':
@@ -12,9 +14,12 @@ $(document).ready(function(){
     case 'events':
       menu_item = '#menu-events';
       break;
+    case 'albums':
     case 'photos':
       menu_item = '#menu-photos';
       break;
+    case 'otherPages':
+    case 'categories':
     case 'downloads':
       menu_item = '#menu-downloads';
       break;
@@ -29,6 +34,31 @@ $(document).ready(function(){
       break;
     default:
       menu_item = '#menu-home';
+  }
+  if(path === 'categories'){
+    switch(otherpage){
+      case '3':
+        menu_item = '#menu-downloads';
+        break;
+      default:
+        menu_item = '#menu-category';
+    }
+  }else if(path === 'otherPages'){
+    switch(otherpage){
+      case '1':
+      case '2':
+      case '3':
+      case '4':
+        menu_item = '#menu-about';
+        break;
+      case '7':
+      case '8':
+      case '9':
+        menu_item = '#menu-downloads';
+        break;
+      default:
+        menu_item = '#menu-category'; 
+    }
   }
   $(menu_item).addClass('active');
 

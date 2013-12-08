@@ -11,8 +11,10 @@
       .text-box "#{@album_desc}"
       .back_link
         =link_to "Back to Albums", albums_path
-      - @photos.each do |photo|    
-        <a class="fancybox content-box img" id="#{photo.id}" href="#{photo.picture.url}" rel="group1" title="#{photo.description}"><img src="#{photo.picture.url}" alt="" /></a>   
+      - @photos.each do |photo|
+        %a{ :class => "fancybox content-box img", :id => "#{photo.id}", :href => "#{photo.picture.url}", :rel => "group1", :title => "#{photo.description}"}
+          .fancybox-picture
+            %img{ :src => "#{photo.picture.url}", :alt => ""}
     .back_link
       =link_to "Back to Albums", albums_path
   = render "/layouts/footer" 

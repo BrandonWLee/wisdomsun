@@ -14,9 +14,10 @@
       %a{ :href => '/events' }
         .title Upcoming Events
       - @events.each do |event|
-        .item
-          .item-title= event.name
-          .item-date= event.date
+        %a{ :href => event_path(event), :class => 'no-underline'}
+          .item
+            .item-title= event.name
+            .item-date= event.date
     .container-right
       #slider.flexslider
         %ul.slides

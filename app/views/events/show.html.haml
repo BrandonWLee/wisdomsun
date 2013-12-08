@@ -5,20 +5,19 @@
     .header
       .header-title Events
     .content
-      .description-box
-        .event-box
-          %h2 
-            =@event.name
-          %p
-            %strong
-              =@event.date
-          %p
-            %strong 
-              =@event.time
-          %p
-            %strong
-              =@event.location
-          %p
-            #description= @event.description.html_safe
-          = link_to 'Back to event list', events_path
+      .content-text
+        %h2 
+          =@event.name
+        %p
+          %strong
+            =@event.date
+        %p
+          %strong 
+            =@event.time
+        %p
+          %strong
+            =@event.location
+        %p
+          #description= @event.description.html_safe
+        = link_to 'Back to event list', events_path
   = render "/layouts/footer"

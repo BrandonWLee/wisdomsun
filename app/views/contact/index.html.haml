@@ -6,48 +6,40 @@
     .header
       .header-title Contact
     .content
+      .content-text
+        <em>
+        601 29th Street<br/>San Francisco, CA 94131<br/>USA 
+        </em>
+        <br/>
+        <br/>
+        <a href="mailto:info@wisdomsun.org">info@wisdomsun.org</a>
+        <br/>
+        <br/>
 
-    <em>
-    601 29th Street<br/>San Francisco, CA 94131<br/>USA 
-    </em>
-    <br/>
-    <br/>
-    <a href="mailto:info@wisdomsun.org">info@wisdomsun.org</a>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
+        = form_tag contact_index_path, :method => :post, :id => "contact_form" do
 
-    = form_tag contact_index_path, :method => :post, :id => "contact_form" do
+          Enter your Name:<br/>
+          = text_field :contact, 'name'
+          <br/>
 
-      Enter your Name:<br/>
-      = text_field :contact, 'name'
-      <br/>
-      <br/>
+          E-mail address:<br/>
+          = text_field :contact, 'email'
+          <br/>
 
-      E-mail address:<br/>
-      = text_field :contact, 'email'
-      <br/>
-      <br/>
+          Message Subject:<br/>
+          = text_field :contact, 'subject'
+          <br/>
 
-      Message Subject:<br/>
-      = text_field :contact, 'subject'
-      <br/>
-      <br/>
+          Enter your Message:<br/>
+          = text_area :contact, 'text', cols: 50, rows: 10
+          <br/>
 
-      Enter your Message:<br/>
-      = text_area :contact, 'text', cols: 50, rows: 10
-      <br/>
-      <br/>
+          = check_box_tag 'receive_email'
+          Email a copy of this message to your own address.
+          <br/>
+          <br/>
 
-      <br/>
-
-      = check_box_tag 'receive_email'
-      Email a copy of this message to your own address.
-      <br/>
-      <br/>
-
-      = submit_tag 'Send', :id => "contact_submit"
+          = submit_tag 'Send', :id => "contact_submit"
 
 
   = render "/layouts/footer"
