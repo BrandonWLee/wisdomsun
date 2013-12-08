@@ -14,5 +14,5 @@
             .title= book.title    
             .buy= link_to "Buy", book.purchase_url
             .author= book.author
-            .details= book.description
+            .details= simple_format(book.description)
   = render "/layouts/footer"
