@@ -35,6 +35,7 @@ When /^I click on "(.*)" link$/ do |name|
   visit "#{slider.link}"
 end
 
-Then /^I will be on the "(.*?)" link$/ do |arg1|
-  
-end  
+Then /the slider "(.*?)" should have the link "(.*?)"$/ do |name, path|
+  slider = Slider.find_by_name(name)
+  slider.link == path
+end
