@@ -15,5 +15,5 @@ class Album < ActiveRecord::Base
       } ]
   has_many :photos
   validates_attachment :album_cover, 
-    :content_type => { :content_type => ["image/jpg", "image/jpeg"] }
+    :content_type => { :content_type => ["image/png", "image/jpg", "image/jpeg"] }
 end

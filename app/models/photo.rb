@@ -16,7 +16,7 @@ class Photo < ActiveRecord::Base
       } ]
 
   validates_attachment :picture, 
-    :content_type => { :content_type => ["image/jpg", "image/jpeg"] }
+    :content_type => { :content_type => ["image/png", "image/jpg", "image/jpeg"] }
   belongs_to :album
   
   def self.find_pictures_in_album(id)
