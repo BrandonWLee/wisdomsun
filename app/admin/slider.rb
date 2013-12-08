@@ -1,9 +1,10 @@
 ActiveAdmin.register Slider do
   index do
+    selectable_column
     column :name
     column :link
     column :picture do |slider|
-      image_tag(slider.picture.url) 
+      image_tag(slider.picture.url(:medium)) 
     end 
     default_actions
   end
@@ -12,7 +13,7 @@ ActiveAdmin.register Slider do
       row :name
       row :link
       row :picture do
-        image_tag(slider.picture.url)
+        image_tag(slider.picture.url(:medium))
       end
       row :picture_url do
         slider.picture.url

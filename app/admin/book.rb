@@ -1,10 +1,13 @@
 ActiveAdmin.register Book do
   index do
+    selectable_column
     column :picture do |book|
-      image_tag(book.picture.url) 
+      image_tag(book.picture.url(:medium)) 
     end 
     column :title
-    column :description
+    column :description do |book|
+      simple_format(book.description)
+    end
     column :purchase_url
     default_actions
   end
@@ -14,7 +17,7 @@ ActiveAdmin.register Book do
         row :description
         row :purchase_url
         row :picture do
-          image_tag(book.picture.url)
+          image_tag(book.picture.url(:medium))
         end
         row :picture_url do
           book.picture.url

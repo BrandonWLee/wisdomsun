@@ -1,4 +1,14 @@
 ActiveAdmin.register OtherPage do
+  index do
+    selectable_column
+    column :category
+    column :body do |other_page|
+      simple_format(strip_tags(other_page.body))
+    end
+    column :title
+    column :refactored_title
+    default_actions
+  end
   form do |f|
   	f.semantic_errors *f.object.errors.keys
     f.inputs "Details" do

@@ -1,7 +1,8 @@
 ActiveAdmin.register Photo do
   index do
+    selectable_column
     column :picture do |photo|
-      image_tag(photo.picture.url) 
+      image_tag(photo.picture.url(:thumb)) 
     end 
     column :description
     column :album_name do  |photo|
@@ -18,7 +19,7 @@ ActiveAdmin.register Photo do
     attributes_table do
       row :description
       row :picture do
-        image_tag(photo.picture.url)
+        image_tag(photo.picture.url(:medium))
       end
       row :album
       row :picture_url do

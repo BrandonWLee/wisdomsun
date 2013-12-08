@@ -1,4 +1,18 @@
 ActiveAdmin.register Category do
+  index do
+    selectable_column
+    column :name
+    column :position 
+    column :refactored_name
+    column :other_pages do |category|
+      titles = []
+      category.other_pages.each do |page|
+        titles += [page.title]
+      end
+      titles
+    end
+    default_actions
+  end
   form do |f|
   	f.semantic_errors *f.object.errors.keys
     f.inputs "Details" do

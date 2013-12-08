@@ -1,4 +1,16 @@
 ActiveAdmin.register Event do
+  index do
+    selectable_column
+    column :name
+    column :date
+    column :description do |event|
+      simple_format(event.description)
+    end
+    column :location
+    column :time
+    default_actions
+  end
+    
   form do |f|
   	f.semantic_errors *f.object.errors.keys
     f.inputs "Details" do

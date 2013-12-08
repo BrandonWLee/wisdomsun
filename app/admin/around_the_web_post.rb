@@ -1,4 +1,11 @@
 ActiveAdmin.register AroundTheWebPost do
+  index do
+    selectable_column
+    column :title
+    column :external_link
+    column :commentary
+    default_actions
+  end
   form do |f|
   	f.semantic_errors *f.object.errors.keys
     f.inputs "Details" do
