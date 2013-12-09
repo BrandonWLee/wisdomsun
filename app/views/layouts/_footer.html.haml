@@ -1,7 +1,7 @@
 .footer
   .login-container
     -if user_signed_in?
-      %span.user_name="User " + current_user.first_name
+      %span.user_name="User " + (current_user.first_name.nil? ? "" : current_user.first_name)
       =link_to "Sign out", main_app.destroy_user_session_path, :method => :delete, :class => 'login-item'
       =link_to "Settings", main_app.edit_user_registration_path, :class => 'login-item'
       -if current_user.admin?
