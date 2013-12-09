@@ -3,6 +3,7 @@ ActiveAdmin.register Category do
     selectable_column
     column :name
     column :position 
+    column :show_in_menu
     column :refactored_name
     column :other_pages do |category|
       titles = []
@@ -18,6 +19,7 @@ ActiveAdmin.register Category do
     f.inputs "Details" do
       f.input :position
       f.input :name
+      f.input :show_in_menu, :label => "Show in Menu under Others"
     end
     f.actions
   end
