@@ -1,5 +1,5 @@
 <%= simple_form_for [forem, :admin, @topic] do |f| %>
-  <%= f.input :subject %>
+  <%= f.input :subject%>
   <%= f.association :forum , :label => "Forum" %>
   <%= f.label :locked %>
   <%= f.check_box :locked %>

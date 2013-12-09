@@ -7,7 +7,37 @@
   margin-right: 20%;
 }
 */
+.category_name label {
+display:block;
+}
 
+.forum_title label {
+display:block;
+}
+.forum_description label {
+display:block;
+}
+
+.forum_category label{
+display: block;
+}
+.btn.btn-primary {
+  margin: 7px;
+}
+
+.topic_subject label{
+  display: block;
+  margin: 5px;
+}
+
+#topic_subject{
+  width: 340px;
+}
+
+.topic_forum label{
+  display: block;
+  margin: 5px;
+}
 
 #forums {
   .title {
