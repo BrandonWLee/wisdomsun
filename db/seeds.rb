@@ -3,11 +3,15 @@
 # USERS AND ADMIN
 puts "Seeding Users and Admins"
 admin = User.create!({:email => 'admin@wisdomsun.org', :password => 'password'})
+admin.first_name = "Admin"
+admin.last_name = "Admin"
 admin.toggle!(:admin)
 admin.toggle!(:forem_admin)
 admin.confirmed_at = Time.now
 admin.save!
 user =  User.create!({:email => 'user@wisdomsun.org', :password => 'password'})
+admin.first_name = "Fake"
+admin.last_name  = "User"
 user.confirmed_at = Time.now
 user.save!
 
