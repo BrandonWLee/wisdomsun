@@ -363,6 +363,9 @@ display: none;
 .login-item {
   padding: 0px 5px;
 }
+.login-container .user_name{
+  cursor: text;
+}
 /**************************
  *     SHARE BUTTON
  **************************/
