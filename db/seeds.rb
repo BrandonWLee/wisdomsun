@@ -141,24 +141,24 @@ holiday_cover.close
 
 
 # Photos 
-# puts "Seeding Photos"
-# (1...29).each do |num|
-#   puts "..retreat #{num}"
-#   retreat1 = Photo.new(:album_id => 1)
-#   pic = File.new("./app/assets/images/photos/1-#{num}.jpg")
-#   retreat1.picture = pic
-#   retreat1.save! 
-#   pic.close 
-# end
+puts "Seeding Photos"
+(1...29).each do |num|
+  puts "..retreat #{num}"
+  retreat1 = Photo.new(:album_id => 1)
+  pic = File.new("./app/assets/images/photos/1-#{num}.jpg")
+  retreat1.picture = pic
+  retreat1.save! 
+  pic.close 
+end
 
-# (1...12).each do |num| 
-#   puts "..holiday #{num}"
-#   holiday1 = Photo.new(:album_id => 2)
-#   pic = File.new("./app/assets/images/photos/2-#{num}.jpg")
-#   holiday1.picture = pic
-#   holiday1.save!  
-#   pic.close
-# end
+(1...12).each do |num| 
+  puts "..holiday #{num}"
+  holiday1 = Photo.new(:album_id => 2)
+  pic = File.new("./app/assets/images/photos/2-#{num}.jpg")
+  holiday1.picture = pic
+  holiday1.save!  
+  pic.close
+end
 
 # Slider Images
 puts "Seeding slider"
