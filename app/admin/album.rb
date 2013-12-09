@@ -1,5 +1,6 @@
 ActiveAdmin.register Album do
   index do
+    selectable_column
     column :album_cover do |album|
       image_tag(album.album_cover.url(:small)) 
     end 
