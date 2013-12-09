@@ -10,7 +10,7 @@
         .content-box
           -# %a{:href => book_path(book.id)}
           .img-box
-            %img{:src => book.picture.url}
+            %img{:src => book.picture.url(:medium)}
           .text-box
             .title= book.title    
             .buy= link_to "Buy", book.purchase_url

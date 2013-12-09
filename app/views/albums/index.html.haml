@@ -11,7 +11,7 @@
         %a{ :href => photos_path(:album_id => album.id)}
           .album-content-box
             .album-img-box
-              %img{:src => album.album_cover.url}    
+              %img{:src => album.album_cover.url(:medium)}    
             .text-box
               =link_to "#{album.name}", photos_path(:album_id => album.id)
   = render "/layouts/footer" 
