@@ -11,7 +11,7 @@ ActiveAdmin.register AroundTheWebPost do
     f.inputs "Details" do
       f.input :title
       f.input :external_link
-      f.input :commentary
+      f.input :commentary, input_html: {class: 'redactor'}
     end
     f.actions
   end

@@ -11,4 +11,5 @@
           .content-box
             .post-box
               .link= link_to "#{post.title}", post.external_link
-              .commentary= post.commentary
+              -if post.commentary
+                .commentary= post.commentary.html_safe
