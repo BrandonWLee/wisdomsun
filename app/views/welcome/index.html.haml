@@ -45,7 +45,7 @@
           %a{ :href => '/around_the_web' } 
             .subtitle Around the Web
           - @around_the_web_posts.each do |post|
-            .item
+            %li.atw_item
               =link_to post.title, post.external_link
       #donations.section
         %a{ :href => 'support'}
