@@ -2,14 +2,22 @@
 Given /the following users are admin:/ do |users_table|
   users_table.hashes.each do |user|
     admin = User.create!({:email => user[:email], :password => user[:password]})
+    admin.first_name = "Admin"
+    admin.last_name = "Admin"
     admin.toggle!(:admin)
     admin.toggle!(:forem_admin)
+    admin.confirmed_at = Time.now
+    admin.save!
   end
 end
 
 Given /the following users are not admin:/ do |users_table|
   users_table.hashes.each do |user|
     usr = User.create!({:email => user[:email], :password => user[:password]})
+    usr.first_name = "Fake"
+    usr.last_name = "User"
+    usr.confirmed_at = Time.now
+    usr.save!
   end
 end
 
