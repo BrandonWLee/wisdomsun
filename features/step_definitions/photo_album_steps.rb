@@ -179,3 +179,15 @@ When(/^I try to view the album with id (\d+)$/) do |arg1|
   # redirect_to photos_path, :album_id => arg1
 end
 
+Then /I should see the (.*) version of all the (.*)/ do |version,type|
+  if type == "album covers"
+    Album.all.each do |album|
+      page.should have_xpath("//img[contains(@src,'/#{version}/#{album.album_cover_file_name}')]")
+    end
+  elsif type == "photos"
+    Photo.all.each do |photo|
+      page.should have_xpath("//img[contains(@src,'/#{version}/#{photo.picture_file_name}')]")
+    end
+  end
+end
+

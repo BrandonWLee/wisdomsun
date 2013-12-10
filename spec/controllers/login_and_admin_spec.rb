@@ -10,6 +10,7 @@ describe Users::SessionsController do
 			user.stub(:to_key).and_return(1)
 			user.stub(:authenticatable_salt).and_return(1)
 			user.stub(:admin?).and_return(true)
+      user.stub(:created_at?).and_return(Time.now)
 			request.env["warden"].stub :authenticate! => user
 			controller.stub :current_user => user
 			@request.env["devise.mapping"] = Devise.mappings[:user]
@@ -17,15 +18,16 @@ describe Users::SessionsController do
 			response.should redirect_to('/admin/dashboard')
 		end
 		it "shouldn't go to admin dashboard if it is not admin" do
-			user = FactoryGirl.build(:user)
+      user = FactoryGirl.build('user')
 			user.stub(:to_key).and_return(1)
 			user.stub(:authenticatable_salt).and_return(1)
 			user.stub(:admin?).and_return(false)
+      user.stub(:created_at?).and_return(Time.now)
 			request.env["warden"].stub :authenticate! => user
 			controller.stub :current_user => user
 			@request.env["devise.mapping"] = Devise.mappings[:user]
 			post :create
-			response.should redirect_to('/')
+			response.should_not redirect_to('/admin/dashboard')
 		end
 	end
 
