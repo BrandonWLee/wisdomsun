@@ -2,7 +2,7 @@ class WelcomeController < ApplicationController
   def index
     @sliders = Slider.all
     @events = Event.mostRecent(5)
-    @quote = Quote.last
-    @around_the_web_posts = AroundTheWebPost.last(5).reverse
+    @quote = Quote.order("created_at DESC").limit(1).first
+    @around_the_web_posts = AroundTheWebPost.order("created_at DESC").limit(5)
   end
 end
