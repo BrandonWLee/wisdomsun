@@ -6,7 +6,7 @@
       .header-title Books
     = render "/layouts/share"
     .content
-      - @books.reverse.each do |book|
+      - @books.each do |book|
         .content-box
           -# %a{:href => book_path(book.id)}
           .img-box
