@@ -180,8 +180,21 @@ Quote.create!({:quote => "There is a sense of joy in being part of this knowledg
 
 # AROUND THE WEB
 puts "Seeding Around the Web Posts"
-AroundTheWebPost.create!({:title => "Wisdom Sun's Facebook page", :external_link => "http://www.facebook.com/widomsunsf"})
-AroundTheWebPost.create!({:title => "Let Loose; Conversations with and about Contemporary Teachers", :external_link => "http://www.chronicleproject.com/chroniclesradio_letloose/ll_2011_05_08.html"})
+atw_1 = AroundTheWebPost.new({:title => "Wisdom Sun's Facebook page", :external_link => "http://www.facebook.com/widomsunsf"})
+atw_1.commentary = %Q{<p> Seen around the web? Wisdom Sun's <a href="http://www.facebook.com/widomsunsf?ref=ts&amp;fref=ts">Facebook page</a>. </p>}
+atw_1.save!
+atw_2 = AroundTheWebPost.new({:title => "Let Loose; Conversations with and about Contemporary Teachers", :external_link => "http://www.chronicleproject.com/chroniclesradio_letloose/ll_2011_05_08.html"})
+atw_2.commentary = %Q{<p> Seen around the web? David Sable interviews Ari on Chronicles Radio: '<a href="http://www.chronicleproject.com/chroniclesradio_letloose/ll_2011_05_08.html" title="Let Loose ~ An Interview on Chronicle Radio">Let Loose; Conversations with and about Contemporary Teachers'</a>. </p>}
+atw_2.save!
+atw_3 = AroundTheWebPost.new({:title => "Let Loose; Conversations with and about Contemporary Teachers", :external_link => "http://www.chronicleproject.com/chroniclesradio_letloose/ll_2011_05_08.html"})
+atw_3.commentary = %Q{<p> <a href="http://www.elephantjournal.com/2011/08/buddhist-yoga-joining-with-naturalness-ari-goldfield-and-rose-taylor-goldfield/" title="Joining with Naturalness">Click here to view Part 1</a> of this article on the key points of practicing yoga from a Buddhist perspective. This was originally published in the book <em><a href="http://www.shambhala.com/html/catalog/items/isbn/978-1-59030-801-1.cfm" title="Freeing the Body">Freeing the Body, Freeing the Mind: Writings on the Connections between Yoga and Buddhism</a>.</em> </p>}
+atw_3.save!
+atw_4 = AroundTheWebPost.new({:title => "Let Loose; Conversations with and about Contemporary Teachers", :external_link => "http://www.chronicleproject.com/chroniclesradio_letloose/ll_2011_05_08.html"})
+atw_4.commentary = %Q{<p> Seen around the web? Wisdom Sunlights Newsletter #5: <a href="http://campaign.r20.constantcontact.com/render?llr=odmka8eab&amp;v=001YzRvM3yRJwQRoa4vA_JlY1mMvLmf485Zy1qJkude5RQFw1RdYCSbS-ifiY1hXGKP-EvmKDHs0MwAEo5PcAwqZ8N3C9Y1OOm1364EJSpfheCckZceiM2xSf40UG4uTriBirFC7efDCjQINXoW9nTxkc9FFsKTGoYv" target="_blank" title="Sunlights Newsletter, Issue 5">Sunlights Newsletter</a> </p>}
+atw_4.save!
+atw_5 = AroundTheWebPost.create!({:title => "Let Loose; Conversations with and about Contemporary Teachers", :external_link => "http://www.chronicleproject.com/chroniclesradio_letloose/ll_2011_05_08.html"})
+atw_5.commentary = %Q{<p> Seen around the web? Rose's Book on Yogic Exercise: <a href="http://campaign.r20.constantcontact.com/render?llr=odmka8eab&amp;v=001Ef42ZQFAkFDDqxTtTnNRh70saq02J6GBN6zjRcg6mlFwKnvFjmcAAl-If4NVOxNmiRfkeCNAC1W5gbNSlnFZTZ_TdY5fM_w0-k8DAJhcowUBootNRAW-oAUEI1ch_0Ih" title="Training the Wisdom Body">Training the Wisdom Body</a> </p>}
+atw_5.save!
 
 # ABOUT CATEGORY AND PAGES
 puts "Seeding About category and pages"
