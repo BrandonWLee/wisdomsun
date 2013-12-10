@@ -2,7 +2,7 @@ require "selenium-webdriver"
 
 Given /the following categories exist:/ do |categories|
   categories.hashes.each do |category|
-    Category.create!(:name => category[:name], :position => category[:position], :refactored_name => category[:refactored_name])
+    Category.create!(:name => category[:name], :position => category[:position], :refactored_name => category[:refactored_name], :show_in_menu => true)
   end
 end
 
