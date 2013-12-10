@@ -14,10 +14,19 @@
 
 # USERS AND ADMIN
 puts "Seeding Users and Admins"
-admin = User.create!({:email => 'admin@wisdomsun.org', :password => 'password'})
-admin.toggle!(:admin)
-admin.toggle!(:forem_admin)
-User.create!({:email => 'user@wisdomsun.org', :password => 'password'})
+admin = User.new({:email => 'admin@wisdomsun.org', :password => 'password'})
+admin.first_name = "Admin"
+admin.last_name = "Admin"
+admin.admin = true
+admin.forem_admin = true
+admin.confirmed_at = Time.now
+admin.save!
+
+user = User.new({:email => 'user@wisdomsun.org', :password => 'password'})
+admin.first_name = "Fake"
+admin.last_name = "User"
+user.confirmed_at = Time.now
+user.save!
 
 puts "Seeding Downloads category and pages"
 downloads_category = Category.create!({:position => 2, :name => 'Downloads', :refactored_name => 'downloads'})
