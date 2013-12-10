@@ -16,7 +16,7 @@ class CategoriesController < ApplicationController
 				return
 			end
 		end
-		flash[:notice] = "Invalid URL"
+		flash[:alert] = "Invalid URL"
 		redirect_to '/'
 	end
 	def index
