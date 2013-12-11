@@ -11,24 +11,24 @@ ActiveAdmin.register Book do
     column :purchase_url
     default_actions
   end
-    show do |book|
-      attributes_table do
-        row :title
-        row :description
-        row :purchase_url
-        row :picture do
-          image_tag(book.picture.url(:medium))
-        end
-        row :picture_url do
-          book.picture.url
-        end
-        row :picture_file_name
-        row :picture_content_type
-        row :picture_file_size
-        row :picture_updated_at
-
+  show do |book|
+    attributes_table do
+      row :title
+      row :description
+      row :purchase_url
+      row :picture do
+        image_tag(book.picture.url(:medium))
       end
+      row :picture_url do
+        book.picture.url
+      end
+      row :picture_file_name
+      row :picture_content_type
+      row :picture_file_size
+      row :picture_updated_at
+
     end
+  end
 
   collection_action :display, :method => :get do
     flash[:notice] = "display action"
