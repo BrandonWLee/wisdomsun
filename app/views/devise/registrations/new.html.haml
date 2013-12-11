@@ -4,7 +4,7 @@
     .content
       .content-text
         %h2 Sign up
-        = form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
+        = semantic_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
           = devise_error_messages!
           %div
             = f.label :email
@@ -22,6 +22,7 @@
             = f.label :password
             %br/
             = f.password_field :password
+            %i (Must be between 8-128 characters long)
           %div
             = f.label :password_confirmation
             %br/
