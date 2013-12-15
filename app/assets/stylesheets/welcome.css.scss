@@ -17,9 +17,21 @@
   margin: 0;
   padding: 0;
 }
-
+#donations {
+  display: block;
+  float: right;
+  text-align: center;
+}
+#donations a {
+  color: #135cae;
+  font-weight: bold;
+  text-decoration: none;
+}
 #donationimage {
-	width: 100%;
+	width: 180px;
 	padding-top: 8px;
+}
+li.atw_item {
+  margin: 20px 0px;
 }
 

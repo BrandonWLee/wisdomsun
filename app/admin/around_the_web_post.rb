@@ -3,7 +3,9 @@ ActiveAdmin.register AroundTheWebPost do
     selectable_column
     column :title
     column :external_link
-    column :commentary
+    column :commentary do |post|
+      simple_format(post.commentary)
+    end
     default_actions
   end
   form do |f|
@@ -11,7 +13,7 @@ ActiveAdmin.register AroundTheWebPost do
     f.inputs "Details" do
       f.input :title
       f.input :external_link
-      f.input :commentary
+      f.input :commentary, input_html: {class: 'redactor'}
     end
     f.actions
   end

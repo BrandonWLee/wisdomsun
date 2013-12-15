@@ -6,6 +6,6 @@ class UserMailer < ActionMailer::Base
          to: to, 
          subject: "'#{subject}' from #{name}",
          body: message,
-         content_type: "text/html")
+         content_type: "text/plain")
   end
 end

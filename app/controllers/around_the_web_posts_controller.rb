@@ -1,5 +1,5 @@
 class AroundTheWebPostsController < ApplicationController
   def index
-    @posts = AroundTheWebPost.all
+    @posts = AroundTheWebPost.order("created_at DESC")
   end
 end

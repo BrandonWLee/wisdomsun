@@ -4,7 +4,6 @@ Feature: clickable donation link on the front page
   I want a link on the frontpage to go to the donations page
 
 Background: The working website has been set up
-	Given the database has been entirely seeded
 
 Scenario: Donation link on the front page
 	Given I am on the home page

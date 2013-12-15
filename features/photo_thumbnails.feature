@@ -26,18 +26,18 @@ Background:
 
 Scenario: In viewing album index page, see only small version of pics
   Given I am on the albums page
-  Then I should see the thumbnail version of all the album covers
+  Then I should see the medium version of all the album covers
         
 Scenario: In viewing photos page of an album, see only small version of pics
   Given I am on the albums page
-  When I click on "Retreat"
-  Then I should see the thumbnail version of all the photos in the album "Retreat"
+  When I click on "Retreat" on the albums page
+  Then I should see the medium version of all the photos in the album "Retreat"
 
 Scenario: In the admin albums page, the previews should all be thumbnails
   Given I am on the admin albums page
-  Then I should see the thumbnail version of all the album covers
+  Then I should see the small version of all the album covers
 
 Scenario: In the admin photos page, the previews of album covers should be thumbnails
   Given I am on the admin photos page
-  Then I should see the thumbnail version of all the photos
+  Then I should see the small version of all the photos
 

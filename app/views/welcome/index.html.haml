@@ -6,11 +6,6 @@
     = render "/layouts/menu"
     #events.container-left
       .homepage-share= render "/layouts/share"
-      #donations
-        %a{ :href => 'support'}
-          .title Donations
-        %a{ :href => 'support'}
-          %img{ :src => 'http://www.wisdomsun.org/images/btn_donations_main.png', :id => 'donationimage'}
       %p
       %a{ :href => '/events' }
         .title Upcoming Events
@@ -50,8 +45,13 @@
           %a{ :href => '/around_the_web' } 
             .subtitle Around the Web
           - @around_the_web_posts.each do |post|
-            .item
+            %li.atw_item
               =link_to post.title, post.external_link
+      #donations.section
+        %a{ :href => 'support'}
+          .title Donations
+        %a{ :href => 'support'}
+          %img{ :src => 'http://www.wisdomsun.org/images/btn_donations_main.png', :id => 'donationimage'}
 
   = render "/layouts/footer"
 
