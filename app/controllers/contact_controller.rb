@@ -12,19 +12,26 @@ class ContactController < ApplicationController
       redirect_to '/contact'
       return
     end
-    # make sure a valid email address was given
+    # make sure a "valid" email address was given
     if /<?\w+@\w+\.\w+>?$/.match(params[:contact][:email]).nil?
       flash[:notice] = ("Error, you must enter a valid email address to submit")
       redirect_to '/contact'
       return
     end
 
-    UserMailer.contact_email(params[:contact][:name], params[:contact][:email], ENV["SMTP_USERNAME"],
-      params[:contact][:subject], params[:contact][:text]).deliver
+    name = params[:contact][:name]
+    to = ENV["SMTP_USERNAME"]
+    from = params[:contact][:email]
+    subject = "Wisdom Sun: #{params[:contact][:subject]}"
+    body = "This is an email from #{from}:\n#{params[:contact][:text]}"
+    UserMailer.contact_email(name, 
+      from, to,
+      subject, body).deliver
 
     if params[:receive_email].to_i == 1
-      UserMailer.contact_email(params[:contact][:name], ENV["SMTP_USERNAME"], params[:contact][:email], 
-        "Copy of '#{params[:contact][:subject]}' email", params[:contact][:text]).deliver
+      UserMailer.contact_email(name, 
+        to, from, 
+        "Copy of '#{subject}' email", body).deliver
     end
 
     flash[:notice] = ("Information submitted")
