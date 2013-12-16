@@ -84,7 +84,3 @@ gem 'selenium-webdriver'
 # bulletin board
 gem 'forem', :github => "radar/forem"
 gem 'will_paginate', '3.0.4'
-
-# Not sure what this does yet...
-gem "rails_12factor"
-
