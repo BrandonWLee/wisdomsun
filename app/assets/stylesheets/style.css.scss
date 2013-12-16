@@ -170,21 +170,23 @@ thead{
     border-style: solid;
     border-color: #bbb;
     border-width: 1px;
+    border-radius: 15px;
   }
   .odd{
     background-color: #adb8c2;
     border-style: solid;
     border-color: #bbb;
     border-width: 1px;
+    border-radius: 15px;
   }
   .post{
     min-height: 75px;
     clear: both;
-    padding: 15px;
+    padding: 10px;
     position: relative;
-    .contents-right .btn-group {
+    .btn-group {
       position: absolute;
-      bottom: 15px;
+      bottom: 5px;
       right: 10px;
     }
     .user{
@@ -192,7 +194,7 @@ thead{
       font-size: .75em;
       width: 140px;
       display: inline-block;
-      padding: .5em 1em;
+      padding: 20px 40px 15px 20px;
       .username{
         font-weight: bold;
       }
@@ -210,26 +212,34 @@ thead{
       display: inline-block;
     }
     .contents-right {
-      font-size: 16px;
-      text-align: right;
-      min-height: 100px;
+      vertical-align: top;
+      padding: .1em 1em;
+      font-style: italic;
+      font-size: 13px;
+      color: #696969;
     }
     .contents-right a.post-date {
       position: absolute;
       right: 10px;
     }
+    .contents-right .date-time {
+      position: absolute;
+      right: 10px;
+      top:10px;
+    }
     .contents{
+      display:block;
       vertical-align: top;
       min-height: 100px;
-      border-left: 1px solid $mid-bg1;
-      padding: .1em 1em;
-      width: 50%;
+      padding: .5em .1em;
+      width: 100%;
       time{
         padding: 5px;
         color: $lighter-text;
         margin-bottom: 1em;
         font-size: .7em;
         line-height: 18px;
+        display: block;
       }
       .text{
         margin-right: 100px;

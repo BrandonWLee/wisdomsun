@@ -10,6 +10,8 @@ Wisdomsun::Application.routes.draw do
   mount RedactorRails::Engine => '/redactor_rails'
 
   ActiveAdmin.routes(self)
+  match '/bulletin/admin/groups/:group_id/members/add_with_username', :to => "forem/admin/members#add_with_username"
+  
 
   devise_for :users, :controllers => { :sessions => 'users/sessions' }
 
