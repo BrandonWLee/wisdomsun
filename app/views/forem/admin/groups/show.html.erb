@@ -6,9 +6,11 @@
 <%= link_to t('back_to_groups', :scope => "forem.admin"), admin_groups_path %>
 <div class="row">
   <h3><%= t('.add_a_new_member') %></h3>
-  <%= form_tag add_admin_group_members_url(@group) do %>
+  <%= form_tag "/bulletin/admin/groups/#{@group.id}/members/add_with_username" do %>
     <p>
-      <%= text_field_tag "user_id" %>
+      <%= label_tag "email" %>
+      <%= email_field_tag "email" %>
+      (e.g. john.smith@example.com)
     </p>
     <p class="span1">
       <%= submit_tag t(".add_member"), :class => "btn btn-primary" %>
