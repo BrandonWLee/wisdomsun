@@ -24,16 +24,17 @@
       <div class='icon'><%= forem_avatar(post.user, :size => 60) %></div>
     </div>
 
-    <div class='contents span5 inline-block'>
-      <%= forem_format(post.text) %>
-    </div>
-    <div class='contents-right span2 inline-block'>
+    <div class='contents-right'>
         <%= "#{time_ago_in_words(post.created_at)} #{t("ago")}" %>
       <% if post.reply_to %>
         <div class='in-reply-to'>
           <%= "#{t("forem.post.in_reply_to")} #{post.reply_to.user}"%>
         </div>
       <% end %>
+    </div>
+
+    <div class='contents'>
+      <%= forem_format(post.text) %>
     </div>
       <% if forem_user %>
         <div class='btn-group'>
