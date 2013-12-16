@@ -180,11 +180,11 @@ thead{
   .post{
     min-height: 75px;
     clear: both;
-    padding: 15px;
+    padding: 10px;
     position: relative;
-    .contents-right .btn-group {
+    .btn-group {
       position: absolute;
-      bottom: 15px;
+      bottom: 0px;
       right: 10px;
     }
     .user{
@@ -192,7 +192,7 @@ thead{
       font-size: .75em;
       width: 140px;
       display: inline-block;
-      padding: .5em 1em;
+      padding: 20px;
       .username{
         font-weight: bold;
       }
@@ -210,13 +210,27 @@ thead{
       display: inline-block;
     }
     .contents-right {
-      font-size: 16px;
       text-align: right;
       min-height: 100px;
+      position: absolute;
+      right: 10px;
+      top: 10px;
     }
     .contents-right a.post-date {
       position: absolute;
       right: 10px;
+    }
+    .contents-right .date-time {
+      position: absolute;
+      right: 10px;
+      top:10px;
+    }
+    .contents-left {
+      text-align: left;
+      min-height: 100px;
+      position: absolute;
+      left: 10px;
+      top: 10px;
     }
     .contents{
       vertical-align: top;

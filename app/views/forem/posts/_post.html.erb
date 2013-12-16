@@ -29,13 +29,12 @@
     </div>
     <div class='contents-right span2 inline-block'>
         <%= "#{time_ago_in_words(post.created_at)} #{t("ago")}" %>
-
       <% if post.reply_to %>
         <div class='in-reply-to'>
           <%= "#{t("forem.post.in_reply_to")} #{post.reply_to.user}"%>
         </div>
       <% end %>
-
+    </div>
       <% if forem_user %>
         <div class='btn-group'>
           <% if can?(:reply, post.topic) %>
@@ -46,7 +45,7 @@
           <% end %>
           <% if post.owner_or_admin?(forem_user) %>
             <% if can?(:edit_post, post.topic.forum) %>
-              <%= link_to t('edit', :scope => 'forem.post'), forem.edit_topic_post_path(post.topic, post), :class => "btn btn-info" %>
+              <%= link_to t('Edit Post'), forem.edit_topic_post_path(post.topic, post), :class => "btn btn-info" %>
             <% end %>
             <% if can?(:destroy_post, post.topic.forum) %>
               <%= link_to t('delete', :scope => 'forem.topic'), forem.topic_post_path(post.topic, post), :method => :delete, data: { :confirm => t("are_you_sure") }, :class => "btn btn-danger" %>
@@ -54,6 +53,6 @@
           <% end %>
         </div>
       <% end %>
-    </div>
-  </div>
+  
+      </div>
 </div>
