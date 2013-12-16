@@ -17,7 +17,8 @@
 //= require active_admin.js
 //= require_directory ./woothemes-FlexSlider
 //= require jquery.flexslider-min.js
-//= require jquery-1.4.3.min.js
+//= require jquery-1.10.2.min.js
+//= require forem
 //= require_directory ./fancybox
 //= require jquery.fancybox-1.3.4.js
 //= require photos.js
@@ -28,4 +29,3 @@
 //= require other_pages.js
 //= require users.js
 //= require welcome.js
-////= require_tree .

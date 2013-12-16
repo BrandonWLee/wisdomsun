@@ -6,11 +6,9 @@
 <%= link_to t('back_to_groups', :scope => "forem.admin"), admin_groups_path %>
 <div class="row">
   <h3><%= t('.add_a_new_member') %></h3>
-  <%= form_tag "/bulletin/admin/groups/#{@group.id}/members/add_with_username" do %>
+  <%= form_tag add_admin_group_members_url(@group) do %>
     <p>
-      <%= label_tag "email" %>
-      <%= email_field_tag "email" %>
-      (e.g. john.smith@example.com)
+      <%= text_field_tag "user_id" %>
     </p>
     <p class="span1">
       <%= submit_tag t(".add_member"), :class => "btn btn-primary" %>
@@ -30,9 +28,12 @@
 <% end %>
 
 
-<script>
+</div>
+<%= render :partial => "/layouts/footer"%>
+</div>
+<script type="text/javascript">
   $("#user_id").select2({
-    containerCssClass: "span5",
+    containerCssClass: "forem span5",
     ajax: {
       url: "<%= forem.admin_user_autocomplete_url %>",
       data: function(term, page) {
@@ -50,6 +51,3 @@
     }
   });
 </script>
-</div>
-<%= render :partial => "/layouts/footer"%>
-</div>

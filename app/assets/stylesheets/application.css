@@ -1,6 +1,7 @@
 /**************************
  *        GENERAL
  *= require redactor-rails
+ *= require forem/base
  **************************/
 body {
   background: #65a9bd url('bkgd.jpg') fixed center top;
@@ -381,4 +382,11 @@ display: none;
  **************************/
 .flash-alert {
   color: red;
+}
+
+/**************************
+ *      FOREM
+ **************************/
+.forem.span5 {
+  width: 250px;
 }
