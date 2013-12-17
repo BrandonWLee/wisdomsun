@@ -47,6 +47,32 @@
           - @around_the_web_posts.each do |post|
             %li.atw_item
               =link_to post.title, post.external_link
+      #mailing-list.section
+        %div 
+          %table{ border:"0", cellspacing:"0", cellpadding:"3"  }
+            %tr
+              %td{ style:"font-weight: bold; font-family:Arial; font-size:12px; "}
+                Join Our Mailing List
+            %tr
+              %td{ align:"center" }
+                %form{ name:"ccoptin", action:"http://visitor.r20.constantcontact.com/d.jsp", target:"_blank", method:"post", style:"margin-bottom:2;"}
+                  %input{ type:"hidden", name:"llr", value:"odmka8eab"}
+                  %input{ type:"hidden", name:"m", value:"1104712904814"}
+                  %input{ type:"hidden", name:"p", value:"oi"}
+                  %font{ style:"font-weight: normal; font-family:Arial; font-size:12px; color:#000000;"}
+                    Email:
+                  %input{ type:"text", name:"ea", size:"20", value:"", style:"font-size:10pt; border:1px solid #999999;"}
+                  %input.submit{ type:"submit", name:"go", value:"Go",  style:"font-family:Verdana,Geneva,Arial,Helvetica,sans-serif; font-size:10pt;"}
+        
+        %div{ align:"center", style:"padding-top:5px;"}
+          %img{ src:"https://imgssl.constantcontact.com/ui/images1/safe_subscribe_logo.gif", border:"0", width:"168", height:"14", alt:""}
+
+        %div{ align:"center", style:"font-family:Arial,Helvetica,sans-serif;font-size:10px;color:#999999;margin-bottom:20px;"}
+          For 
+          %a{ href:"http://www.constantcontact.com/jmml/email-marketing.jsp", style:"text-decoration:none;font-family:Arial,Helvetica,sans-serif;font-size:10px;color:#999999;", target:"_blank"}
+            Email Marketing
+          you can trust
+        
       #donations.section
         %a{ :href => 'support'}
           .title Donations

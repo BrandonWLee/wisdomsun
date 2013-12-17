@@ -20,6 +20,7 @@
 #donations {
   display: block;
   float: right;
+  clear: both;
   text-align: center;
 }
 #donations a {
@@ -28,10 +29,16 @@
   text-decoration: none;
 }
 #donationimage {
-	width: 180px;
+	width: 235px;
 	padding-top: 8px;
 }
 li.atw_item {
   margin: 20px 0px;
+}
+#mailing-list {
+  display: block;
+  float: right;
+  clear: both;
+  text-align: center;
 }
 
