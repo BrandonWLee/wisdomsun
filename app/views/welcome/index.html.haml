@@ -47,7 +47,7 @@
           - @around_the_web_posts.each do |post|
             %li.atw_item
               =link_to post.title, post.external_link, target: "_blank"
-      #mailing-list.section
+      #mailing-list.section.small
         %div 
           %table{ border:"0", cellspacing:"0", cellpadding:"3"  }
             %tr
@@ -73,7 +73,7 @@
             Email Marketing
           you can trust
         
-      #donations.section
+      #donations.section.small
         %a{ :href => 'support'}
           .title Donations
         %a{ :href => 'support'}

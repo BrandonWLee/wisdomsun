@@ -142,7 +142,7 @@ display: none;
   box-shadow: 0 0 8px #777;
   -moz-box-shadow: 0 0 8px #777;
   -webkit-box-shadow: 0 0 8px #777;
-  padding: 10px 20px 70px 20px;
+  padding: 10px 20px 30px 20px;
 }
 .container-left {
   display: inline-block;
@@ -227,6 +227,9 @@ display: none;
 }
 .container-right .section {
   margin-bottom: 30px;
+}
+.container-right .section.small {
+  margin-bottom: 0px;
 }
 .container-right .slide-name{
   background-color: rgba(0,118,163,0.8);
