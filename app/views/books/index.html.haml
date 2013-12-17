@@ -13,7 +13,7 @@
             %img{:src => book.picture.url(:medium)}
           .text-box
             .title= book.title    
-            .buy= link_to "Buy", book.purchase_url
+            .buy= link_to "Buy", book.purchase_url, target: "_blank"
             .author= book.author
             .details= simple_format(book.description)
   = render "/layouts/footer"

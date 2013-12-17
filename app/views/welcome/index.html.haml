@@ -46,7 +46,7 @@
             .subtitle Around the Web
           - @around_the_web_posts.each do |post|
             %li.atw_item
-              =link_to post.title, post.external_link
+              =link_to post.title, post.external_link, target: "_blank"
       #mailing-list.section
         %div 
           %table{ border:"0", cellspacing:"0", cellpadding:"3"  }

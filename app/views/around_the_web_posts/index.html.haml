@@ -10,6 +10,6 @@
         - @posts.each do |post|
           .content-box
             .post-box
-              .link= link_to "#{post.title}", post.external_link
+              .link= link_to "#{post.title}", post.external_link, target: "_blank"
               -if post.commentary
                 .commentary= post.commentary.html_safe
