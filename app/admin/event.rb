@@ -1,6 +1,9 @@
 ActiveAdmin.register Event do
   index do
     selectable_column
+    column :picture do |event|
+      image_tag(event.picture.url(:medium))
+    end
     column :name
     column :date
     column :description do |event|
@@ -19,6 +22,8 @@ ActiveAdmin.register Event do
       f.input :description, input_html: {class: 'redactor'}
       f.input :location
       f.input :time
+      f.input :picture, :as => :file,
+          :hint => f.object.picture.nil? || f.object.picture.url.include?("missing.png") ? f.template.content_tag(:span, "no picture yet") : f.template.image_tag(f.object.picture.url(:thumb))
     end
     f.actions
   end

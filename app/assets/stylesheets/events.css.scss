@@ -8,15 +8,17 @@
 	border: 1px solid #d4d4d4;
   color: #333;
   line-height: 25px;
-	width: 700px;
 	margin: 20px 0 0 18px;
 }
 .content-box .title a {
+display: inline-block;
   color: #444;
 }
 .content-box .date {
+display: inline-block;
   font-style: oblique;
 }
+
 .description-box {
 	border: 1px solid #ddd;
   width: 915px;
@@ -29,17 +31,16 @@
 }
 .event-box {
 	padding: 25px;
+  display: inline-block;
 }
-.img-box {
-	width: 200px;
+.content-box .img-box {
 	display: inline-block;
+  vertical-align: top;
 }
-.img-box img {
-  border-radius: 5px;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  margin: 10px 0 0 10px;
-	width: 100%;
+.content-box img {
+  display: block;
+  margin: 10px 10px 10px 10px;
+  width: 170px;
 }
 
 

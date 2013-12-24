@@ -6,14 +6,12 @@
       .header-title Events
     = render "/layouts/share"
     .content
-      .img-box 
-        %img{:src => '/assets/events/palmtrees.jpg'}
-        %img{:src => '/assets/events/retreat.jpg'}
-      .events-box
-        - @events.each do |event|
-          .content-box
-            .event-box
-              .title= link_to "#{event.name}", event_path(event)
-              .date= event.date
-              .location= event.location
+      - @events.each do |event|
+        .content-box
+          .img-box
+            %img{:src => event.picture.url(:medium)}
+          .event-box
+            .title= link_to "#{event.name}", event_path(event)
+            .date= event.date
+            .location= event.location
   = render "/layouts/footer"
