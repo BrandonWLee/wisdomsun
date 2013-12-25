@@ -1,3 +1,8 @@
+<%= stylesheet_link_tag 'style', :media => 'all' %>
+
+<div class='wrapper'>
+<div class='container'>
+  <%= render :partial => "/layouts/menu"%>
 <h2><%= t('forem.admin.group.members', :group => forem_emojify(@group.name)) %></h2>
 <%= link_to t('back_to_groups', :scope => "forem.admin"), admin_groups_path %>
 <div class="row">
@@ -24,9 +29,12 @@
 <% end %>
 
 
-<script>
+</div>
+<%= render :partial => "/layouts/footer"%>
+</div>
+<script type="text/javascript">
   $("#user_id").select2({
-    containerCssClass: "span5",
+    containerCssClass: "forem span5",
     ajax: {
       url: "<%= forem.admin_user_autocomplete_url %>",
       data: function(term, page) {

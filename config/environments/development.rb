@@ -51,7 +51,6 @@ Wisdomsun::Application.configure do
    :enable_starttls_auto => true
    }
   config.action_mailer.default :charset => "utf-8"
-  puts config.action_mailer
 
 
   # Paperclip using ImageMagick
