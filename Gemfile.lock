@@ -13,6 +13,15 @@ GIT
       simple_form
       workflow (= 0.8.0)
 
+GIT
+  remote: https://github.com/BrandonWLee/redactor-rails.git
+  revision: 5541e8b22eb067fbc464975ee3455fa2db93294d
+  tag: wisdom-sun
+  specs:
+    redactor-rails-paperclip (0.4.8)
+      mime-types
+      orm_adapter
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -212,9 +221,6 @@ GEM
     rake (10.1.0)
     rdoc (3.12.2)
       json (~> 1.4)
-    redactor-rails-paperclip (0.4.3)
-      mime-types
-      orm_adapter
     responders (1.0.0)
       railties (>= 3.2, < 5)
     rmagick (2.13.2)
@@ -306,7 +312,7 @@ DEPENDENCIES
   pg
   railroady
   rails (= 3.2.14)
-  redactor-rails-paperclip
+  redactor-rails-paperclip!
   rmagick
   rspec-rails
   sass-rails (~> 3.2.3)

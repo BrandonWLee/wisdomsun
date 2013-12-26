@@ -1,5 +1,6 @@
 class RedactorRails::Picture < RedactorRails::Asset
   has_attached_file :data,
+    :styles => { :content => "800>", :thumb => ["100x100#"] },
     :storage => :ftp,
     :path => "/wisdomsun.org/dev/:class/:attachment/:id/:style/:filename",
     :url => "http://wisdomsun.org/dev/:class/:attachment/:id/:style/:filename",

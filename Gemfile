@@ -72,7 +72,7 @@ gem "paperclip", "~> 3.5.2"
 gem "paperclip-storage-ftp", "~> 1.1.0"
 
 # rich text editor with paperclip support
-gem 'redactor-rails-paperclip'
+gem 'redactor-rails-paperclip', git: "https://github.com/BrandonWLee/redactor-rails.git", tag: "wisdom-sun"
 gem 'rmagick'
 
 # email
