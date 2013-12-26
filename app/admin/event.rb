@@ -13,6 +13,25 @@ ActiveAdmin.register Event do
     column :time
     default_actions
   end
+  show do |event|
+    attributes_table do
+      row :name
+      row :date
+      row :description
+      row :location
+      row :picture do
+        image_tag(event.picture.url(:medium))
+      end
+      row :picture_url do
+        event.picture.url
+      end
+      row :picture_file_name
+      row :picture_content_type
+      row :picture_file_size
+      row :picture_updated_at
+
+    end
+  end
     
   form do |f|
   	f.semantic_errors *f.object.errors.keys
